@@ -49,6 +49,16 @@ const useStyles = makeStyles((theme) => ({
         color: '#f78320',
       }
     },
+    menuButtonHighlightedScroll: {
+      backgroundColor: '#fff',
+      color: '#f78320',
+      marginRight: theme.spacing(2),
+      fontSize: '13px',
+      '&:hover': {
+        backgroundColor: '#f78320',
+        color: '#fff',
+      }
+    },
     menuItemIcon:{
       fontSize : '16px',
       marginLeft: '3px',
@@ -95,7 +105,7 @@ export const Header = ()=>{
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>CONTACT US</Button>
-                <Button color="inherit" classes={{ root : classes.menuButtonHighlighted}}>
+                <Button color="inherit" classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
                   PLOT AVAILABILITY
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
