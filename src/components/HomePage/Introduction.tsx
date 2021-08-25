@@ -8,33 +8,36 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     cardRoot:{
-        width: '450px',
-        height:'auto',
-        color: '#f78320',
-        fontSize: '24px',
-        fontFamily: 'Avenir next',
-        backgroundColor: '#fff',
-        marginTop:'50px',
-        boxShadow: '0 10px 20px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1)',
-        transition: "transform 0.15s ease-in-out",
-        borderRadius : '10px',
+        position:'relative',
+        width: '540px',
+        height:'350px',
+        backgroundColor: 'transparent',
+        backgroundImage:  'url("laptop.png")',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize:'100% auto',
+        boxShadow: 'none',
+
     },
     media:{
-        width: '450px',
-        height:'auto',
-        margin:'auto',
-        borderRadius : '10px',
+        backgroundSize: 'contain',
+        position: 'absolute',
+        top: '0',
+        left:'0',
+        width: '100%',
+        height: '100%',
+        padding:'3% 14% ',
     },
     containerRoot:{
         marginTop:'50px',
         backgroundImage:  'url("intro1.gif")',
+        // backgroundImage:  'url("intro2.png")',
         backgroundSize:'100% auto',
         height:'850px',
         width:'100%',
         backgroundRepeat: 'no-repeat',
         paddingTop:'200px',
         paddingLeft:'100px'
-    }
+    },
 })
 
 export const Introduction = ()=>{
