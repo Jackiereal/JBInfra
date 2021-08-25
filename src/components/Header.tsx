@@ -9,11 +9,30 @@ import {
     rgbToHex,
 } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import{ useEffect, useState } from 'react'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor: '#f78320',
+      // backgroundColor:'#f78320',
+      backgroundColor: 'transparent',
+      boxShadow:'none',
+    },
+    rootScroll: {
+      flexGrow: 1,
+      backgroundColor:'#f78320',
+      // backgroundColor: 'transparent',
+      // boxShadow:'none',
+    },
+    logoContainer:{
+      
+    },
+    logo:{
+      height:'50px',
+      width:'auto',
+      marginRight:'20px',
+      marginLeft:'20px',
+      marginTop: '5px',
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -21,13 +40,13 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Avenir next'
     },
     menuButtonHighlighted: {
-      backgroundColor: '#fff',
-      color: '#f78320',
+      backgroundColor: '#f78320',
+      color: '#fff',
       marginRight: theme.spacing(2),
       fontSize: '13px',
       '&:hover': {
-        backgroundColor: '#f78320',
-        color: '#fff',
+        backgroundColor: '#fff',
+        color: '#f78320',
       }
     },
     menuItemIcon:{
@@ -41,15 +60,25 @@ const useStyles = makeStyles((theme) => ({
 
 export const Header = ()=>{
     const classes = useStyles();
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+      window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 200);
+      });
+    }, []); 
     return (
         <div className={classes.root}>
             <AppBar 
               position="fixed" 
               classes={{
-                root:classes.root,
+                root:scroll ? classes.rootScroll : classes.root,
               }}
             >
             <Toolbar >
+                <div className={classes.logoContainer}>
+                  <img src={"logoWhite.png"} className={classes.logo} alt="logo" />
+                </div>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>HOME</Button>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>ABOUT US</Button>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>
