@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
     rootScroll: {
       flexGrow: 1,
       backgroundColor:'#f78320',
-      // backgroundColor: 'transparent',
-      // boxShadow:'none',
+      opacity: '0.9',
     },
     logoContainer:{
       

@@ -27,11 +27,13 @@ const useStyles = makeStyles({
         fontSize: '14px',
         textAlign:'center',
         marginBottom:'10px',
+        transition: "all 0.15s ease-in-out",
     },
     cardtext:{
         color: '#fff',
         fontSize: '12px',
         textAlign:'center',
+        transition: "all 0.15s ease-in-out",
       },
     headerRoot:{
         display: 'flex',
@@ -67,10 +69,20 @@ const useStyles = makeStyles({
             transform: "scale3d(1.1, 1.1, 1)" 
         },
     },
+    avatarInactive: {
+        width: '60px',
+        height: '60px',
+        border: '5px solid #fff',
+        borderRadius: '100%',
+        transition: "transform 0.15s ease-in-out",
+        "&:hover": {
+            transform: "scale3d(1.1, 1.1, 1)" 
+        },
+    },
   });
 
 export const TestimonialCard = (props:any)=>{
-
+    console.log(props)
     const classes = useStyles() 
     return (
         <>
@@ -83,15 +95,15 @@ export const TestimonialCard = (props:any)=>{
         >
         </Badge> */}
          <div className={classes.avatarScatter2}>
-            <Avatar alt="Avatar" src="https://picsum.photos/id/1011/100/100" className={classes.avatar}/>
+            <Avatar alt="Avatar" src="https://picsum.photos/id/1011/100/100" className={classes.avatarInactive}/>
         </div>
         <div className={classes.avatarScatter1}>
-            <Avatar alt="Avatar" src="https://picsum.photos/id/1025/100/100" className={classes.avatar}/>
+            <Avatar alt="Avatar" src="https://picsum.photos/id/1025/100/100" className={classes.avatarInactive}/>
         </div>
         <Card classes={{root: classes.root}}>
            
             <div className={classes.headerRoot}>
-                <Avatar alt="Avatar" src="https://picsum.photos/id/1005/100/100" className={classes.avatar}/>
+                <Avatar alt="Avatar" src={`https://picsum.photos/id/${props.list.id}/100/100`} className={classes.avatar}/>
             </div>
 
             <CardContent>
@@ -104,10 +116,10 @@ export const TestimonialCard = (props:any)=>{
             </CardContent>
         </Card>
         <div className={classes.avatarScatter2}>
-            <Avatar alt="Avatar" src="https://picsum.photos/id/1074/100/100" className={classes.avatar}/>
+            <Avatar alt="Avatar" src="https://picsum.photos/id/1074/100/100" className={classes.avatarInactive}/>
         </div>
         <div className={classes.avatarScatter1}>
-            <Avatar alt="Avatar" src="https://picsum.photos/id/177/100/100" className={classes.avatar}/>
+            <Avatar alt="Avatar" src="https://picsum.photos/id/177/100/100" className={classes.avatarInactive}/>
         </div>
         </>
     )

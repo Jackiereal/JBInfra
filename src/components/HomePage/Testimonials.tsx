@@ -5,6 +5,7 @@ import {
 
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { useState, useEffect } from 'react';
 import { TestimonialCard } from "./TestimonialCard";
 
 const useStyles = makeStyles({
@@ -44,7 +45,7 @@ const testimonialList = [
     },
     {
         id: 1040,
-        title : 'SAI RAJA',
+        name : 'SAI RAJA',
         description : " Serene Villas is HMDA approved 42 Acre Villa Project at Adibatla"
     },
     
@@ -52,6 +53,15 @@ const testimonialList = [
 
 export const Testimonials = ()=>{
     const classes = useStyles();
+    const [index, setIndex] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex(item => (item ===  testimonialList.length-1? 0 : item + 1));
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
         <Container fixed classes={{root : classes.containerRoot}}>
@@ -59,7 +69,7 @@ export const Testimonials = ()=>{
             <Typography  classes={{ root : classes.caption}}>from our customers</Typography>
         </Container>
         <Container fixed classes={{ root : classes.containerContent}}>
-            <TestimonialCard list={testimonialList[0]}></TestimonialCard>
+            <TestimonialCard list={testimonialList[index]}></TestimonialCard>
         </Container>
         </>
     )
