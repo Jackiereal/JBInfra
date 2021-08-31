@@ -2,7 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Steps to start the application
+
+1. Check if you have node intsalled in your system.
+
+### `node -v`
+
+2. if not available download install node and yarn in your system
+
+### `https://nodejs.org/en/download/`
+### `npm install --global yarn`
+
+3. To check if yarn is installed 
+
+### `yarn --version`
+
 
 In the project directory, you can run:
 
