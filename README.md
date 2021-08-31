@@ -11,9 +11,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. if not available download install node and yarn in your system
 
 ### `https://nodejs.org/en/download/`
+
+3.
 ### `npm install --global yarn`
 
-3. To check if yarn is installed 
+4. To check if yarn is installed 
 
 ### `yarn --version`
 
