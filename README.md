@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `node -v`
 
-2. if not available download install node and yarn in your system
+2. if not available download and install node.
 
 ### `https://nodejs.org/en/download/`
 
