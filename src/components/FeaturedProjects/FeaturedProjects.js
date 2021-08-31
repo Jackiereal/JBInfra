@@ -18,7 +18,7 @@ export default function FeaturedProjects() {
   return (
     <div>
      { 
-        projects === [] ? 
+        (projects === [] || projects === undefined)? 
         'No Projects' : 
         projects.map(project=>{
           return <div>{project.name}</div>

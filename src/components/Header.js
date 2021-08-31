@@ -11,7 +11,9 @@ import {
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import{ useEffect, useState } from 'react'
 import { 
-  Link 
+  Link,
+  NavLink,
+  useLocation
 } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +45,9 @@ const useStyles = makeStyles((theme) => ({
     },
     menuLink: {
       textDecoration: 'none',
+      color: '#fff',
     },
+   
     menuButtonHighlighted: {
       backgroundColor: '#f78320',
       color: '#fff',
@@ -71,6 +75,14 @@ const useStyles = makeStyles((theme) => ({
     title: {
       flexGrow: 1,
     },
+    active:{
+      background:'#f78320',
+      textDecoration:'none',
+    },
+    activeLink:{
+      textDecoration:'none',
+      color:'#fff',
+    },
   }));
 
 export const Header = ()=>{
@@ -78,6 +90,12 @@ export const Header = ()=>{
     const [scroll, setScroll] = useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+
+    const location = useLocation();
+    const { pathname } = location;
+    const splitLocation = pathname.split("/");
+    console.log(location)
+    console.log(splitLocation)
   
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
@@ -105,11 +123,9 @@ export const Header = ()=>{
                   <img src={"logoWhite.png"} className={classes.logo} alt="logo" />
                 </div>
                
-                  <Button color="inherit" classes={{ root : classes.menuButton}}> <Link className={classes.menuLink} to="/">HOME </Link></Button>
+                  <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "" ? classes.active : ""} ><Link  classes={classes.menuLink} className={splitLocation[1] === "" ? classes.activeLink : classes.menuLink} to="/">HOME </Link></Button>
+                  <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "about" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "about" ? classes.activeLink : classes.menuLink}  to="/about">ABOUT US </Link></Button>
                
-                <Link to="/about">
-                  <Button color="inherit" classes={{ root : classes.menuButton}}>ABOUT US</Button>
-                </Link>
                 {/* <Link to="/featured-projects">
                   <Button color="inherit" classes={{ root : classes.menuButton}}>
                     FEATURED PROJECT
@@ -117,21 +133,29 @@ export const Header = ()=>{
                   </Button>
                 </Link> */}
 
-                <Button color="inherit" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <Button color="inherit" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick} className={splitLocation[1] === "1" ? classes.active : ""}>
                   FEATURED PROJECTS
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
                 <Menu
+                
                 id="fade-menu"
                 anchorEl={anchorEl}
                 keepMounted
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Fade}
+                PaperProps={{
+                  style: {
+                    background: "#f78320",
+                    marginTop:'30px',
+                    marginLeft:'10px'
+                  }
+                }}
                 >
-                  <Link to="/1"><MenuItem onClick={handleClose}>Serene City</MenuItem></Link>
-                  <Link to="/2"><MenuItem onClick={handleClose}>Serene Villas</MenuItem></Link>
-                  <Link to="/3"><MenuItem onClick={handleClose}>Serene Resorts</MenuItem></Link>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "1" ? classes.activeLink : classes.menuLink} to="/1">Serene City</Link></MenuItem>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "2" ? classes.activeLink : classes.menuLink} to="/2">Serene Villas</Link></MenuItem>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "3" ? classes.activeLink : classes.menuLink} to="/3">Serene Resorts</Link></MenuItem>
                 </Menu>
 
 
