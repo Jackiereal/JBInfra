@@ -1,10 +1,8 @@
 import {
     Card,
     CardContent,
-    CardHeader,
     Typography,
     Avatar,
-    Badge,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -82,7 +80,6 @@ const useStyles = makeStyles({
   });
 
 export const TestimonialCard = (props:any)=>{
-    console.log(props)
     const classes = useStyles() 
     return (
         <>

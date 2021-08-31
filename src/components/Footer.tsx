@@ -1,9 +1,7 @@
 import {
-    Container,
     Grid,
     Typography,
     IconButton,
-    Box,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
