@@ -21,3 +21,9 @@ docker run -d -p 8080:8080  python:V1
 
 # Start testing
 http://127.0.0.1:8080/api/health
+
+#Aboutus api's
+
+http://127.0.0.1:8080/aboutus_json (Returns Json Response)
+http://127.0.0.1:8080/aboutus_html (Returns html Response)
+

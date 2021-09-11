@@ -1,13 +1,15 @@
-from flask import Flask, send_file, send_from_directory
-from os import path
+import flask
+from flask import Flask, send_file, send_from_directory, render_template, request, jsonify
+import os
 from common import getLogger
 import json
 app = Flask(__name__)
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 logger = getLogger()
 @app.route('/download/<name>')
 def downloadFile (name):
-    if path.exists(name):
+    if os.path.exists(name):
         logger.info(name + " File Downloaded")
         return send_file(name, as_attachment=True)
     else:
@@ -17,96 +19,49 @@ def downloadFile (name):
 
 @app.route('/file/<name>')
 def get_file(name):
-    if path.exists(name):
-        data = open(name, 'r').read()
-        return data
-    else:
-        return name + " Not Exists"
+    try:
+        file_path = "content/"+name+".txt"
+        logger.info(file_path)
+        if os.path.exists(file_path):
+            data = open(file_path, 'r').read()
+            return data
+        else:
+            return " Not Exists"
+    except Exception as e:
+        return "Not Exists" + str(e)
+
+
+@app.route('/getfile')
+def content():
+    filename = request.args['filename']
+    file_path = os.getcwd()+"\content"+ "\\"+filename+".txt"
+    logger.info(file_path)
+    with open(file_path, 'r') as f:
+        #template_file = os.getcwd()+"\\templates\\content.html"
+        #logger.info(template_file)
+        return render_template('content.html', text=f.read())
+
+
+@app.route('/aboutus_html')
+def aboutus_html():
+    f = open('content/indexcontent.json')
+    data = json.load(f)
+    return render_template('content.html', text=data)
+
+@app.route('/aboutus_json')
+def aboutus_json():
+    f = open('content/indexcontent.json')
+    data = json.load(f)
+    return data
 
 @app.route('/api/health')
 def Health():
     value = {
-        "Status": "UP",
-        "name" : "Serene bay",
-        "description" : "some description",
-        "features" : [
-            'feature - 1',
-            'feature - 2',
-            'feature - 3',
-            'feature - 4',
-        ]
+        "Status": "UP"
     }
     return json.dumps(value)
-@app.route('/api/projects')
-def projects():
-    value = [
-        {
-            "id":1,
-            "name" : "Serene bay",
-            "description" : "some description",
-            "features" : [
-                'feature - 1',
-                'feature - 2',
-                'feature - 3',
-                'feature - 4',
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Serene Villas",
-            "description": "some description",
-            "features": [
-                'feature - 1',
-                'feature - 2',
-                'feature - 3',
-                'feature - 4',
-            ]
-        },
-
-    ]
-    return json.dumps(value)
-@app.route('/api/projects/<id>')
-def getprojectbyId():
-    value = [
-        {
-            "id":1,
-            "name" : "Serene bay",
-            "description" : "some description",
-            "features" : [
-                'feature - 1',
-                'feature - 2',
-                'feature - 3',
-                'feature - 4',
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Serene Villas",
-            "description": "some description",
-            "features": [
-                'feature - 1',
-                'feature - 2',
-                'feature - 3',
-                'feature - 4',
-            ]
-        },
-        {
-            "id": 3,
-            "name": "Serene Resorts",
-            "description": "some description",
-            "features": [
-                'feature - 1',
-                'feature - 2',
-                'feature - 3',
-                'feature - 4',
-            ]
-        }
-    ]
-    response = [project for project in value if project["id"] == id]
-    print(response)
-    return json.dumps(response)
 @app.route('/open/<filename>', methods=['GET'])
-def open(filename):
+def openfile(filename):
     return send_file(filename)
 
 

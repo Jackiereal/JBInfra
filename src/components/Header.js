@@ -165,10 +165,12 @@ export const Header = ()=>{
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button>
-                <Button color="inherit" classes={{ root : classes.menuButton}}>
+                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/brochure">BROCHURES </Link></Button>
+
+                {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ? classes.active : ""}>
                   BROCHURE
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
-                </Button>
+                </Button> */}
                 <Button color="inherit" classes={{ root : classes.menuButton}}>CONTACT US</Button>
                 <Button color="inherit" classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
                   PLOT AVAILABILITY

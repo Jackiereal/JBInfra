@@ -1,8 +1,9 @@
 import './App.scss';
 import { Header } from './components/Header'
-import { About } from './components/AboutPage'
+import About  from './components/AboutPage/AboutPage'
 import { Footer } from './components/Footer'
 import { HomePage } from './components/HomePage/HomePage'
+import { Brochures } from './components/Brochures/Brochures'
 // import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
 import FeaturedProjects from './components/FeaturedProjects/FeaturedProjects'
 import { BrowserRouter as Router,
@@ -19,6 +20,7 @@ function App() {
         <Header/>
         <Switch>
             <Route path="/about" component={About}></Route>
+            <Route path="/brochure" component={Brochures} />
             <Route path="/:project" component={FeaturedProjects} />
             <Route path="/" component={HomePage}></Route>
           </Switch>
