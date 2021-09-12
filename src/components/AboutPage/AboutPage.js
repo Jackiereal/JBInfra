@@ -46,7 +46,15 @@ export default function About(){
         "Twitter": "twitter.com", 
         "description": "Mr. Buyyani Manohar Reddy, Managing Partner of JB Infra Projects and a proud owner of Hyderabad's largest Convetions,BMR Sartha Convenstions . Mr. BMR, has an immense experience in Politics, Real Estate and Civil Contracts. Mr.BMR, had created jobs for several hundreds in various fields since 1990 as Government Civil Contractor(Class-1), served the public as ZPTC member (2006-20011).By entering Real Estate in the year 2002, Mr.BMR had showcased the actual meaning of trust to customers, since then. He joined JB Infra in 2012 and stood as a major support strength by making it the fastest growing Real Estate compant in less than 5 years.", 
         "facebook": "facebook.com"
-    }
+    },
+    {
+    "name": "Pratap",
+      "Googleplus": "googleplus.com", 
+      "LinkedIn": "linkedin.com", 
+      "Twitter": "twitter.com", 
+      "description": "Mr. Prathap Reddy, Managing Partner of JB Infra, started his journey in the year 1983 as marketing executive in Swedish company called Minimax. He had grown to become a Regional Head and then further on to become the Divisional Manager for entire South India, His vast experience in Marketing and Distribution and the ambition to serve people with the intention of providing affordable real estate to customers, lead to the start of JB. The first project of JB Infra was initiated on the Sagar Road in year 2001. From then on, as a founder of company he has worked in multiple facets to take the company to new heights. The proudest moment for Mr. JB Prathap Reddy and his managing partners was when they took over a 570 acres project at Ibrahimpatnam and executed it meticulously with in a record time of 3 years. With 18 years of experience in marketing and nearly 2 decades of experties in real-estate, he is key driving force and important pillar in building up JB.", 
+      "facebook": "facebook.com"
+    },
 ]
   const description = 'JB Infra Projects is a 19 year old real estate firm which has built its reputation for developing wide range of affordable real estate ventures in and around Ibrahimpatnam  Adibatla areas in Hyderabad. The promoters have vast experience with deep domain knowledge in identifying, developing, marketing and delivering real estate projects they undertake. All the ventures are planned and executed with custom-made features keeping targeted customers needs in mind.JB Infra Projects offers wide range of plots, customized housing options, residential investments in fast developing locations in and around ORR in Hyderabad. JB Infra Projects primary focus is on building ever lasting relationships with its customers.'
     return (

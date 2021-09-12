@@ -45,6 +45,8 @@ const useStyles = makeStyles({
       },
     description: {
         fontFamily: 'Avenir next',
+       textAlign:'justify',
+
     }
   
   });
@@ -61,7 +63,7 @@ export const AboutUs = (props)=>{
                     <Card>
                             <CardMedia
                                     className={classes.media}
-                                    image="https://picsum.photos/id/1024/300/300"
+                                    image="https://picsum.photos/id/1029/2048/2048"
                                     title="Aboutus"
                                 />
                             </Card>
