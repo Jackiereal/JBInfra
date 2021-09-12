@@ -41,7 +41,9 @@ const useStyles = makeStyles({
     },
     media: {
         height: '0',
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%', // 16:9,
+        boxShadow:'none',
+        border:'none',
       },
     description: {
         fontFamily: 'Avenir next',
@@ -60,13 +62,14 @@ export const AboutUs = (props)=>{
                 <Typography  classes={{ root : classes.root}}>ABOUT US</Typography>
                 <Grid container justifyContent="center" spacing={2}>
                     <Grid item xs={6} >
-                    <Card>
+                        <Card>
                             <CardMedia
                                     className={classes.media}
-                                    image="https://picsum.photos/id/1029/2048/2048"
+                                    // image="https://picsum.photos/id/1029/2048/2048"
+                                    image="aboutus.png"
                                     title="Aboutus"
                                 />
-                            </Card>
+                        </Card>
                     </Grid>
                     <Grid item xs={6} >
                         <Typography  classes={{ root : classes.description}}> {props.aboutus !== undefined? props.aboutus : 'No description'}</Typography>

@@ -11,38 +11,41 @@ import { useState } from 'react';
 
 const useStyles = makeStyles({
   rootContainer:{
-    marginBottom:'30px',
+    // marginBottom:'30px',
     height:'auto',
     fontFamily: 'Avenir next',
-
+    background: '#fff1ff',
+    marginTop:'20px',
+    paddingTop:'10px',
+    paddingBottom:'50px',
   },
   rootGrid:{
-    marginBottom: '30px',
+    // marginBottom: '30px',
   },
   root: {
     width: '100%',
     color: '#f78320',
     fontSize: '24px',
     fontFamily: 'Avenir next',
-    backgroundColor: '#fff',
     marginTop:'75px',
-    marginBottom:'10px'
+    marginBottom:'30px'
   },
   description: {
     fontFamily: 'Avenir next',
-    fontSize: '12px',
-    marginTop:'30px',
+    fontSize: '16px',
+    paddingLeft:'100px',
+    paddingRight:'100px',
+    textAlign:'justify'
   },
   directorDescription:{
     marginTop:'30px',
     fontFamily: 'Avenir next',
-    fontSize: '12px',
     padding:'30px',
 
   },
 active:{
     // border: '0.25px solid #f78320'
-    background: '#F5F5F5',
+    background: '#fbdbfb',
 },
 cardGrid:{
     alignItems:'center',
@@ -54,8 +57,8 @@ cardGrid:{
 export const Directors = (props)=>{
     const classes = useStyles();
     const directors = props.directors
-    const [directorDesc,setDirectorDesc] = useState('');
-    const [directorName,setDirectorName] = useState('')
+    const [directorDesc,setDirectorDesc] = useState(directors[0].description);
+    const [directorName,setDirectorName] = useState(directors[0].name)
     const selectDirector = (e)=>{
         setDirectorDesc(e.description)
         setDirectorName(e.name)
@@ -73,7 +76,7 @@ export const Directors = (props)=>{
                     ))}
                 </Grid>
                 <Grid  container justifyContent="center" classes={{root : classes.directorDescription}}>
-                    <Typography  classes={classes.description}> {directorDesc}</Typography>
+                    <Typography  classes={{ root : classes.description}}> {directorDesc}</Typography>
                 </Grid>
             </Grid>
         </Container>

@@ -30,8 +30,8 @@ const useStyles = makeStyles({
     },
     containerRoot:{
         // marginTop:'50px',
-        backgroundImage:  'url("intro1.gif")',
-        // backgroundImage:  'url("intro2.png")',
+        // backgroundImage:  'url("intro.gif")',
+        backgroundImage:  'url("intro2.png")',
         backgroundSize:'100% auto',
         height:'850px',
         width:'100%',

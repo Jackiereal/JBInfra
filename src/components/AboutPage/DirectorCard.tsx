@@ -64,7 +64,7 @@ export const DirectorCard = (props:any)=>{
           <Card classes={{root: classes.root}}>
             <CardMedia
                 className={classes.media}
-                image='https://picsum.photos/id/100/240/240'
+                image={`https://picsum.photos/id/${props.data.id}/240/240`}
                 title="Project 1"
             />
             <CardContent>
