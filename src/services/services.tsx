@@ -27,3 +27,17 @@ export const getAboutUs = async () =>{
     console.log(aboutus)
     return aboutus;
 }
+
+export const getProjectImages = async (id: number) =>{
+    const images = await axios
+        .get(`http://127.0.0.1:8080/gallery/${id}`)
+        .then( response =>{
+            return response;
+        })
+        .catch( error =>{
+            console.log(error);
+            return error;
+        })
+    console.log(images)
+    return images;
+}

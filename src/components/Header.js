@@ -180,7 +180,8 @@ export const Header = ()=>{
                   COMPLETED PROJECTS
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
-                <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button>
+                {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
+                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "about" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? classes.activeLink : classes.menuLink}  to="/gallery">Gallery </Link></Button>
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} ><a classes={classes.menuLink} href="sample.pdf" target = "_blank"  to="/home">BROCHURES </a></Button> */}
                 <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ? classes.active : ""}>
