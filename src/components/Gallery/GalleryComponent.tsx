@@ -65,10 +65,12 @@ const useStyles = makeStyles({
   buttons:{
     color: '#4a4a4a',
     fontFamily: 'Avenir next',
-    fontSize: '16px'
+    fontSize: '16px',
+    background:'#fff'
   },
   active:{
-    color: '#f78320',
+    color: '#fff',
+    background:'#f78320'
   }
 });
 
