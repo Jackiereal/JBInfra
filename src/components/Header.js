@@ -41,11 +41,13 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
       marginRight: theme.spacing(2),
       fontSize: '13px',
-      fontFamily: 'Avenir next'
+      fontFamily: 'Avenir next',
+      textDecoration:'none'
     },
     menuLink: {
-      textDecoration: 'none',
+      textDecoration: 'none ',
       color: '#fff',
+
     },
    
     menuButtonHighlighted: {
@@ -83,13 +85,19 @@ const useStyles = makeStyles((theme) => ({
       textDecoration:'none',
       color:'#fff',
     },
+    link:{
+      textDecoration:'none',
+      color:'#fff',
+    }
   }));
 
 export const Header = ()=>{
     const classes = useStyles();
     const [scroll, setScroll] = useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorBrochure, setAnchorBrochure] = React.useState(null);
     const open = Boolean(anchorEl);
+    const openBrochure = Boolean(anchorBrochure);
 
     const location = useLocation();
     const { pathname } = location;
@@ -103,6 +111,14 @@ export const Header = ()=>{
   
     const handleClose = () => {
       setAnchorEl(null);
+    };
+
+    const handleClickBrochure = (event) => {
+      setAnchorBrochure(event.currentTarget);
+    };
+  
+    const handleCloseBrochure = () => {
+      setAnchorBrochure(null);
     };
 
     useEffect(() => {
@@ -165,12 +181,32 @@ export const Header = ()=>{
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button>
-                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/brochure">BROCHURES </Link></Button>
-
-                {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ? classes.active : ""}>
+                {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
+                {/* <Button color="inherit" classes={{ root : classes.menuButton}} ><a classes={classes.menuLink} href="sample.pdf" target = "_blank"  to="/home">BROCHURES </a></Button> */}
+                <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ? classes.active : ""}>
                   BROCHURE
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
-                </Button> */}
+                </Button>
+                <Menu
+                
+                id="fade-brochure"
+                anchorEl={anchorBrochure}
+                keepMounted
+                open={openBrochure}
+                onClose={handleCloseBrochure}
+                TransitionComponent={Fade}
+                PaperProps={{
+                  style: {
+                    background: "#f78320",
+                    marginTop:'30px',
+                    marginLeft:'10px'
+                  }
+                }}
+                >
+                  <MenuItem className={classes.menuLink} onClick={handleCloseBrochure} ><a className={classes.link} href="sample.pdf" target = "_blank">Serene City</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link} href="sample.pdf" target = "_blank">Serene Villas</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link}href="sample.pdf" target = "_blank">Serene Resorts</a></MenuItem>
+                </Menu>
                 <Button color="inherit" classes={{ root : classes.menuButton}}>CONTACT US</Button>
                 <Button color="inherit" classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
                   PLOT AVAILABILITY
