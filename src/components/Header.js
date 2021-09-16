@@ -208,7 +208,7 @@ export const Header = ()=>{
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.link} href="sample.pdf" target = "_blank">Serene Villas</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.link}href="sample.pdf" target = "_blank">Serene Resorts</a></MenuItem>
                 </Menu>
-                <Button color="inherit" classes={{ root : classes.menuButton}}>CONTACT US</Button>
+                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "about" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "contactus" ? classes.activeLink : classes.menuLink}  to="/contactus">CONTACT US </Link></Button>
                 <Button color="inherit" classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
                   PLOT AVAILABILITY
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
