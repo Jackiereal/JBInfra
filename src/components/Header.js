@@ -96,15 +96,16 @@ export const Header = ()=>{
     const [scroll, setScroll] = useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [anchorBrochure, setAnchorBrochure] = React.useState(null);
+    const [anchorPlot, setAnchorPlot] = React.useState(null);
+
     const open = Boolean(anchorEl);
     const openBrochure = Boolean(anchorBrochure);
+    const openPlot = Boolean(anchorPlot);
 
     const location = useLocation();
     const { pathname } = location;
     const splitLocation = pathname.split("/");
-    console.log(location)
-    console.log(splitLocation)
-  
+
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
     };
@@ -119,6 +120,14 @@ export const Header = ()=>{
   
     const handleCloseBrochure = () => {
       setAnchorBrochure(null);
+    };
+
+    const handleClickPlot = (event) => {
+      setAnchorPlot(event.currentTarget);
+    };
+  
+    const handleClosePlot = () => {
+      setAnchorPlot(null);
     };
 
     useEffect(() => {
@@ -169,9 +178,10 @@ export const Header = ()=>{
                   }
                 }}
                 >
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "1" ? classes.activeLink : classes.menuLink} to="/1">Serene City</Link></MenuItem>
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "2" ? classes.activeLink : classes.menuLink} to="/2">Serene Villas</Link></MenuItem>
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "3" ? classes.activeLink : classes.menuLink} to="/3">Serene Resorts</Link></MenuItem>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenecity" ? classes.activeLink : classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenevillas" ? classes.activeLink : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "sereneresorts" ? classes.activeLink : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenenaturevalley" ? classes.activeLink : classes.menuLink} to="/serenenaturevalley">Serene Nature Valley</Link></MenuItem>
                 </Menu>
 
 
@@ -204,15 +214,36 @@ export const Header = ()=>{
                   }
                 }}
                 >
-                  <MenuItem className={classes.menuLink} onClick={handleCloseBrochure} ><a className={classes.link} href="sample.pdf" target = "_blank">Serene City</a></MenuItem>
-                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link} href="sample.pdf" target = "_blank">Serene Villas</a></MenuItem>
-                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link}href="sample.pdf" target = "_blank">Serene Resorts</a></MenuItem>
+                  <MenuItem className={classes.menuLink} onClick={handleCloseBrochure} ><a className={classes.link} href="jb-serene-city.pdf" target = "_blank">Serene City</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link} href="jb-serene-villas.pdf" target = "_blank">Serene Villas</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link}href="jb-serene-resort.pdf" target = "_blank">Serene Resorts</a></MenuItem>
                 </Menu>
                 <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "contactus" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "contactus" ? classes.activeLink : classes.menuLink}  to="/contactus">CONTACT US </Link></Button>
-                <Button color="inherit" classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
+                <Button color="inherit" aria-controls="fade-plot" aria-haspopup="true" onClick={handleClickPlot}  classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
                   PLOT AVAILABILITY
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
+                <Menu
+                
+                id="fade-plot"
+                anchorEl={anchorPlot}
+                keepMounted
+                open={openPlot}
+                onClose={handleClosePlot}
+                TransitionComponent={Fade}
+                PaperProps={{
+                  style: {
+                    background: "#f78320",
+                    marginTop:'30px',
+                    marginLeft:'10px'
+                  }
+                }}
+                >
+                  <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.link} href="http://43.240.65.20/NextoraMaps/home/project/12345" target = "_blank">Serene City</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.link} href="http://43.240.65.20/NextoraMaps/home/project/JBEC001" target = "_blank">Serene Villas</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.link}href="http://43.240.65.20/NextoraMaps/home/project/JB00011" target = "_blank">Serene Resorts</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.link}href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">Serene Nature Valley</a></MenuItem>
+              </Menu>
             </Toolbar>
             </AppBar>
         </div>

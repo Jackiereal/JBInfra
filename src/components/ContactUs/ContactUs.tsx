@@ -49,10 +49,10 @@ export const ContactUs = ()=>{
             </Grid>
             <Grid container xs={12} style={{ 'marginBottom' : '100px'}}>
                 <Grid item xs ={6}>
-                   <Map map={addresses[0].map}/>
+                   <Map address={addresses[0]}/>
                 </Grid>
                 <Grid item xs ={6}>
-                   <Map map={addresses[1].map}/>
+                   <Map address={addresses[1]}/>
                 </Grid>
             </Grid>
             <Quote/>

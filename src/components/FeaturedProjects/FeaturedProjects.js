@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { getProjects } from '../../services/services';
+import { ProjectHome } from './ProjectHome'
 
 export default function FeaturedProjects() {
   let { project } = useParams();
@@ -17,12 +18,16 @@ export default function FeaturedProjects() {
 
   return (
     <div>
-     { 
+     {/* { 
         (projects === [] || projects === undefined)? 
         'No Projects' : 
         projects.map(project=>{
-          return <div>{project.name}</div>
-        })}
+          return <ProjectHome project={'serenecity'}/>
+        })} */}
+        <ProjectHome project={project}/>
     </div>
   );
 }
+
+
+//google-site-verification=MEBcrodqjBgt4q4DV27mpvwJ92nOmTIUtYiBdJ6o5gQ

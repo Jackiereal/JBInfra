@@ -53,16 +53,25 @@ const projectList = [
     {
         id: 1029,
         title : 'SERENE CITY',
+        name: 'serenecity',
         description : " JB's Serene city is a 540 acre layout with Residential Plotting"
     },
     {
         id: 1040,
         title : 'SERENE VILLAS',
+        name: 'serenvillas',
         description : " Serene Villas is HMDA approved 42 Acre Villa Project at Adibatla"
     },
     {
         id: 1048,
         title : 'SERENE RESORT',
+        name: 'sereneresort',
+        description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
+    },
+    {
+        id: 1043,
+        title : 'SERENE NATURE VALLEY',
+        name: 'serenenaturevalley',
         description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
     },
 ]
@@ -90,7 +99,7 @@ export const Timeline = ()=>{
         <div className="demo-card demo-card--step3" data-aos="fade-up">
 			<div className="head">
 				<div className="number-box">
-                    <ProjectCard project={projectList[2]}/>
+                    <ProjectCard project={projectList[3]}/>
 				</div>
 			</div>
 			
@@ -106,7 +115,7 @@ export const Timeline = ()=>{
     
 	</div>
     <Button className={classes.cardbutton}>
-                            Read More
+        Read More
     </Button>
     </section>
     )

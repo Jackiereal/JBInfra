@@ -33,6 +33,12 @@ const useStyles = makeStyles({
         verticalAlign:'middle',
     
       },
+      heading:{
+        color: '#f78320',
+        fontSize: '18px',
+        marginBottom: '10px',
+        textAlign:'center',
+       },
 })
 
 const handleMapClick = ()=>{
@@ -41,16 +47,22 @@ const handleMapClick = ()=>{
 
 export const Map = (props:any) =>{
     const classes = useStyles();
+    const address = props.address
     return (
         <Grid container>
-            <Card className={classes.cardMedia} onClick={handleMapClick}>
-                <CardMedia
-                        className={classes.media}
-                        image={props.map}
-                        title="Aboutus"
+            <Grid item xs={12}>
+                <Typography className={classes.heading}>{address.type} LOCATION</Typography>
+            </Grid>
+            <Grid item xs ={12}>
+                <Card className={classes.cardMedia} onClick={handleMapClick}>
+                    <CardMedia
+                            className={classes.media}
+                            image={address.map}
+                            title="Aboutus"
 
-                    />
-            </Card>
+                        />
+                </Card>
+            </Grid>
         </Grid>
     )
 }
