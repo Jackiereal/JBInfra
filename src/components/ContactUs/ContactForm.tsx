@@ -1,12 +1,13 @@
 import {
     Container,
     Typography,
-    Box,
-    TextField,
-    Button,
+    Button
    
 } from '@material-ui/core';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles({
     rootGrid:{
@@ -22,6 +23,15 @@ const useStyles = makeStyles({
       marginTop:'25px',
       marginBottom:'20px'
     },
+    textField:{
+      color:'#f78320',
+    },
+    contactButton:{
+      background:'#f78320',
+      color:'#fff',
+      float:'left',
+      margin:'7px 0 0 7px',
+    }
 })
 
 export const ContactForm = ()=>{
@@ -29,31 +39,32 @@ export const ContactForm = ()=>{
     return (
         <Container fixed>
             <Typography  classes={{ root : classes.root}}>Message Us</Typography>
-            <form>
-      <TextField  size="small"  margin="normal" label="Full Name" variant="outlined" />
-      <TextField  size="small" margin="normal"  label="Email" variant="outlined"/>
-      <TextField  size="small" margin="normal" label="Mobile" variant="outlined" />
-      <TextField  size="small" margin="normal" label="Subject" variant="outlined" />
-      <TextField  size="small" fullWidth margin="normal" label="Message" variant="outlined" />
-    </form>
-            {/* <Box
-      component="form"
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-      }}
-    //   sx={{
-    //     '& > :not(style)': { m: 1, width: '25ch' },
-    //   }}
-    //   noValidate
-    //   autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="Your Name" variant="outlined" />
-      <TextField id="outlined-basic" label="Email id" variant="outlined" />
-      <TextField id="outlined-basic" label="Mobile" variant="outlined" />
-      <TextField id="outlined-basic" label="Subject" variant="outlined" />
-       <TextField id="outlined-basic" label="Your message" fullWidth variant="outlined" />
-    </Box> */}
+            <Box
+              component="form"
+              sx={{
+                '& .MuiTextField-root': { m: 1, float:'left' },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <div>
+                <TextField color="primary" size="small" label="Full Name" variant="outlined" />
+                <TextField className={classes.textField} size="small" label="Email" variant="outlined"/>
+              </div>
+              <div>
+                <TextField className={classes.textField} size="small" label="Mobile" variant="outlined" />
+                <TextField className={classes.textField} size="small" label="Subject" variant="outlined" />
+              </div>
+              <div>
+                <TextField className={classes.textField} size="small" fullWidth label="Message" variant="outlined" />
+              </div>
+              <div>
+                <Button classes={{ root : classes.contactButton}} >Message Us </Button>
+              </div>
+            
+            </Box>
+
+            
         </Container>
     )
 }

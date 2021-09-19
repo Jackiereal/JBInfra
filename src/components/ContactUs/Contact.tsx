@@ -11,7 +11,7 @@ import { ContactForm } from "./ContactForm";
 
 const useStyles = makeStyles({
   rootGrid:{
-    marginBottom:'100px',
+    marginBottom:'50px',
     background:'#eee',
   },
   root: {
@@ -35,6 +35,7 @@ media: {
     paddingTop: '56.25%', // 16:9,
     boxShadow:'none',
     border:'none',
+    verticalAlign:'middle',
 
   },
 description: {
@@ -44,7 +45,13 @@ description: {
 },
 cardMedia:{
     boxShadow:'none',
+    width:'90%',
+    margin:'auto',
+    height:'auto',
+    marginTop:'20px',
+    marginBottom:'20px', 
 }
+
 })
 
 export const Contact = ()=>{
