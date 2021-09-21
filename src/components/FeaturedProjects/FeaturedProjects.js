@@ -89,7 +89,7 @@ export default function FeaturedProjects() {
 
   return (
     <div>
-        (<Container fixed classes={{root : classes.containerRoot}}>
+        <Container fixed classes={{root : classes.containerRoot}}>
 
              <Card classes={{root: classes.cardRoot}}>
                 <CardMedia
