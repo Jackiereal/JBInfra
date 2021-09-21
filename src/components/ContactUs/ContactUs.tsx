@@ -1,4 +1,5 @@
-import { Introduction } from "./../AboutPage/Introduction";
+// import { Introduction } from "./../AboutPage/Introduction";
+import { Introduction } from "./../HomePage/Introduction";
 import { Quote } from './../AboutPage/Quote';
 import { Contact } from "./Contact";
 import { Address  } from "./Address";

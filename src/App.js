@@ -6,6 +6,7 @@ import { Gallery } from './components/Gallery/Gallery'
 import { ContactUs } from './components/ContactUs/ContactUs'
 import { HomePage } from './components/HomePage/HomePage'
 import { Brochures } from './components/Brochures/Brochures'
+// import { Introduction } from "./components/HomePage/Introduction";
 // import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
 import FeaturedProjects from './components/FeaturedProjects/FeaturedProjects'
 import { BrowserRouter as Router,

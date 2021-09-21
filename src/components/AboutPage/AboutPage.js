@@ -1,4 +1,5 @@
-import { Introduction } from "./Introduction";
+// import { Introduction } from "./Introduction";
+import { Introduction } from "./../HomePage/Introduction";
 import { useState, useEffect } from 'react';
 // import { useParams } from "react-router-dom";
 import { getAboutUs } from '../../services/services';

@@ -53,24 +53,28 @@ const projectList = [
     {
         id: 1029,
         title : 'SERENE CITY',
+        img: '1.jpg',
         name: 'serenecity',
         description : " JB's Serene city is a 540 acre layout with Residential Plotting"
     },
     {
         id: 1040,
         title : 'SERENE VILLAS',
+        img: '2.jpg',
         name: 'serenvillas',
         description : " Serene Villas is HMDA approved 42 Acre Villa Project at Adibatla"
     },
     {
         id: 1048,
         title : 'SERENE RESORT',
+        img: '3.jpg',
         name: 'sereneresort',
         description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
     },
     {
         id: 1043,
-        title : 'SERENE NATURE VALLEY',
+        title : 'NATURE VALLEY',
+        img: '4.jpg',
         name: 'serenenaturevalley',
         description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
     },
@@ -107,7 +111,7 @@ export const ProjectTimeline = ()=>{
         <div className="demo-card demo-card--step4" data-aos="fade-up">
 			<div className="head">
 				<div className="number-box">
-                    <ProjectCard project={projectList[0]}/>
+                    <ProjectCard project={projectList[2]}/>
 				</div>
 			</div>
 			

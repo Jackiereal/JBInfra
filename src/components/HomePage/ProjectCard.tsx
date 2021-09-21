@@ -35,7 +35,9 @@ const useStyles = makeStyles({
 });
 
 export const ProjectCard = (props:any)=>{
-    let img = `https://picsum.photos/id/${props.project.id}/240/240`
+    // let img = `https://picsum.photos/id/${props.project.id}/240/240`
+    let img = props.project.img
+    console.log(props.project.img)
     const classes = useStyles() 
     return (
         <>

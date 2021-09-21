@@ -19,8 +19,8 @@ import {
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      // backgroundColor:'#f78320',
-      backgroundColor: 'transparent',
+      backgroundColor:'#f78320',
+      // backgroundColor: 'transparent',
       boxShadow:'none',
     },
     rootScroll: {
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
    
-    menuButtonHighlighted: {
+    menuButtonHighlightedScroll: {
       backgroundColor: '#f78320',
       color: '#fff',
       marginRight: theme.spacing(2),
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#f78320',
       }
     },
-    menuButtonHighlightedScroll: {
+    menuButtonHighlighted: {
       backgroundColor: '#fff',
       color: '#f78320',
       marginRight: theme.spacing(2),
@@ -78,12 +78,15 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     active:{
-      background:'#f78320',
+      // background:'#f78320',
+      background:'#fff',
       textDecoration:'none',
     },
     activeLink:{
       textDecoration:'none',
-      color:'#fff',
+      // color:'#fff',
+      color:'#f78320',
+      
     },
     link:{
       textDecoration:'none',
@@ -139,9 +142,12 @@ export const Header = ()=>{
         <div className={classes.root}>
             <AppBar 
               position="fixed" 
+              // classes={{
+              //   root:scroll ? classes.rootScroll : classes.root,
+              // }}
               classes={{
-                root:scroll ? classes.rootScroll : classes.root,
-              }}
+                  root:classes.root,
+                }}
             >
             <Toolbar >
                 <div className={classes.logoContainer}>
@@ -178,10 +184,10 @@ export const Header = ()=>{
                   }
                 }}
                 >
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenenaturevalley" ? classes.activeLink : classes.menuLink} to="/serenenaturevalley">Serene Nature Valley</Link></MenuItem>
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenecity" ? classes.activeLink : classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenevillas" ? classes.activeLink : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "sereneresorts" ? classes.activeLink : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenenaturevalley" ? classes.active : ""}><Link className={splitLocation[1] === "serenenaturevalley" ? classes.activeLink : classes.menuLink} to="/serenenaturevalley">Nature Valley</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenecity" ? classes.active : ""}><Link className={splitLocation[1] === "serenecity" ? classes.activeLink : classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenevillas" ? classes.active : ""}><Link className={splitLocation[1] === "serenevillas" ? classes.activeLink : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "sereneresorts" ? classes.active : ""}><Link className={splitLocation[1] === "sereneresorts" ? classes.activeLink : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
                 </Menu>
 
 
