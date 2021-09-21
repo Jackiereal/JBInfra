@@ -29,13 +29,17 @@ const useStyles = makeStyles({
     containerRoot:{
         // marginTop:'50px',
         // backgroundImage:  'url("intro1.gif")',
-        backgroundImage:  'url("intro2.png")',
-        backgroundSize:'100% auto',
+        // backgroundImage:  'url("intro2.png")',
+        // backgroundSize:'100% auto',
         height:'850px',
         width:'100%',
         backgroundRepeat: 'no-repeat',
-        paddingTop:'150px',
-        paddingLeft:'100px'
+        margin:'0',
+        padding:'0',
+    },
+    img:{
+        width:'100%',
+        height:'auto',
     },
     textFirst:{
         color:'#fff',
@@ -65,16 +69,12 @@ const useStyles = makeStyles({
     }
 })
 
-export const Introduction = ()=>{
+export const Introduction = (props:any)=>{
     const classes = useStyles();
+    console.log(props)
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
-            <div>
-                
-            </div>
-            <Typography align='left' className={classes.textFirst}>JB SERENE</Typography>
-            <Typography align='left' className={classes.textSecond}>CLUBHOUSE</Typography>
-            <div className={classes.verticalBar}>Your happiness begins here</div>
+            <img className={classes.img} src={props.image} ></img>
         </Container>
     )
 }

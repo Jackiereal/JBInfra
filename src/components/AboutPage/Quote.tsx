@@ -13,14 +13,15 @@ const useStyles = makeStyles({
     
     containerRoot:{
         
-        backgroundImage:  'url("quote.png")',
+        backgroundImage:  'url("quote2.png")',
         backgroundSize:'100% auto',
-        height:'850px',
         width:'100%',
+        height:'850px',
         backgroundRepeat: 'no-repeat',
         // paddingTop:'200px',
         paddingLeft:'100px',
-        marginTop:'-150px'
+        marginTop:'-125px',
+        marginBottom:'30px',
     },
     textFirst:{
         color:'#fff',
@@ -54,7 +55,6 @@ export const Quote = ()=>{
     const classes = useStyles();
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
-
         </Container>
     )
 }

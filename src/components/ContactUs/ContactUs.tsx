@@ -1,5 +1,5 @@
-// import { Introduction } from "./../AboutPage/Introduction";
-import { Introduction } from "./../HomePage/Introduction";
+import { Introduction } from "./../AboutPage/Introduction";
+// import { Introduction } from "./../HomePage/Introduction";
 import { Quote } from './../AboutPage/Quote';
 import { Contact } from "./Contact";
 import { Address  } from "./Address";
@@ -38,7 +38,7 @@ export const ContactUs = ()=>{
 
     return (
         <div>
-            <Introduction/>
+           <Introduction image={'contactusintro.png'}/>
             <Contact/>
             <Grid container xs={12} style={{ 'marginBottom' : '40px'}}>
                 <Grid item xs ={6}>

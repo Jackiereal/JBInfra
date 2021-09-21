@@ -1,5 +1,5 @@
-// import { Introduction } from "./Introduction";
-import { Introduction } from "./../HomePage/Introduction";
+import { Introduction } from "./Introduction";
+// import { Introduction } from "./../HomePage/Introduction";
 import { useState, useEffect } from 'react';
 // import { useParams } from "react-router-dom";
 import { getAboutUs } from '../../services/services';
@@ -65,7 +65,7 @@ export default function About(){
   const description = 'JB Infra Projects is a 19 year old real estate firm which has built its reputation for developing wide range of affordable real estate ventures in and around Ibrahimpatnam  Adibatla areas in Hyderabad. The promoters have vast experience with deep domain knowledge in identifying, developing, marketing and delivering real estate projects they undertake. All the ventures are planned and executed with custom-made features keeping targeted customers needs in mind.JB Infra Projects offers wide range of plots, customized housing options, residential investments in fast developing locations in and around ORR in Hyderabad. JB Infra Projects primary focus is on building ever lasting relationships with its customers.'
     return (
     <div>
-            <Introduction/>
+            <Introduction image={'aboutusintro.png'}/>
             {/* <AboutUs aboutus={projects.Aboutus.description}/> */}
             <AboutUs aboutus={description}/> 
             <Directors directors={directors}/>

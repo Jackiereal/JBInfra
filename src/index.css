@@ -16,3 +16,8 @@ code {
   font-family: 'Avenir next';
   src: local('Avenir next'), url(font.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'regular';
+  src: local('Avenir next'), url(font.ttf) format('truetype');
+}

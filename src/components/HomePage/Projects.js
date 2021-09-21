@@ -15,10 +15,12 @@ import {
 
 const useStyles = makeStyles({
     containerRoot:{
-        backgroundImage:  'url("design.png")',
+        backgroundImage:  'url("design1.png")',
         backgroundPosition: 'left',
         backgroundSize:'100% auto',
         backgroundRepeat: 'no-repeat',
+        // height:'400px',
+        width:'100%',
     },
   root: {
     width: '100%',
@@ -50,6 +52,11 @@ const useStyles = makeStyles({
         color:'#f78320',
     },
   },
+  image:{
+      width:'100%',
+      height:'auto'
+      
+  }
 
 });
 
@@ -88,6 +95,7 @@ export const Projects = ()=>{
     ]
     return (
         <Container fixed classes={{root: classes.containerRoot}}>
+            {/* <img classes={{root: classes.image}} src="design1.png"></img> */}
             <Typography  classes={{ root : classes.root}}>OUR PRIME PROJECTS</Typography>
             <Grid item xs={12}>
                 <Grid container justifyContent="center" spacing={4}>

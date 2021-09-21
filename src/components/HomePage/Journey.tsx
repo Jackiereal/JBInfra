@@ -23,8 +23,14 @@ const useStyles = makeStyles({
 
     },
     containerRoot:{
-        marginTop:'50px'
-    }
+        marginTop:'50px',
+        backgroundImage:  'url("journey.png")',
+        backgroundPosition: 'left',
+        backgroundSize:'100% auto',
+        backgroundRepeat: 'no-repeat',
+        height:'1100px',
+        width:'100%',
+    },
 })
 
 export const Journey = ()=>{
