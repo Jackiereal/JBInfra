@@ -102,7 +102,7 @@ export const Footer = ()=>{
     ]
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
+            {/* <Grid container spacing={3}>
                 <Grid item xs={3}>
                     
                 </Grid>
@@ -111,25 +111,25 @@ export const Footer = ()=>{
                         <FooterLinks linkgroup={item}/>
                     </Grid>
                 ))}
-            </Grid>
+            </Grid> */}
             <Grid container spacing={3} >
                 <Grid item xs={6} className={classes.simpletext}>
                     <Typography variant='body1'  align="left">
-                        Copyright 2019 JB Infra Projects
+                        Copyright 2021 JB Infra Projects
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={3}>
                 <IconButton >
-                         <FacebookIcon />
+                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com','_blank')}}/>
                      </IconButton>
                      <IconButton >
-                         <TwitterIcon />
+                         <TwitterIcon onClick={() => { window.open('https://www.twitter.com','_blank')}}/>
                      </IconButton>
                      <IconButton >
-                         <InstagramIcon />
+                         <InstagramIcon onClick={() => { window.open('https://www.instagram.com','_blank')}}/>
                      </IconButton>
                      <IconButton >
-                         <LinkedInIcon />
+                         <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com','_blank')}}/>
                      </IconButton>
                 </Grid>
             </Grid>

@@ -19,7 +19,7 @@ export const ContactUs = ()=>{
             `sales@jbinfraprojects.in`,
             `040 2409 0939`, 
          ],
-         map:'aboutus.png',
+         map:'map1.png',
         },
         {
             type : 'BRANCH OFFICE',
@@ -30,7 +30,7 @@ export const ContactUs = ()=>{
                 `customercare@jbinfraprojects.com`,
                 `040 2955 4577` 
             ],
-            map:'aboutus.png',
+            map:'map2.png',
            }
     ]
 

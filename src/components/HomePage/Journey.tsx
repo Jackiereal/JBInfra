@@ -3,7 +3,7 @@ import {
     Typography,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Timeline } from './Timeline'
+import { ProjectTimeline } from './Timeline'
 
 const useStyles = makeStyles({
     root:{
@@ -33,7 +33,7 @@ export const Journey = ()=>{
         <Container fixed classes={{root : classes.containerRoot}}>
             <Typography  classes={{ root : classes.root}}>OUR JOURNEY</Typography>
             <Typography  classes={{ root : classes.caption}}>Completed Projects</Typography>
-            <Timeline/>
+            <ProjectTimeline/>
         </Container>
     )
 }

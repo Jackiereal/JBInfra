@@ -41,3 +41,14 @@ export const getProjectImages = async (id: number) =>{
     console.log(images)
     return images;
 }
+
+export const getFeaturedProjects = async (projectName:String)=>{
+    console.log(projectName)
+    const project = await axios
+        .get('./serenecity.json')
+        .then(response =>{
+            return response;
+        })
+    console.log(project)
+    return project
+}

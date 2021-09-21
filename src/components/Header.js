@@ -178,10 +178,10 @@ export const Header = ()=>{
                   }
                 }}
                 >
+                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenenaturevalley" ? classes.activeLink : classes.menuLink} to="/serenenaturevalley">Serene Nature Valley</Link></MenuItem>
                   <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenecity" ? classes.activeLink : classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
                   <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenevillas" ? classes.activeLink : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
                   <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "sereneresorts" ? classes.activeLink : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
-                  <MenuItem onClick={handleClose} ><Link className={splitLocation[1] === "serenenaturevalley" ? classes.activeLink : classes.menuLink} to="/serenenaturevalley">Serene Nature Valley</Link></MenuItem>
                 </Menu>
 
 
