@@ -8,6 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import { CopyrightOutlined } from '@material-ui/icons';
 
  
 
@@ -20,8 +21,8 @@ const useStyles = makeStyles({
       },
     simpletext:{
         color: '#4a4a4a',
-        fontSize: '10px',
-         alignSelf:'center',
+        fontSize: '13px',
+        alignSelf:'center',
         // alignContent:'center',
       },
       iconButton: {
@@ -45,6 +46,18 @@ const useStyles = makeStyles({
         color: '#4a4a4a',
         fontSize: '12px',
       },
+      copyrightfont:{
+          fontSize: '18px',
+          marginRight:'5px',
+          paddingTop:'5px',
+      },
+      gridContainer:{
+        marginTop:'20px',
+      },
+      logoImage:{
+          width:'100px',
+          margin:'auto',
+      }
       
 })
 
@@ -70,49 +83,56 @@ export const Footer = ()=>{
     const classes = useStyles();
     const FooterLinksArray = [
         {
-            title:'For candidates',
+            title:'Head Office',
             links: [
-                'text',
-                'sample text',
-                'new text',
-                'sample new text',
-                'new link'
+                'Plot No : 1, 2nd & #rd Floor, Adj. B.D.Reddy',
+                'Gardens, Chaitanya Nagar, B.N. Reddy Nagar',
+                'Hyderabad - 500 070',
+                'sales@jbinfraprojects.in',
+                '040 2409 0939'
             ]
         },
-        {
-            title:'About us',
-            links: [
-                'text',
-                'sample text',
-                'new text',
-                'sample new text',
-                'new link'
-            ]
-        },
-        {
-            title:'Helpful Resources',
-            links: [
-                'text',
-                'sample text',
-                'new text',
-                'sample new text',
-                'new link'
-            ]
-        }
     ]
     return (
         <div className={classes.root}>
-            {/* <Grid container spacing={3}>
-                <Grid item xs={3}>
-                    
+            <Grid container spacing={3}>
+                <Grid item xs={12} sm={3}>
+                    <img className={classes.logoImage} src={'logo-orange.png'} alt="logo"></img>
                 </Grid>
                 {FooterLinksArray.map((item)=>(
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={3}>
                         <FooterLinks linkgroup={item}/>
                     </Grid>
                 ))}
-            </Grid> */}
-            <Grid container spacing={3} >
+                <Grid item xs={12} sm={3} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                        customercare@jbinfraprojects.com
+                    </Typography>
+                    <Typography className={classes.simpletext}  align="left">
+                        040 2955 4577
+                    </Typography>
+                    
+                    <Typography className={classes.simpletext}  align="left">
+                        <CopyrightOutlined className={classes.copyrightfont}/>Copyright 2021 JB Infra Projects
+                        
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                <IconButton >
+                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com','_blank')}}/>
+                     </IconButton>
+                     <IconButton >
+                         <TwitterIcon onClick={() => { window.open('https://www.twitter.com','_blank')}}/>
+                     </IconButton>
+                     <IconButton >
+                         <InstagramIcon onClick={() => { window.open('https://www.instagram.com','_blank')}}/>
+                     </IconButton>
+                     <IconButton >
+                         <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com','_blank')}}/>
+                     </IconButton>
+                </Grid>
+            </Grid>
+            {/* <Grid container spacing={3} >
                 <Grid item xs={6} className={classes.simpletext}>
                     <Typography variant='body1'  align="left">
                         Copyright 2021 JB Infra Projects
@@ -132,7 +152,7 @@ export const Footer = ()=>{
                          <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com','_blank')}}/>
                      </IconButton>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </div>
         // <Container fixed className={classes.root}>
         //     <Grid item xs={12}>

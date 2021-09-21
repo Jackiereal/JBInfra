@@ -19,35 +19,38 @@ import {
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor:'#f78320',
-      // backgroundColor: 'transparent',
+      // backgroundColor:'#f78320',
+      backgroundColor: 'transparent',
+      // backgroundColor:'#fff',
       boxShadow:'none',
+      
     },
     rootScroll: {
       flexGrow: 1,
-      backgroundColor:'#f78320',
-      opacity: '0.9',
+      backgroundColor:'#fff',
+      opacity: '1',
     },
     logoContainer:{
       
     },
     logo:{
-      height:'50px',
-      width:'auto',
+      height:'auto',
+      width:'160px',
       marginRight:'20px',
       marginLeft:'20px',
       marginTop: '5px',
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
       fontSize: '13px',
       fontFamily: 'Avenir next',
-      textDecoration:'none'
+      textDecoration:'none',
+      color:'#f78320'
     },
     menuLink: {
       textDecoration: 'none ',
-      color: '#fff',
-
+      // color: '#fff',
+      color:'#f78320',
     },
    
     menuButtonHighlightedScroll: {
@@ -61,13 +64,13 @@ const useStyles = makeStyles((theme) => ({
       }
     },
     menuButtonHighlighted: {
-      backgroundColor: '#fff',
-      color: '#f78320',
+      backgroundColor: '#f78320',
+      color: '#fff',
       marginRight: theme.spacing(2),
       fontSize: '13px',
       '&:hover': {
-        backgroundColor: '#f78320',
-        color: '#fff',
+        backgroundColor: '#fff',
+        color: '#f78320',
       }
     },
     menuItemIcon:{
@@ -82,13 +85,18 @@ const useStyles = makeStyles((theme) => ({
       background:'#fff',
       textDecoration:'none',
     },
+    activeScrolled:{
+      // background:'#f78320',
+      background:'#f78320',
+      textDecoration:'none',
+    },
     activeLink:{
       textDecoration:'none',
       // color:'#fff',
       color:'#f78320',
       
     },
-    link:{
+    activeLinkScroll:{
       textDecoration:'none',
       color:'#fff',
     }
@@ -142,20 +150,20 @@ export const Header = ()=>{
         <div className={classes.root}>
             <AppBar 
               position="fixed" 
-              // classes={{
-              //   root:scroll ? classes.rootScroll : classes.root,
-              // }}
               classes={{
-                  root:classes.root,
-                }}
+                root:scroll ? classes.rootScroll : classes.root,
+              }}
+              // classes={{
+              //     root:classes.root,
+              //   }}
             >
             <Toolbar >
                 <div className={classes.logoContainer}>
                   <img src={"logoWhite.png"} className={classes.logo} alt="logo" />
                 </div>
                
-                  <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "" ? classes.active : ""} ><Link  classes={classes.menuLink} className={splitLocation[1] === "" ? classes.activeLink : classes.menuLink} to="/">HOME </Link></Button>
-                  <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "about" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "about" ? classes.activeLink : classes.menuLink}  to="/about">ABOUT US </Link></Button>
+                  <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "" ? (scroll ? classes.activeScrolled: classes.active ) : ""} ><Link  classes={classes.menuLink} className={splitLocation[1] === "" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/">HOME </Link></Button>
+                  <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "about" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "about" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/about">ABOUT US </Link></Button>
                
                 {/* <Link to="/featured-projects">
                   <Button color="inherit" classes={{ root : classes.menuButton}}>
@@ -164,7 +172,7 @@ export const Header = ()=>{
                   </Button>
                 </Link> */}
 
-                <Button color="inherit" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick} className={splitLocation[1] === "1" ? classes.active : ""}>
+                <Button color="inherit" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
                   FEATURED PROJECTS
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
@@ -178,16 +186,16 @@ export const Header = ()=>{
                 TransitionComponent={Fade}
                 PaperProps={{
                   style: {
-                    background: "#f78320",
+                    background: "#fff",
                     marginTop:'30px',
                     marginLeft:'10px'
                   }
                 }}
                 >
-                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenenaturevalley" ? classes.active : ""}><Link className={splitLocation[1] === "serenenaturevalley" ? classes.activeLink : classes.menuLink} to="/serenenaturevalley">Nature Valley</Link></MenuItem>
-                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenecity" ? classes.active : ""}><Link className={splitLocation[1] === "serenecity" ? classes.activeLink : classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
-                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenevillas" ? classes.active : ""}><Link className={splitLocation[1] === "serenevillas" ? classes.activeLink : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
-                  <MenuItem onClick={handleClose} className={splitLocation[1] === "sereneresorts" ? classes.active : ""}><Link className={splitLocation[1] === "sereneresorts" ? classes.activeLink : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
+                  <MenuItem onClick={handleClose}  className={splitLocation[1] === "serenenaturevalley" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenenaturevalley" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/serenenaturevalley">Nature Valley</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenecity" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenecity" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "serenevillas" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenevillas" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "sereneresorts" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "sereneresorts" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
                 </Menu>
 
 
@@ -197,10 +205,10 @@ export const Header = ()=>{
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
-                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? classes.activeLink : classes.menuLink}  to="/gallery">Gallery </Link></Button>
+                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/gallery">Gallery </Link></Button>
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} ><a classes={classes.menuLink} href="sample.pdf" target = "_blank"  to="/home">BROCHURES </a></Button> */}
-                <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ? classes.active : ""}>
+                <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ?(scroll ? classes.activeScrolled: classes.active ) : ""}>
                   BROCHURE
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                 </Button>
@@ -214,17 +222,17 @@ export const Header = ()=>{
                 TransitionComponent={Fade}
                 PaperProps={{
                   style: {
-                    background: "#f78320",
+                    background: "#fff",
                     marginTop:'30px',
                     marginLeft:'10px'
                   }
                 }}
                 >
-                  <MenuItem className={classes.menuLink} onClick={handleCloseBrochure} ><a className={classes.link} href="jb-serene-city.pdf" target = "_blank">Serene City</a></MenuItem>
-                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link} href="jb-serene-villas.pdf" target = "_blank">Serene Villas</a></MenuItem>
-                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.link}href="jb-serene-resort.pdf" target = "_blank">Serene Resorts</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-serene-city.pdf" target = "_blank">Serene City</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-serene-villas.pdf" target = "_blank">Serene Villas</a></MenuItem>
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink}href="jb-serene-resort.pdf" target = "_blank">Serene Resorts</a></MenuItem>
                 </Menu>
-                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "contactus" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "contactus" ? classes.activeLink : classes.menuLink}  to="/contactus">CONTACT US </Link></Button>
+                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "contactus" ? (scroll ? classes.activeScrolled: classes.active ): ""}><Link classes={classes.menuLink} className={splitLocation[1] === "contactus" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/contactus">CONTACT US </Link></Button>
                 <Button color="inherit" aria-controls="fade-plot" aria-haspopup="true" onClick={handleClickPlot}  classes={{ root : scroll? classes.menuButtonHighlightedScroll : classes.menuButtonHighlighted}}>
                   PLOT AVAILABILITY
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
@@ -239,16 +247,16 @@ export const Header = ()=>{
                 TransitionComponent={Fade}
                 PaperProps={{
                   style: {
-                    background: "#f78320",
+                    background: "#fff",
                     marginTop:'30px',
                     marginLeft:'10px'
                   }
                 }}
                 >
-                  <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.link} href="http://43.240.65.20/NextoraMaps/home/project/12345" target = "_blank">Serene City</a></MenuItem>
-                <MenuItem onClick={handleClosePlot} ><a className={classes.link} href="http://43.240.65.20/NextoraMaps/home/project/JBEC001" target = "_blank">Serene Villas</a></MenuItem>
-                <MenuItem onClick={handleClosePlot} ><a className={classes.link}href="http://43.240.65.20/NextoraMaps/home/project/JB00011" target = "_blank">Serene Resorts</a></MenuItem>
-                <MenuItem onClick={handleClosePlot} ><a className={classes.link}href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">Serene Nature Valley</a></MenuItem>
+                  <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/12345" target = "_blank">Serene City</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JBEC001" target = "_blank">Serene Villas</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB00011" target = "_blank">Serene Resorts</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">Serene Nature Valley</a></MenuItem>
               </Menu>
             </Toolbar>
             </AppBar>

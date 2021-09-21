@@ -14,13 +14,19 @@ import {
   } from 'react-router-dom'
 
 const useStyles = makeStyles({
+    containerRoot:{
+        backgroundImage:  'url("design.png")',
+        backgroundPosition: 'left',
+        backgroundSize:'100% auto',
+        backgroundRepeat: 'no-repeat',
+    },
   root: {
     width: '100%',
     color: '#f78320',
     fontSize: '24px',
     fontFamily: 'Avenir next',
-    backgroundColor: '#fff',
-    marginTop:'75px',
+    backgroundColor: 'transparent',
+    marginTop:'25px',
     marginBottom:'20px'
   },
   cardbutton:{
@@ -81,7 +87,7 @@ export const Projects = ()=>{
         },
     ]
     return (
-        <Container fixed>
+        <Container fixed classes={{root: classes.containerRoot}}>
             <Typography  classes={{ root : classes.root}}>OUR PRIME PROJECTS</Typography>
             <Grid item xs={12}>
                 <Grid container justifyContent="center" spacing={4}>
