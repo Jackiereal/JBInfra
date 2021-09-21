@@ -101,7 +101,7 @@ export default function FeaturedProjects() {
             </Card> 
             
         </Container>
-         <ProjectHome project={projects} projectName={project}/>)
+         <ProjectHome project={SERENECITY} projectName={project}/>)
         
     </div>
   );

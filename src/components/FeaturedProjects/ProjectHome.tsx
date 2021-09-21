@@ -39,9 +39,6 @@ export const ProjectHome = (props:any)=>{
     console.log(projectName)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
-    console.log(props.project)
-    console.log(projectHighlights);
-    console.log(locationHighlights)
 
     useEffect(()=>{
         
