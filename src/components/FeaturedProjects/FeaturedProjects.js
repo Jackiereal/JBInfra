@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { getProjects, getFeaturedProjects } from '../../services/services';
+// import { getProjects, getFeaturedProjects } from '../../services/services';
 import { ProjectHome } from './ProjectHome';
 import {
   Container,
@@ -50,7 +50,7 @@ export default function FeaturedProjects() {
   const classes = useStyles()
   let { project } = useParams();
   const [projects,setProjects] = useState({});
-  const [isError,setIsError] = useState(false);
+  // const [isError,setIsError] = useState(false);
   useEffect(()=>{
     console.log(project)
     switch (project) {

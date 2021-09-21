@@ -1,7 +1,5 @@
 import {
     Container,
-    Card,
-    CardMedia,
     Typography
 
 } from '@material-ui/core';

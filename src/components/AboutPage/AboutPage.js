@@ -1,15 +1,15 @@
 import { Introduction } from "./Introduction";
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { getAboutUs } from '../../services/services';
 import { AboutUs } from '../AboutPage/AboutUs';
 import { Directors } from '../AboutPage/Directors';
 import { Quote } from './Quote'
 
 export default function About(){
-  let { project } = useParams();
+  // let { project } = useParams();
   const [projects,setProjects] = useState([]);
-  const [isError,setIsError] = useState(false);
+  // const [isError,setIsError] = useState(false);
 
   useEffect(()=>{
     async function fetchProjects(){
