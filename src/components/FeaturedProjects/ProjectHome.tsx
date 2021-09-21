@@ -53,7 +53,7 @@ export const ProjectHome = (props:any)=>{
                 <Grid item xs={12}>
                     <Typography className={classes.description}>{props.project.overview}</Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Typography className={classes.title}>{props.project.titleproject}</Typography>
                     <ul>
                     {
@@ -65,7 +65,7 @@ export const ProjectHome = (props:any)=>{
                     }
                     </ul>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Typography className={classes.title}>{props.project.titlelocation}</Typography>
                     <ul>
                     {
