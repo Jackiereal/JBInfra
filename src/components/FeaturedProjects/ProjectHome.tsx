@@ -2,6 +2,7 @@ import {
     Container, Grid, Typography
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import { useEffect } from 'react';
 
 const useStyles = makeStyles({
     grid:{
@@ -34,11 +35,18 @@ const useStyles = makeStyles({
 
 export const ProjectHome = (props:any)=>{
     const classes = useStyles();
+    const projectName = props.projectName;
+    console.log(projectName)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
     console.log(props.project)
     console.log(projectHighlights);
     console.log(locationHighlights)
+
+    useEffect(()=>{
+        
+    },[])
+
     return (
         <Container>
             <Grid className={classes.grid} container xs={12}>

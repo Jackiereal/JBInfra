@@ -74,7 +74,7 @@ export const Introduction = ()=>{
     const classes = useStyles();
     const images = [1,2,3,4,5,6,7]
     return (
-        <Carousel stopOnHover={false} dynamicHeight={false} interval={1000} infiniteLoop={true} autoPlay={true} showThumbs={false} showIndicators={false} showArrows={false}>
+        <Carousel stopOnHover={false} dynamicHeight={false} interval={2000} infiniteLoop={true} autoPlay={true} showThumbs={false} showIndicators={false} showArrows={false}>
                 
                 <div><img src="1.jpg" /></div>
                 <div><img src="2.jpg" /></div>
