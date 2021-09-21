@@ -51,8 +51,8 @@ export default function FeaturedProjects() {
   let { project } = useParams();
   const [projects,setProjects] = useState({});
   // const [isError,setIsError] = useState(false);
+  console.log(project)
   useEffect(()=>{
-    console.log(project)
     switch (project) {
       case 'serenecity':
         setProjects(SERENECITY) 
@@ -71,10 +71,9 @@ export default function FeaturedProjects() {
         break;
     
       default:
-        break;
+        setProjects(SERENENATUREVALLEY) 
     }
-    console.log(projects)
-  },[project,projects])
+  },[])
   
 
   // useEffect(()=>{
@@ -90,8 +89,7 @@ export default function FeaturedProjects() {
 
   return (
     <div>
-    
-        <Container fixed classes={{root : classes.containerRoot}}>
+        (<Container fixed classes={{root : classes.containerRoot}}>
 
              <Card classes={{root: classes.cardRoot}}>
                 <CardMedia
@@ -104,7 +102,7 @@ export default function FeaturedProjects() {
             </Card> 
             
         </Container>
-         <ProjectHome project={projects}/>
+         <ProjectHome project={SERENECITY}/>)
         
     </div>
   );
