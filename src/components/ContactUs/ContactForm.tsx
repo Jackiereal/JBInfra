@@ -7,6 +7,8 @@ import {
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import { useState } from 'react';
+
 
 
 const useStyles = makeStyles({
@@ -34,8 +36,49 @@ const useStyles = makeStyles({
     }
 })
 
+ interface MessageProps{
+  name: string,
+  email : string,
+  mobile: string,
+  subject : string,
+  message : string
+}
+
 export const ContactForm = ()=>{
     const classes = useStyles()
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [mobile,setMobile] = useState('');
+    const [subject,setSubject] = useState('');
+    const [message,setMessage] = useState('');
+
+    const handleNameChange = (event:any)=>{
+      setName(event.target.value)
+    }
+    const handleEmailChange = (event:any)=>{
+      setEmail(event.target.value)
+    }
+    const handleMobileChange = (event:any)=>{
+      setMobile(event.target.value)
+    }
+    const handleSubjectChange = (event:any)=>{
+      setSubject(event.target.value)
+    }
+    const handleMessageChange = (event:any)=>{
+      setMessage(event.target.value)
+    }
+
+     const handleMessageClick = async ()=>{
+      let messageObject: MessageProps = {} 
+      messageObject.name = name;
+      messageObject.email = email;
+      messageObject.mobile = mobile;
+      messageObject.subject = subject;
+      messageObject.message = message;
+      console.log(messageObject)
+      
+    }
+
     return (
         <Container fixed>
             <Typography  classes={{ root : classes.root}}>Message Us</Typography>
@@ -48,18 +91,18 @@ export const ContactForm = ()=>{
               autoComplete="off"
             >
               <div>
-                <TextField color="primary" size="small" label="Full Name" variant="outlined" />
-                <TextField className={classes.textField} size="small" label="Email" variant="outlined"/>
+                <TextField color="primary" size="small" label="Full Name" variant="outlined" onChange={handleNameChange}/>
+                <TextField className={classes.textField} size="small" label="Email" variant="outlined" onChange={handleEmailChange}/>
               </div>
               <div>
-                <TextField className={classes.textField} size="small" label="Mobile" variant="outlined" />
-                <TextField className={classes.textField} size="small" label="Subject" variant="outlined" />
+                <TextField className={classes.textField} size="small" label="Mobile" variant="outlined" onChange={handleMobileChange}/>
+                <TextField className={classes.textField} size="small" label="Subject" variant="outlined" onChange={handleSubjectChange}/>
               </div>
               <div>
-                <TextField className={classes.textField} size="small" fullWidth label="Message" variant="outlined" />
+                <TextField className={classes.textField} size="small" fullWidth label="Message" variant="outlined" onChange={handleMessageChange}/>
               </div>
               <div>
-                <Button classes={{ root : classes.contactButton}} >Message Us </Button>
+                <Button classes={{ root : classes.contactButton}} onClick={handleMessageClick}>Message Us </Button>
               </div>
             
             </Box>
