@@ -12,12 +12,28 @@ code {
     monospace;
 }
 
+/* @font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(font.ttf) format('truetype');
+} */
+
 @font-face {
-  font-family: 'Avenir next';
-  src: local('Avenir next'), url(font.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('./fonts/regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'regular';
-  src: local('Avenir next'), url(font.ttf) format('truetype');
+  font-family: 'MontserratSemiBold';
+  src: local('Montserrat'), url('./fonts/semibold.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'MontserratMedium';
+  src: local('Montserrat'), url('./fonts/medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: local('Montserrat'), url('./fonts/bold.ttf') format('truetype');
+}
+

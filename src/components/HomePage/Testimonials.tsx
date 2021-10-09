@@ -13,16 +13,17 @@ const useStyles = makeStyles({
         width: '100%',
         color: '#f78320',
         fontSize: '24px',
-        fontFamily: 'Avenir next',
+        fontFamily: 'Montserrat',
         backgroundColor: '#fff',
         marginTop:'20px',
+        
         
     },
     caption:{
         width: '100%',
         color: '#4a4a4a',
         fontSize: '13px',
-        fontFamily: 'Avenir next',
+        fontFamily: 'Montserrat',
         backgroundColor: '#fff',
 
     },
@@ -34,33 +35,46 @@ const useStyles = makeStyles({
         display:'flex',
         marginBottom:'50px',
         justifyContent:'center',
+        paddingBottom: '50px',
     }
 })
 
 const testimonialList = [
     {
         id: 1029,
-        name : 'TEJA KASUKURTHI',
-        description : " JB's Serene city is a 540 acre layout with Residential Plotting"
+        name : 'Anonymous',
+        description : " Had felt good experience with JB with their service and good potential compa. As all my investments in this company were worthy and in-return hiked my asset value and living style.You made and changed my life meaningful, we are always with you!",
+        image: 'jc.jpg',
     },
     {
         id: 1040,
-        name : 'SAI RAJA',
-        description : " Serene Villas is HMDA approved 42 Acre Villa Project at Adibatla"
+        name : 'Landbloom9290',
+        description : "This is my second time buying plot with JB Infra.Both experiences have been great.On this offer, we got number of consequences due to covid but the company management went above and beyond to close the deal but got delayed a bit.",
+        image: 'jc2.jpg'
+    },
+    {
+        id: 1030,
+        name : 'Teja',
+        description : " Had felt good experience with JB with their service and good potential compa. As all my investments in this company were worthy and in-return hiked my asset value and living style.You made and changed my life meaningful, we are always with you!",
+        image: 'jbr.jpg',
+    },
+    {
+        id: 1050,
+        name : 'Raja',
+        description : "This is my second time buying plot with JB Infra.Both experiences have been great.On this offer, we got number of consequences due to covid but the company management went above and beyond to close the deal but got delayed a bit.",
+        image: 'jbgm.jpg'
+    },
+    {
+        id: 1060,
+        name : 'Rahul',
+        description : "This is my second time buying plot with JB Infra.Both experiences have been great.On this offer, we got number of consequences due to covid but the company management went above and beyond to close the deal but got delayed a bit.",
+        image: 'logo192.png'
     },
     
 ]
 
 export const Testimonials = ()=>{
     const classes = useStyles();
-    const [index, setIndex] = useState(0);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex(item => (item ===  testimonialList.length-1? 0 : item + 1));
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <>
@@ -69,7 +83,7 @@ export const Testimonials = ()=>{
             <Typography  classes={{ root : classes.caption}}>from our customers</Typography>
         </Container>
         <Container fixed classes={{ root : classes.containerContent}}>
-            <TestimonialCard list={testimonialList[index]}></TestimonialCard>
+            <TestimonialCard list={testimonialList}></TestimonialCard>
         </Container>
         </>
     )

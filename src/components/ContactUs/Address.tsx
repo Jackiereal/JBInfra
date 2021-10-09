@@ -9,9 +9,10 @@ const useStyles = makeStyles({
     },
     lines:{
         color: '#4a4a4a',
-        fontSize: '13px',
+        fontSize: '14px',
         // textAlign:'left',
-        padding: '5px',
+        padding: '2px',
+        fontFamily:'Montserrat'
     },
     grid:{
 

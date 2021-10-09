@@ -23,6 +23,7 @@ const useStyles = makeStyles({
         color: '#4a4a4a',
         fontSize: '13px',
         alignSelf:'center',
+        fontFamily: 'Montserrat',
         // alignContent:'center',
       },
       iconButton: {
@@ -40,16 +41,19 @@ const useStyles = makeStyles({
         fontSize: '14px',
         margin: ' 2px 0px',
         textAlign:'left',
+        fontFamily: 'Montserrat',
       },
       text:{
         textAlign:'left',
         color: '#4a4a4a',
         fontSize: '12px',
+        fontFamily: 'Montserrat',
       },
       copyrightfont:{
           fontSize: '18px',
           marginRight:'5px',
           paddingTop:'5px',
+          fontFamily: 'Montserrat',
       },
       gridContainer:{
         marginTop:'20px',
@@ -57,7 +61,13 @@ const useStyles = makeStyles({
       logoImage:{
           width:'100px',
           margin:'auto',
-      }
+      },
+      cardbutton:{
+        "&:hover": {
+            backgroundColor: '#f78320',
+            color:'#fff',
+        },
+      },
       
 })
 
@@ -97,7 +107,7 @@ export const Footer = ()=>{
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12} sm={3}>
-                    <img className={classes.logoImage} src={'logo-orange.png'} alt="logo"></img>
+                    <img className={classes.logoImage} src={'logo-orange.gif'} alt="logo"></img>
                 </Grid>
                 {FooterLinksArray.map((item)=>(
                     <Grid item xs={12} sm={3}>
@@ -118,91 +128,21 @@ export const Footer = ()=>{
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={3}>
-                <IconButton >
-                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com','_blank')}}/>
+                <IconButton className={classes.cardbutton}>
+                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com/JB-INFRA-107826903920956/','_blank')}}/>
                      </IconButton>
-                     <IconButton >
-                         <TwitterIcon onClick={() => { window.open('https://www.twitter.com','_blank')}}/>
+                     <IconButton className={classes.cardbutton} >
+                         <TwitterIcon onClick={() => { window.open('https://twitter.com/Jbinfraofficial','_blank')}}/>
                      </IconButton>
-                     <IconButton >
-                         <InstagramIcon onClick={() => { window.open('https://www.instagram.com','_blank')}}/>
+                     <IconButton className={classes.cardbutton}>
+                         <InstagramIcon onClick={() => { window.open('https://www.instagram.com/jbinfragroupofficial/','_blank')}}/>
                      </IconButton>
-                     <IconButton >
-                         <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com','_blank')}}/>
+                     <IconButton className={classes.cardbutton}>
+                         <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com/company/jb-infraprojects/','_blank')}}/>
                      </IconButton>
                 </Grid>
             </Grid>
-            {/* <Grid container spacing={3} >
-                <Grid item xs={6} className={classes.simpletext}>
-                    <Typography variant='body1'  align="left">
-                        Copyright 2021 JB Infra Projects
-                    </Typography>
-                </Grid>
-                <Grid item xs={3}>
-                <IconButton >
-                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com','_blank')}}/>
-                     </IconButton>
-                     <IconButton >
-                         <TwitterIcon onClick={() => { window.open('https://www.twitter.com','_blank')}}/>
-                     </IconButton>
-                     <IconButton >
-                         <InstagramIcon onClick={() => { window.open('https://www.instagram.com','_blank')}}/>
-                     </IconButton>
-                     <IconButton >
-                         <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com','_blank')}}/>
-                     </IconButton>
-                </Grid>
-            </Grid> */}
         </div>
-        // <Container fixed className={classes.root}>
-        //     <Grid item xs={12}>
-        //         <Grid item xs={3}>
-        //             Item 1
-        //         </Grid>
-        //         <Grid item xs={3}>
-        //         Item 1
-        //         </Grid>
-        //         <Grid item xs={3}>
-        //         Item 1
-        //         </Grid>
-        //         <Grid item xs={3}>
-        //         Item 1   
-        //         </Grid>
-        //     </Grid>
-        //     {/* <div>
-        //         <div className={classes.copyright}>
-        //             <Typography variant='body1' className={classes.simpletext} align="left">
-        //                 Copyright 2019 JB Infra Projects
-        //             </Typography>
-        //         </div>
-        //         <div className={classes.iconButton}>
-        //             <IconButton >
-        //                 <FacebookIcon />
-        //             </IconButton>
-        //             <IconButton >
-        //                 <TwitterIcon />
-        //             </IconButton>
-        //             <IconButton >
-        //                 <InstagramIcon />
-        //             </IconButton>
-        //             <IconButton >
-        //                 <LinkedInIcon />
-        //             </IconButton>
-        //         </div>
-        //     </div> */}
-        //      <div style={{ width: '100%' }}>
-        //         <Box display="flex" p={1} >
-        //             <Box p={1} flexGrow={1} >
-        //             Item 1
-        //             </Box>
-        //             <Box p={1} >
-        //             Item 2
-        //             </Box>
-        //             <Box p={1} >
-        //             Item 3
-        //             </Box>
-        //         </Box>
-        //     </div>
-        // </Container>
+       
     )
 }

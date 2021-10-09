@@ -5,11 +5,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useEffect } from 'react';
 
 const useStyles = makeStyles({
+    container:{
+        maxWidth:'100%',
+    },
     grid:{
         marginTop:'50px',
     },
     title:{
-        fontFamily: 'Avenir Next',
+        fontFamily: 'Montserrat',
         fontSize: '18px',
         textAlign: 'center',
         lineHeight: '36px',
@@ -17,18 +20,34 @@ const useStyles = makeStyles({
         color:'#f78320',
     },
     description:{
-        fontFamily: 'Avenir Next',
-        fontSize: '16px',
+        fontFamily: 'Montserrat',
+        fontSize: '13px',
         textAlign: 'left',
-        lineHeight: '28px',
+        lineHeight: '26px',
         color:'#4a4a4a',
         marginBottom:'20px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '11px',
+            lineHeight: '22px',
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '12px',
+            lineHeight: '24px',
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '14px',
+            lineHeight: '28px',
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '16px',
+            lineHeight: '32px',
+          },
     },
     listItem:{
-        fontFamily: 'Avenir Next',
-        fontSize: '16px',
+        fontFamily: 'Montserrat',
+        fontSize: '13px',
         textAlign: 'left',
-        lineHeight: '28px',
+        lineHeight: '26px',
         color:'#4a4a4a',
     }
 })
@@ -37,6 +56,7 @@ export const ProjectHome = (props:any)=>{
     const classes = useStyles();
     const projectName = props.projectName;
     console.log(projectName)
+    console.log(props.project)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
 
@@ -45,7 +65,7 @@ export const ProjectHome = (props:any)=>{
     },[])
 
     return (
-        <Container>
+        <Container className={classes.container}>
             <Grid className={classes.grid} container xs={12}>
                 <Grid item xs={12}>
                     <Typography className={classes.title}>OVERVIEW</Typography>

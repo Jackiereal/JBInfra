@@ -24,11 +24,13 @@ const useStyles = makeStyles({
   cardtitle:{
     color: '#f78320',
     fontSize: '12px',
-    margin: ' 2px 0px'
+    margin: ' 2px 0px',
+    fontFamily: 'MontserratSemiBold',
   },
   cardtext:{
     color: '#4a4a4a',
     fontSize: '10px',
+    fontFamily: 'Montserrat'
   },
   
 
@@ -45,7 +47,7 @@ export const ProjectCard = (props:any)=>{
             <CardMedia
                 className={classes.media}
                 image={img}
-                title="Project 1"
+                title= {props.project.title}
         />
             <CardContent>
                 <Typography variant='body1' className={classes.cardtitle} align="left">

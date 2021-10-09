@@ -1,8 +1,16 @@
 import { ProjectCard } from "./ProjectCard";
 import {
-    Button
+    Button,
+Typography,
+
 
 } from '@material-ui/core';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 import { makeStyles } from '@material-ui/core/styles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -35,7 +43,7 @@ AOS.init({
 const useStyles = makeStyles({
     cardbutton:{
       fontSize: '13px',
-      fontFamily: 'Avenir next',
+      fontFamily: 'Montserrat',
       backgroundColor: '#f78320',
       color:'#fff',
       paddingLeft: '30px',
@@ -45,45 +53,122 @@ const useStyles = makeStyles({
           color:'#f78320',
           border:'1px solid #f78320',
       },
-    }
+      
+    },
+    root:{
+        width: '100%',
+        color: '#f78320',
+        fontSize: '24px',
+        fontFamily: 'Montserrat',
+        //backgroundColor: '#fff',
+        marginTop:'0px',
+    },
+    caption:{
+        width: '100%',
+        color: '#4a4a4a',
+        fontSize: '13px',
+        fontFamily: 'Montserrat',
+        //backgroundColor: '#fff',
+
+    },
+    typojourney:{
+        paddingTop:'50px',
+    },
+    timelinecontentalternative:{
+        float:'right',
+    },
+    timelineDotColor:{
+        backgroundColor: '#f78320 !important',
+    },
   
   });
 
 const projectList = [
     {
         id: 1029,
-        title : 'SERENE CITY',
-        img: '1.jpg',
-        name: 'serenecity',
-        description : " JB's Serene city is a 540 acre layout with Residential Plotting"
+        title : "JB's GREEN MEADOWS",
+        img: 'jbgm.jpg',
+        name: 'greenmeadows',
+        description : "JB’S Green Meadows is a 40 Acre Residential Plotting Venture at Kongara Kalan, near Adibatla"
     },
     {
         id: 1040,
-        title : 'SERENE VILLAS',
-        img: '2.jpg',
-        name: 'serenvillas',
-        description : " Serene Villas is HMDA approved 42 Acre Villa Project at Adibatla"
+        title : 'JB RESORT',
+        img: 'jbr.jpg',
+        name: 'jbresorts',
+        description : "JB Resorts is a Resort Living Plotting Project offering modern clubhouse in 100 acre layout"
     },
     {
         id: 1048,
-        title : 'SERENE RESORT',
-        img: '3.jpg',
-        name: 'sereneresort',
-        description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
+        title : 'JASMINE CITY II',
+        img: 'jc2.jpg',
+        name: 'jasminecityll',
+        description : "Jasmine City - II is HMDA Approved 12 Acre Plotting Project at Mangalpally Village, near fast developing zone of Adibatla"
     },
     {
         id: 1043,
-        title : 'NATURE VALLEY',
-        img: '4.jpg',
-        name: 'serenenaturevalley',
-        description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
+        title : 'JASMINE CITY',
+        img: 'jc.jpg',
+        name: 'jasminecity',
+        description : "Jasmine City is HMDA Approved 12 Acre Plotting Project at Mangalpally Village, near to ORR and IT Hub Adibatla"
     },
 ]
 
 export const ProjectTimeline = ()=>{
     const classes = useStyles();
     return (
+        <div className={classes.typojourney}>
+        <Typography  classes={{ root : classes.root}}>OUR JOURNEY</Typography>
+        <Typography  classes={{ root : classes.caption}}>Completed Projects</Typography>
+        
+      <Timeline position="alternate">
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[0]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <div className={classes.timelinecontentalternative}>
+                <ProjectCard project={projectList[1]}/>
+            </div>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[2]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot  className={classes.timelineDotColor}/>
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <div className={classes.timelinecontentalternative}>
+                <ProjectCard project={projectList[3]}/>
+            </div>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+    </div>
+    /*    
     <section id="timeline">
+        <div className={classes.typojourney}>
+        <Typography  classes={{ root : classes.root}}>OUR JOURNEY</Typography>
+        <Typography  classes={{ root : classes.caption}}>Completed Projects</Typography>
+        </div>
 	<div className="demo-card-wrapper">
 		<div className="demo-card demo-card--step1" data-aos="fade-up">
 			<div className="head">
@@ -122,6 +207,8 @@ export const ProjectTimeline = ()=>{
         Read More
     </Button>
     </section>
+
+    */
     )
 }
 

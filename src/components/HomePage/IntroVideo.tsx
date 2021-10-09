@@ -4,7 +4,7 @@ import {
   CardMedia  
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { VideoCard } from 'material-ui-player';
+// import { VideoCard } from 'material-ui-player';
 import ReactPlayer from 'react-player'
 
 const useStyles = makeStyles({
@@ -33,6 +33,6 @@ export const IntroVideo = ()=>{
         //     </Card> 
         // </Container>
         // <VideoCard src={'gearth.mp4'} autoplay={true} loop={true}/>
-        <ReactPlayer url='home.mp4' playing loop={true} width='100%' height='auto'/>
+        <ReactPlayer url='home3.mp4' playing loop width='100%' height='auto' muted/>
     )
 }

@@ -47,14 +47,14 @@ const useStyles = makeStyles({
         fontSize:'28px',
         marginLeft:'100px',
         marginTop:'-250px',
-        fontFamily: 'Avenir next',
+        fontFamily: 'Montserrat',
         fontWeight:500,
     },
     textSecond:{
         color:'#fff',
         fontSize:'28px',
         marginLeft:'100px',
-        fontFamily: 'Avenir next',
+        fontFamily: 'Montserrat',
         fontWeight:500,
     },
     verticalBar:{
@@ -64,7 +64,7 @@ const useStyles = makeStyles({
         marginLeft:'-160px',
         color:'#f78320',
         textAlign:'right',
-        fontFamily:'Avenir next',
+        fontFamily:'Montserrat',
         paddingRight:'30px',
         paddingTop:'5px',
     }

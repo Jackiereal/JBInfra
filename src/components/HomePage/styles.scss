@@ -25,7 +25,7 @@
   }
  
   $background: transperant;
-  $box-shadow: 0px 1px 22px 4px #fff;
+  $box-shadow: transperant;
   $border: 1px solid#fff;
   $items: 5;
   $rows: ceil($items/2);
@@ -48,6 +48,7 @@
   #fff,
   #fff;
   $timeline: #bdbdbd;
+  $greyBackground : #f6f6f8;
   
   /* Calculations */
   
@@ -105,7 +106,7 @@
     padding: 50px 0;
     background: $background;
     border-top: $border;
-    border-bottom: $border;
+    // border-bottom: $border;
     h1 {
       text-align: center;
       font-size: 3rem;
@@ -252,7 +253,7 @@
       @for $i from 1 through $items {
         &--step#{$i} {
           $color: nth($colors, ((($i - 1) % 4) + 1));
-          background-color: $color;
+          background-color: $greyBackground;
           .head::after {
             border-color: $color;
           }

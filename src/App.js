@@ -8,11 +8,14 @@ import { HomePage } from './components/HomePage/HomePage'
 import { Brochures } from './components/Brochures/Brochures'
 // import { Introduction } from "./components/HomePage/Introduction";
 // import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
-import FeaturedProjects from './components/FeaturedProjects/FeaturedProjects'
+import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
+
 import { BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom'
+
+
 
 
 function App() {
@@ -27,6 +30,7 @@ function App() {
             <Route path="/gallery" component={Gallery} />
             <Route path="/contactus" component={ContactUs} />
             <Route path="/:project" component={FeaturedProjects} />
+            {/* <Route path="/:compproject" component={FeaturedProjects} /> */}
             <Route path="/" component={HomePage}></Route>
           </Switch>
         <Footer/>

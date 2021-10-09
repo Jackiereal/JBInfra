@@ -18,7 +18,7 @@ const useStyles = makeStyles({
       width: '100%',
       color: '#f78320',
       fontSize: '18px',
-      fontFamily: 'Avenir next',
+      fontFamily: 'Montserrat',
       textAlign:'left',
       marginTop:'25px',
       marginBottom:'20px'

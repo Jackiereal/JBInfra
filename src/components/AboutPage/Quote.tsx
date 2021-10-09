@@ -22,20 +22,48 @@ const useStyles = makeStyles({
         paddingLeft:'100px',
         marginTop:'-125px',
         marginBottom:'30px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            height:'300px',
+            marginTop:'-100px',
+            maxWidth:'100%',
+        },
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            height:'500px',
+            marginTop:'-100px',
+            maxWidth:'100%',
+        },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            height:'700px',
+            marginTop:'-100px',
+            maxWidth:'100%',
+        },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            height:'900px',
+            marginTop:'-125px',
+            maxWidth:'100%',
+        },
+        ['@media (min-width:1536px)']: { // eslint-disable-line no-useless-computed-key
+            height:'1200px',
+            marginTop:'-200px',
+            maxWidth:'100%',
+        },
+       
+       
+        
     },
     textFirst:{
         color:'#fff',
         fontSize:'28px',
         marginLeft:'100px',
         marginTop:'-250px',
-        fontFamily: 'Avenir next',
+        fontFamily: 'Montserrat',
         fontWeight:500,
     },
     textSecond:{
         color:'#fff',
         fontSize:'28px',
         marginLeft:'100px',
-        fontFamily: 'Avenir next',
+        fontFamily: 'Montserrat',
         fontWeight:500,
     },
     verticalBar:{
@@ -45,7 +73,7 @@ const useStyles = makeStyles({
         marginLeft:'-160px',
         color:'#f78320',
         textAlign:'right',
-        fontFamily:'Avenir next',
+        fontFamily:'Montserrat',
         paddingRight:'30px',
         paddingTop:'5px',
     }

@@ -10,26 +10,28 @@ const useStyles = makeStyles({
         width: '100%',
         color: '#f78320',
         fontSize: '24px',
-        fontFamily: 'Avenir next',
-        backgroundColor: '#fff',
+        fontFamily: 'Montserrat',
+        //backgroundColor: '#fff',
         marginTop:'20px',
     },
     caption:{
         width: '100%',
         color: '#4a4a4a',
         fontSize: '13px',
-        fontFamily: 'Avenir next',
-        backgroundColor: '#fff',
+        fontFamily: 'Montserrat',
+        //backgroundColor: '#fff',
 
     },
     containerRoot:{
-        marginTop:'50px',
+        marginTop:'-5px',
         backgroundImage:  'url("journey.png")',
         backgroundPosition: 'left',
         backgroundSize:'100% auto',
         backgroundRepeat: 'no-repeat',
-        height:'1100px',
+        backgroundColor: '#f6f6f8',
+        height:'1300px',
         width:'100%',
+        maxWidth:'100%',
     },
 })
 
@@ -37,8 +39,6 @@ export const Journey = ()=>{
     const classes = useStyles();
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
-            <Typography  classes={{ root : classes.root}}>OUR JOURNEY</Typography>
-            <Typography  classes={{ root : classes.caption}}>Completed Projects</Typography>
             <ProjectTimeline/>
         </Container>
     )
