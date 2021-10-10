@@ -31,7 +31,7 @@ export const HomePage = ()=>{
 
     useEffect(() => {
     setLoading(true);
-    setTimeout(()=>{setLoading(false)},8000);
+    setTimeout(()=>{setLoading(false)},5000);
 
     }, [])
     
