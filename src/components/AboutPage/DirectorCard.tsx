@@ -181,8 +181,7 @@ export const DirectorCard = (props:any)=>{
             </CardContent>
           </Card>
         </Grid>
-        <Grid xs={12} sm={3} md={2} className={ active ? classes.activeICons : classes.inActive} item>
-          <div item data-aos="fade-up">
+        <Grid xs={12} sm={3} md={2} item className={ active ? classes.activeICons : classes.inActive}> 
             <IconButton >
                 <FacebookIcon className={classes.icons} onClick={() => { window.open(`${props.data.facebook}`,'_blank')}}/>
             </IconButton>
@@ -197,7 +196,6 @@ export const DirectorCard = (props:any)=>{
             </IconButton>
           <div className={classes.line}>
 
-          </div>
           </div>
         </Grid>
         </Grid>
