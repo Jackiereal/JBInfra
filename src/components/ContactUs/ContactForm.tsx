@@ -8,6 +8,9 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
+import{ init } from 'emailjs-com';
+import emailjs from 'emailjs-com';
+init("user_DqOWSHU5U0XJDVy8rzYOi");
 
 
 
@@ -69,13 +72,25 @@ export const ContactForm = ()=>{
     }
 
      const handleMessageClick = async ()=>{
-      let messageObject: MessageProps = {} 
+      let messageObject: MessageProps ={ 
+        name : '',
+        email: '',
+        mobile : '',
+        subject : '',
+        message : '',
+      } 
       messageObject.name = name;
       messageObject.email = email;
       messageObject.mobile = mobile;
       messageObject.subject = subject;
       messageObject.message = message;
-      console.log(messageObject)
+      emailjs.send(`service_j9uyrb5`, 'template_2jvy6rt',messageObject, 'user_DqOWSHU5U0XJDVy8rzYOi')
+        .then((result) => {
+          console.log(result)
+        },
+        (error) => {
+          console.log(error)
+        });
       
     }
 
