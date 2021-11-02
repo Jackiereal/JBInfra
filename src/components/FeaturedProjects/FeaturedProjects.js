@@ -19,6 +19,7 @@ import GREENMEADOWS from '../../jsons/greenmeadows.json'
 import JASMINECITY from '../../jsons/jasminecity.json'
 import JASMINECITYII from '../../jsons/jasminecityll.json'
 import JBRESORTS from '../../jsons/jbresorts.json'
+import HILLSIDECOUNTY from '../../jsons/hillsidecounty.json'
 import { useThemeProps } from '@mui/material';
 import GoToTop from './../GoToTop'
 
@@ -36,6 +37,9 @@ const projectPage = (props)=>{
     
         case 'serenenaturevalley': 
           return  <ProjectHome project={SERENENATUREVALLEY} projectName={props}/>
+        
+        case 'hillsidecounty': 
+          return  <ProjectHome project={HILLSIDECOUNTY} projectName={props}/>
 
         case 'greenmeadows':
           return <ProjectHome project={GREENMEADOWS} projectName={props}/> 

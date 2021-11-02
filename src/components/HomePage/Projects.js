@@ -133,7 +133,7 @@ export const Projects = ()=>{
             title : 'NATURE VALLEY',
             img: '1.jpg',
             name: 'serenenaturevalley',
-            description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
+            description : " JB's NATURE VALLEY Which is a large scale multifunctional eco-friendly project"
         },
         {
             id: 1040,
@@ -156,6 +156,13 @@ export const Projects = ()=>{
             name: 'sereneresorts',
             description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
         },
+        {
+          id: 1085,
+          title : 'JB HILLSIDE COUNTY',
+          img: '2.jpg',
+          name: 'hillsidecounty',
+          description : " JB's Hillside County is Hillside plotting project offering modern clubhouse"
+      },
        
     ]
     return (
