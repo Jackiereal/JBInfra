@@ -66,22 +66,29 @@ const useStyles = makeStyles((theme) => ({
     },
    
     menuButtonHighlightedScroll: {
-      backgroundColor: '#f78320',
-      color: '#fff',
+      border:'1px solid #f78320',
+      // backgroundColor: '#f78320',
+      color: '#f78320',
+      
+      fontFamily: 'MontserratSemiBold',
       // marginRight: theme.spacing(1),
       fontSize: '12px',
       '&:hover': {
-        backgroundColor: '#fff',
+        border:'1px solid #f78320',
+        // backgroundColor: '#f78320',
         color: '#f78320',
       }
     },
     menuButtonHighlighted: {
-      backgroundColor: '#f78320',
-      color: '#fff',
+      border:'1px solid #f78320',
+      // backgroundColor: '#f78320',
+      color: '#f78320',
+      fontFamily: 'MontserratSemiBold',
       // marginRight: theme.spacing(1),
       fontSize: '12px',
       '&:hover': {
-        backgroundColor: '#fff',
+        border:'1px solid #f78320',
+        // backgroundColor: '#fff',
         color: '#f78320',
       }
     },

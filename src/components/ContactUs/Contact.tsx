@@ -86,7 +86,7 @@ export const Contact = ()=>{
     const classes = useStyles();
     return (
         <Container fixed  classes={{root : classes.containerRoot}}>
-            <Typography  classes={{ root : classes.root}}>Contact Us</Typography>
+            <Typography  classes={{ root : classes.root}}>Get In Touch</Typography>
             <Grid container justifyContent="center" spacing={2} className={classes.rootGrid} >
                     <Grid item xs={12} sm={6}>
                         <Card className={classes.cardMedia} >

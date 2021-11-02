@@ -96,7 +96,7 @@ export const ContactForm = ()=>{
 
     return (
         <Container fixed>
-            <Typography  classes={{ root : classes.root}}>Message Us</Typography>
+            <Typography  classes={{ root : classes.root}}></Typography>
             <Box
               component="form"
               sx={{
