@@ -110,63 +110,8 @@ export const FeaturedProjects = () => {
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
+    window.scrollTo(0, 0);
   }
-  
-  // const [isError,setIsError] = useState(false);
-  console.log(project)
-  
-
-  // useEffect(()=>{
-  //   console.log(project)
-  //   switch (project) {
-  //     case 'serenecity':
-  //       setProjects(SERENECITY) 
-  //       break;
-  
-  //     case 'serenevillas':
-  //       setProjects(SERENEVILLAS) 
-  //       break;
-  
-  //     case 'sereneresorts':
-  //       setProjects(SERENERESORTS) 
-  //       break;
-      
-  //       case 'serenenaturevalley':
-  //       setProjects(SERENENATUREVALLEY) 
-  //       break;
-
-  //       case 'greenmeadows':
-  //       setProjects(GREENMEADOWS) 
-  //       break;
-  
-  //       case 'jbresorts':
-  //         setProjects(JBRESORTS) 
-  //         break;
-    
-  //       case 'jasminecity':
-  //         setProjects(JASMINECITY) 
-  //         break;
-      
-  //       // case 'jasminecity2':
-  //       // setProjects(JASMINECITYII) 
-  //       // break;
-    
-  //     default:
-  //       setProjects(SERENENATUREVALLEY) 
-  //   }
-  //   console.log(projects.overview)
-  // },[])
-  
-
-  // useEffect(()=>{
-  //   async function fetchProjects(p){
-  //     const response = await getFeaturedProjects(p);
-  //     console.log(response)
-  //     setProjects(response.data);
-  //   }
-  //   fetchProjects(project);
-
-  // },[project])
 
 
   return (
@@ -192,6 +137,7 @@ export const FeaturedProjects = () => {
             </Container>
             <GoToTop />
             </div>
+            <GoToTop />
             </div>
             <GoToTop />
     </div>
