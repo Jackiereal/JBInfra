@@ -54,22 +54,22 @@ const useStyles = makeStyles({
         ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-60px',
             paddingTop:'40px',
-            height:'1400px',
+            height:'1700px',
           },
           ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-125px',
             paddingTop:'125px',
-            height:'800px'
+            height:'1100px'
           },
           ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-150px',
             paddingTop:'150px',
-            height:'500px'
+            height:'800px'
           },
           ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-200px',
             paddingTop:'175px',
-            height:'550px'
+            height:'850px'
           },
           ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-300px',
