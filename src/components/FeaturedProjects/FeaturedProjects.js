@@ -190,7 +190,7 @@ export const FeaturedProjects = () => {
                
             </Card> 
             </Container>
-           
+            <GoToTop />
             </div>
             </div>
             <GoToTop />
