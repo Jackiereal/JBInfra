@@ -39,14 +39,6 @@ const useStyles = makeStyles({
     }
 })
 
- interface MessageProps{
-  name: string,
-  email : string,
-  mobile: string,
-  subject : string,
-  message : string
-}
-
 export const ContactForm = ()=>{
     const classes = useStyles()
     const [name,setName] = useState('');
@@ -72,7 +64,7 @@ export const ContactForm = ()=>{
     }
 
      const handleMessageClick = async ()=>{
-      let messageObject: MessageProps ={ 
+      let messageObject ={ 
         name : '',
         email: '',
         mobile : '',
