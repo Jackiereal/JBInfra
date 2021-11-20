@@ -103,6 +103,7 @@ const useStyles = makeStyles({
     },
     cardMedia:{
         boxShadow:'none',
+        marginTop:'-70px',
     },
     containerRoot:{
         marginTop: '10px',
@@ -125,7 +126,7 @@ export const AboutUs = (props)=>{
                                     // image="https://picsum.photos/id/1029/2048/2048"
                                     image="logo-orange.png"
                                     title="Aboutus"
-                                    data-aos="fade-left"
+                                    data-aos="fade-down"
                                     data-aos-anchor-placement="bottom-bottom"
                             />
                         </Card>
