@@ -2,7 +2,8 @@ import {
     Container, Grid, Typography
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import GoToTop from './../GoToTop'
 
 const useStyles = makeStyles({
     container:{
@@ -63,6 +64,12 @@ export const ProjectHome = (props:any)=>{
     useEffect(()=>{
         
     },[])
+    const [projects,setProjects] = useState({});
+    if(!window.location.hash){
+      window.location = window.location + '#'
+      window.location.reload()
+      window.scrollTo(0, 0);
+    }
 
     return (
         <Container className={classes.container}>
@@ -98,6 +105,7 @@ export const ProjectHome = (props:any)=>{
                     </ul>
                 </Grid>
             </Grid>
+            <GoToTop />
         </Container> 
     )
 }
