@@ -8,7 +8,6 @@ import { Quote } from './../AboutPage/Quote';
 import { Banner } from './../AboutPage/Banner';
 import GoToTop from './../GoToTop';
 import { useState, useEffect } from "react";
-import RingLoader from "react-spinners/RingLoader";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
