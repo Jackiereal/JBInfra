@@ -1,7 +1,7 @@
-import { Introduction } from "./../AboutPage/Introduction";
-import { Banner } from "./../AboutPage/Banner"
+import { Introduction } from "../AboutPage/Introduction";
+import { Banner } from "../AboutPage/Banner"
 // import { Introduction } from "./../HomePage/Introduction";
-import { Quote } from './../AboutPage/Quote';
+import { Quote } from '../AboutPage/Quote';
 import { Contact } from "./Contact";
 import { Address  } from "./Address";
 import { Maphead } from "./Map"
@@ -9,7 +9,7 @@ import { Mapbranch } from "./Map"
 import {
     Grid
 } from '@material-ui/core';
-import GoToTop from './../GoToTop';
+import GoToTop from '../GoToTop';
 export const ContactUs = ()=>{
 
     if(!window.location.hash){

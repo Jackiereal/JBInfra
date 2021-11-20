@@ -190,7 +190,7 @@ const itemData = [
     // it does not have any dependencies.
     useEffect(() => {
       // timeoutId for debounce mechanism
-      let timeoutId = null;
+      let timeoutId: NodeJS.Timeout;
       const resizeListener = () => {
         // prevent execution of previous setTimeout
         clearTimeout(timeoutId);

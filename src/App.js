@@ -9,6 +9,7 @@ import { Brochures } from './components/Brochures/Brochures'
 // import { Introduction } from "./components/HomePage/Introduction";
 // import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
 import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
+import { PlotAvailability } from './components/PlotAvailability/PlotAvailability'
 
 import { BrowserRouter as Router,
   Switch,
@@ -29,7 +30,8 @@ function App() {
             <Route path="/brochure" component={Brochures} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/contactus" component={ContactUs} />
-            <Route path="/:project" component={FeaturedProjects} />
+            <Route path="/plotavailability/:project" component={PlotAvailability} />
+            <Route path="/:project" component={FeaturedProjects} /> 
             {/* <Route path="/:compproject" component={FeaturedProjects} /> */}
             <Route path="/" component={HomePage}></Route>
           </Switch>
