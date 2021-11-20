@@ -19,6 +19,7 @@ import GREENMEADOWS from '../../jsons/greenmeadows.json'
 import JASMINECITY from '../../jsons/jasminecity.json'
 import JASMINECITYII from '../../jsons/jasminecityll.json'
 import JBRESORTS from '../../jsons/jbresorts.json'
+import HILLSIDECOUNTY from '../../jsons/hillsidecounty.json'
 import { useThemeProps } from '@mui/material';
 import GoToTop from './../GoToTop'
 
@@ -36,6 +37,9 @@ const projectPage = (props)=>{
     
         case 'serenenaturevalley': 
           return  <ProjectHome project={SERENENATUREVALLEY} projectName={props}/>
+        
+        case 'hillsidecounty': 
+          return  <ProjectHome project={HILLSIDECOUNTY} projectName={props}/>
 
         case 'greenmeadows':
           return <ProjectHome project={GREENMEADOWS} projectName={props}/> 
@@ -110,63 +114,8 @@ export const FeaturedProjects = () => {
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
+    window.scrollTo(0, 0);
   }
-  
-  // const [isError,setIsError] = useState(false);
-  console.log(project)
-  
-
-  // useEffect(()=>{
-  //   console.log(project)
-  //   switch (project) {
-  //     case 'serenecity':
-  //       setProjects(SERENECITY) 
-  //       break;
-  
-  //     case 'serenevillas':
-  //       setProjects(SERENEVILLAS) 
-  //       break;
-  
-  //     case 'sereneresorts':
-  //       setProjects(SERENERESORTS) 
-  //       break;
-      
-  //       case 'serenenaturevalley':
-  //       setProjects(SERENENATUREVALLEY) 
-  //       break;
-
-  //       case 'greenmeadows':
-  //       setProjects(GREENMEADOWS) 
-  //       break;
-  
-  //       case 'jbresorts':
-  //         setProjects(JBRESORTS) 
-  //         break;
-    
-  //       case 'jasminecity':
-  //         setProjects(JASMINECITY) 
-  //         break;
-      
-  //       // case 'jasminecity2':
-  //       // setProjects(JASMINECITYII) 
-  //       // break;
-    
-  //     default:
-  //       setProjects(SERENENATUREVALLEY) 
-  //   }
-  //   console.log(projects.overview)
-  // },[])
-  
-
-  // useEffect(()=>{
-  //   async function fetchProjects(p){
-  //     const response = await getFeaturedProjects(p);
-  //     console.log(response)
-  //     setProjects(response.data);
-  //   }
-  //   fetchProjects(project);
-
-  // },[project])
 
 
   return (
@@ -190,8 +139,9 @@ export const FeaturedProjects = () => {
                
             </Card> 
             </Container>
-           
+            <GoToTop />
             </div>
+            <GoToTop />
             </div>
             <GoToTop />
     </div>

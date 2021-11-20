@@ -27,25 +27,25 @@ const useStyles = makeStyles({
 
 export const HomePage = ()=>{
     const classes = useStyles()
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-    setLoading(true);
-    setTimeout(()=>{setLoading(false)},5000);
+    // useEffect(() => {
+    // setLoading(true);
+    // setTimeout(()=>{setLoading(false)},8000);
 
-    }, [])
+    // }, [])
     
     return (
-        <div>
-            {
-                loading ?
-        <div className={classes.loaderContainer}>
+        // <div>
+        //     {
+        //         loading ?
+        // <div className={classes.loaderContainer}>
         
                 
-                <RingLoader color={"#f78320"} loading={loading} size={100} />
+        //         <RingLoader color={"#f78320"} loading={loading} size={100} />
                
-        </div>
-         :
+        // </div>
+        //  :
         <div>
             {/* <Introduction/> */}
             <IntroVideo/>
@@ -57,8 +57,8 @@ export const HomePage = ()=>{
             <Quote/>
             <GoToTop/>
         </div>
-}
-        </div>
+// }
+//         </div>
 
         
     )

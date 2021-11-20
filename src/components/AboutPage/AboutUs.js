@@ -69,9 +69,11 @@ const useStyles = makeStyles({
     // },
     media: {
         height: '0',
-        paddingTop: '75%', // 16:9,
+        paddingTop: '73%', // 16:9,
         boxShadow:'none',
         border:'none',
+        width:"82%",
+        margin:'auto'
       },
     description: {
         fontFamily: 'Montserrat',
@@ -101,7 +103,6 @@ const useStyles = makeStyles({
     },
     cardMedia:{
         boxShadow:'none',
-        margin:'auto'
     },
     containerRoot:{
         marginTop: '10px',
@@ -122,7 +123,7 @@ export const AboutUs = (props)=>{
                             <CardMedia
                                     className={classes.media}
                                     // image="https://picsum.photos/id/1029/2048/2048"
-                                    image="aboutus.png"
+                                    image="logo-orange.png"
                                     title="Aboutus"
                                     data-aos="fade-left"
                                     data-aos-anchor-placement="bottom-bottom"

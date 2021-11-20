@@ -54,22 +54,22 @@ const useStyles = makeStyles({
         ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-60px',
             paddingTop:'40px',
-            height:'1400px',
+            height:'1700px',
           },
           ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-125px',
             paddingTop:'125px',
-            height:'800px'
+            height:'1100px'
           },
           ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-150px',
             paddingTop:'150px',
-            height:'500px'
+            height:'800px'
           },
           ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-200px',
             paddingTop:'175px',
-            height:'550px'
+            height:'850px'
           },
           ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-300px',
@@ -133,7 +133,7 @@ export const Projects = ()=>{
             title : 'NATURE VALLEY',
             img: '1.jpg',
             name: 'serenenaturevalley',
-            description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
+            description : " JB's NATURE VALLEY Which is a large scale multifunctional eco-friendly project"
         },
         {
             id: 1040,
@@ -156,6 +156,13 @@ export const Projects = ()=>{
             name: 'sereneresorts',
             description : " JB's Serene Resort is Resort style living plotting project offering modern clubhouse"
         },
+        {
+          id: 1085,
+          title : 'JB HILLSIDE COUNTY',
+          img: '2.jpg',
+          name: 'hillsidecounty',
+          description : " JB's Hillside County is Hillside plotting project offering modern clubhouse"
+      },
        
     ]
     return (

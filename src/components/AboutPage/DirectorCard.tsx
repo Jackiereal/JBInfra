@@ -162,7 +162,7 @@ export const DirectorCard = (props:any)=>{
         >
           <Card 
             classes={{root: classes.root}}
-            onClick={clickHandler} 
+            onMouseOver={clickHandler} 
             
           >
             <CardMedia
