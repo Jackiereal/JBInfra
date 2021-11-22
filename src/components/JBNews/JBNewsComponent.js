@@ -11,9 +11,9 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 // import { getProjectImages } from '../../services/services';
 import { useState, useEffect, useCallback } from 'react';
-// import ImageViewer from "react-simple-image-viewer";
-import "./../../styles/scss/image-gallery.scss"
-import ImageGallery from 'react-image-gallery';
+import ImageViewer from "react-simple-image-viewer";
+// import "./../../styles/scss/image-gallery.scss"
+// import ImageGallery from 'react-image-gallery';
 
 
 
@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     overflow: 'hidden',
     backgroundColor: '#fff',
-    // height:'540px',
+    height:'540px',
     marginBottom:'30px',
     marginTop:'50px',
   },
@@ -106,8 +106,7 @@ const useStyles = makeStyles({
 const itemData = [
       {
         //  img :`https://picsum.photos/id/100/360/360`,
-        original :'1.jpg',
-        thumbnail : '1.jpg',
+        img:'1.jpg',
          title: 'Image',
         author: 'author',
          cols: 1,
@@ -115,8 +114,7 @@ const itemData = [
        },
        {
         // img :`https://picsum.photos/id/200/360/360`,
-        original :'2.jpg',
-        thumbnail : '2.jpg',
+        img:'2.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -124,8 +122,7 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/300/360/360`,
-        original :'3.jpg',
-        thumbnail : '3.jpg',
+        img:'3.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -133,8 +130,7 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/400/360/360`,
-        original :'4.jpg',
-        thumbnail : '4.jpg',
+        img:'4.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -142,8 +138,7 @@ const itemData = [
       },
       {
       //  img :`https://picsum.photos/id/500/360/360`,
-      original :'5.jpg',
-      thumbnail : '5.jpg',
+      img:'5.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -151,8 +146,7 @@ const itemData = [
      },
      {
       //  img :`https://picsum.photos/id/600/360/360`,
-      original :'6.jpg',
-      thumbnail : '6.jpg',
+      img:'6.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -160,8 +154,7 @@ const itemData = [
      },
      {
         // img :`https://picsum.photos/id/700/360/360`,
-        original :'7.jpg',
-        thumbnail : '7.jpg',
+        img:'7.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -169,8 +162,7 @@ const itemData = [
       },
       {
       //  img :`https://picsum.photos/id/800/360/360`,
-      original :'8.jpg',
-      thumbnail : '8.jpg',
+      img:'8.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -178,8 +170,7 @@ const itemData = [
      },
      {
       //  img :`https://picsum.photos/id/900/360/360`,
-      original :'9.jpg',
-        thumbnail : '9.jpg',
+      img:'9.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -223,7 +214,7 @@ const itemData = [
 
 
 
-export const GalleryComponent = ()=>{
+export const JBNewsComponent = ()=>{
     // let { gallery } = useParams();
     const [gallery,setGallery] = useState([]);
     const [project,setProject] = useState(0);
@@ -231,9 +222,9 @@ export const GalleryComponent = ()=>{
     const [currentImage, setCurrentImage] = useState(0);
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const [images, setImages] = useState(itemData)
-    // let imageList = images.map(item=>{
-    //   return item.img;
-    // });
+    let imageList = images.map(item=>{
+      return item.img;
+    });
 
     let width = useCurrentWidth()
 
@@ -259,7 +250,7 @@ export const GalleryComponent = ()=>{
     },[project])
     const classes = useStyles();
 
-    const handleButtonClick=(id: number)=>{
+    const handleButtonClick=(id)=>{
          setProject(id)  
          const filtered = itemData.filter(item=>{
           return id === 0 ? true : item.project === id;
@@ -293,8 +284,8 @@ export const GalleryComponent = ()=>{
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>
-              <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>;
-                {/* <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
+              {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}
+                <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
                     {images.map((item,index) => (
                     <ImageListItem key={item.img} cols={item.cols || 1}>
                         <img src={item.img} alt={item.title} onClick={()=>openImageViewer(index)}/>
@@ -312,7 +303,7 @@ export const GalleryComponent = ()=>{
                     }}
                     closeOnClickOutside={true}
                   />
-                )} */}
+                )}
             </div>
         </Container>
     )

@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import About  from './components/AboutPage/AboutPage'
 import { Footer } from './components/Footer'
 import { Gallery } from './components/Gallery/Gallery'
+import { JBNews } from './components/JBNews/JBNews'
 import { ContactUs } from './components/ContactUs/ContactUs'
 import { HomePage } from './components/HomePage/HomePage'
 import { Brochures } from './components/Brochures/Brochures'
@@ -30,6 +31,7 @@ function App() {
             <Route path="/about" component={About}></Route>
             <Route path="/brochure" component={Brochures} />
             <Route path="/gallery" component={Gallery} />
+            <Route path="/jbnews" component={JBNews} />
             <Route path="/contactus" component={ContactUs} />
             <Route path="/plotavailability/:project" component={PlotAvailability} />
             <Route path="/:project" component={FeaturedProjects} /> 

@@ -50,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '5px',
     },
     menuButton: {
-      marginRight: theme.spacing(1),
-      fontSize: '12px',
+      marginRight: theme.spacing(0.5),
+      fontSize: '11px',
       fontFamily: 'MontserratSemiBold',
       textDecoration:'none',
       color:'#f78320',
@@ -294,6 +294,7 @@ export function Header(props) {
                 </Menu> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
                 <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/gallery">Gallery </Link></Button>
+                <Button onClick={handleDrawerToggle} color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "jbnews" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "jbnews" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/jbnews">JB NEWS </Link></Button>
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} ><a classes={classes.menuLink} href="sample.pdf" target = "_blank"  to="/home">BROCHURES </a></Button> */}
                 <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ?(scroll ? classes.activeScrolled: classes.active ) : ""}>
@@ -434,6 +435,8 @@ export function Header(props) {
                 </Menu> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
                 <Button onClick={handleDrawerToggle} color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/gallery">Gallery </Link></Button>
+                <Button onClick={handleDrawerToggle} color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "jbnews" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "jbnews" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/jbnews">JB NEWS </Link></Button>
+
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} ><a classes={classes.menuLink} href="sample.pdf" target = "_blank"  to="/home">BROCHURES </a></Button> */}
                 <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ?(scroll ? classes.activeScrolled: classes.active ) : ""}>
