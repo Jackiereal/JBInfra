@@ -36,7 +36,7 @@ function App() {
             {/* <Route path="/plotavailability/:project" component={PlotAvailability} /> */}
             <Route path="/:project" component={FeaturedProjects} /> 
             {/* <Route path="/:compproject" component={FeaturedProjects} /> */}
-            <Route path="/" component={HomePage}></Route>
+            <Route path="/" component={HomePage} forceRefresh={true}></Route>
           </Switch>
         <Footer/>
     </div>
