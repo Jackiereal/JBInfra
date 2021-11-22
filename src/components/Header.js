@@ -259,15 +259,15 @@ export function Header(props) {
                 }}
                 >
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "serenenaturevalley" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenenaturevalley" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/serenenaturevalley">Nature Valley</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "hillsidecounty" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "hillsidecounty" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/hillsidecounty">JB Hillside County</Link></MenuItem>
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "serenecity" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenecity" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "serenevillas" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenevillas" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "sereneresorts" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "sereneresorts" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
-                  <MenuItem onClick={handleClose} className={splitLocation[1] === "hillsidecounty" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "hillsidecounty" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/hillsidecounty">JB Hillside County</Link></MenuItem>
                 </Menu>
 
 
-
-                 <Button color="inherit"  aria-controls="fade-menu-completed" aria-haspopup="true" onClick={handleClickcomp} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
+                <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "ourjourney" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "ourjourney" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/ourjourney">COMPLETED PROJECTS </Link></Button>
+                 {/* <Button color="inherit"  aria-controls="fade-menu-completed" aria-haspopup="true" onClick={handleClickcomp} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
                    COMPLETED PROJECTS
                    <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                  </Button>
@@ -291,7 +291,7 @@ export function Header(props) {
                   <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jbresorts" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jbresorts" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/jbresorts">JB Resort</Link></MenuItem>
                   <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jasminecity" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jasminecity" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/jasminecity">Jasmine City</Link></MenuItem>
                   <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jasminecity2" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jasminecity2" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/jasminecity2">Jasmine City II</Link></MenuItem>
-                </Menu>
+                </Menu> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
                 <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/gallery">Gallery </Link></Button>
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
@@ -398,15 +398,16 @@ export function Header(props) {
                 }}
                 >
                   <MenuItem onClick={handleClose}  className={splitLocation[1] === "serenenaturevalley" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenenaturevalley" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/serenenaturevalley">Nature Valley</Link></MenuItem>
+                  <MenuItem onClick={handleClose} className={splitLocation[1] === "hillsidecounty" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "hillsidecounty" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/hillsidecounty">JB Hillside County</Link></MenuItem>
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "serenecity" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenecity" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/serenecity">Serene City</Link></MenuItem>
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "serenevillas" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "serenevillas" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/serenevillas">Serene Villas</Link></MenuItem>
                   <MenuItem onClick={handleClose} className={splitLocation[1] === "sereneresorts" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "sereneresorts" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/sereneresorts">Serene Resorts</Link></MenuItem>
-                  <MenuItem onClick={handleClose} className={splitLocation[1] === "hillsidecounty" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "hillsidecounty" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/hillsidecounty">JB Hillside County</Link></MenuItem>
+                  
                 </Menu>
 
 
-
-                 <Button color="inherit"  aria-controls="fade-menu-completed" aria-haspopup="true" onClick={handleClickcomp} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
+                <Button onClick={handleDrawerToggle} color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "ourjourney" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "about" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/ourjourney">COMPLETED PROJECTS </Link></Button>
+                 {/* <Button color="inherit"  aria-controls="fade-menu-completed" aria-haspopup="true" onClick={handleClickcomp} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
                    COMPLETED PROJECTS
                    <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
                  </Button>
@@ -430,7 +431,7 @@ export function Header(props) {
                   <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jbresorts" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jbresorts" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/jbresorts">JB Resort</Link></MenuItem>
                   <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jasminecity" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jasminecity" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/jasminecity">Jasmine City</Link></MenuItem>
                   <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jasminecity2" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jasminecity2" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/jasminecity2">Jasmine City II</Link></MenuItem>
-                </Menu>
+                </Menu> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
                 <Button onClick={handleDrawerToggle} color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/gallery">Gallery </Link></Button>
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}

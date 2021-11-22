@@ -2,7 +2,8 @@ import {
     Container, Grid, Typography,Card,CardMedia
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import GoToTop from './../GoToTop'
 
 const useStyles = makeStyles({
     container:{
@@ -101,6 +102,15 @@ export const ProjectHome = (props)=>{
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
 
+    useEffect(()=>{
+        
+    },[])
+    const [projects,setProjects] = useState({});
+    if(!window.location.hash){
+      window.location = window.location + '#'
+      window.location.reload()
+      window.scrollTo(0, 0);
+    }
 
     return (
         <Container className={classes.container}>

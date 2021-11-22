@@ -100,21 +100,32 @@ export const Footer = ()=>{
                 'Hyderabad - 500 070',
                 'sales@jbinfraprojects.in',
                 '040 2409 0939'
+            ],
+            
+        },{
+            title:'Branch Office',
+            links:[
+            "JB'S NATURE VALLEY",
+            '7-1B,Sai Nagar Colony,Peddamberpet,Hayatnagar Mandal,',
+            'Hyderabad,',
+            'Telangana 501505',
+            'customercare@jbinfraprojects.com',
+            '040 2955 4577'
             ]
-        },
+        }
     ]
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid item xs={12} sm={3}>
+            <Grid container spacing={2}>
+                <Grid item xs={10} sm={2}>
                     <img className={classes.logoImage} src={'logo-orange.gif'} alt="logo"></img>
                 </Grid>
                 {FooterLinksArray.map((item)=>(
-                    <Grid item xs={12} sm={3}>
+                    <Grid item xs={10} sm={3}>
                         <FooterLinks linkgroup={item}/>
                     </Grid>
                 ))}
-                <Grid item xs={12} sm={3} className={classes.gridContainer}>
+                <Grid item xs={10} sm={2} className={classes.gridContainer}>
                     <Typography className={classes.simpletext}  align="left">
                         customercare@jbinfraprojects.com
                     </Typography>
@@ -127,9 +138,9 @@ export const Footer = ()=>{
                         
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={10} sm={2}>
                 <IconButton className={classes.cardbutton}>
-                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com/JB-INFRA-107826903920956/','_blank')}}/>
+                         <FacebookIcon onClick={() => { window.open('https://www.facebook.com/Jbinfraofficial/','_blank')}}/>
                      </IconButton>
                      <IconButton className={classes.cardbutton} >
                          <TwitterIcon onClick={() => { window.open('https://twitter.com/Jbinfraofficial','_blank')}}/>

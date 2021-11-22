@@ -14,6 +14,8 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import { makeStyles } from '@material-ui/core/styles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import React from 'react';
+import { Link } from "react-router-dom";
 
 
 AOS.init({
@@ -54,6 +56,13 @@ const useStyles = makeStyles({
           border:'1px solid #f78320',
       },
       
+    },
+    menuLink: {
+      textDecoration: 'none ',
+      color: '#fff',
+      "&:hover": {
+          color:'#f78320',
+      }
     },
     root:{
         width: '100%',
@@ -112,6 +121,90 @@ const projectList = [
         name: 'jasminecity',
         description : "Jasmine City is HMDA Approved 12 Acre Plotting Project at Mangalpally Village, near to ORR and IT Hub Adibatla"
     },
+//     {
+//       id: 1029,
+//       title : "JB ENCLAVE",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB Enclave is a 30 Acre Residential Plotting Venture at Bonguluru launched on 2001."
+//   },
+// {
+//       id: 1030,
+//       title : "PEACOCK VALLEY",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "Peacock Valley is a 36 Acre Residential Plotting Venture at Medchal launched on 2004."
+//   },
+// {
+//       id: 1031,
+//       title : "JB VISHAKA",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB Vishaka is a 87 Acre Residential Plotting Venture at Vizag launched on 2005."
+//   },
+// {
+//       id: 1032,
+//       title : "JB SAGAR VALLEY",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB Sagar Valley is a 24 Acre Residential Plotting Venture at Mallepally launched on 2007."
+//   },
+// {
+//       id: 1033,
+//       title : "JB HILLS",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB Hills is a 26 Acre Residential Plotting Venture at Mallepally launched on 2007."
+//   },
+// {
+//       id: 1034,
+//       title : "SAGAR VALLEY",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "Sagar Valley is a 18 Acre Residential Plotting Venture at Patelguda launched on 2012."
+//   },
+// {
+//       id: 1035,
+//       title : 'JASMINE CITY',
+//       img: 'jc.jpg',
+//       name: 'jasminecity',
+//       description : "Jasmine City is HMDA Approved 33 Acre Plotting Project at Mangalpally Village, near to ORR and IT Hub Adibatla"
+//   },
+// {
+//       id: 1036,
+//       title : "BRUNDAVANAM",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "Brundavanam is a 23 Acre Residential Plotting Venture at Yamjal launched on 2014."
+//   },
+// {
+//       id: 1037,
+//       title : 'JB RESORT',
+//       img: 'jbr.jpg',
+//       name: 'jbresorts',
+//       description : "JB Resorts is a Resort Living Plotting Project offering modern clubhouse in 100 acre layout"
+//   },
+// {
+//       id: 1038,
+//       title : "JB's GREEN MEADOWS",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB’S Green Meadows is a 40 Acre Residential Plotting Venture at Kongara Kalan, near Adibatla"
+//   },
+// {
+//       id: 1039,
+//       title : "JB AERO HEIGHTS",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB Aero Heights is a 12 Acre Residential Plotting Venture at Tukkuguda, near Adibatla"
+//   },
+// {
+//       id: 1040,
+//       title : "JB ENCLAVE",
+//       img: 'jbgm.jpg',
+//       name: 'greenmeadows',
+//       description : "JB Enclave is a 10 Acre Residential Plotting Venture at Tummaloorlaunched on 2019."
+//   },
 ]
 
 export const ProjectTimeline = ()=>{
@@ -153,7 +246,8 @@ export const ProjectTimeline = ()=>{
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot  className={classes.timelineDotColor}/>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent data-aos="fade-up">
             <div className={classes.timelinecontentalternative}>
@@ -161,7 +255,92 @@ export const ProjectTimeline = ()=>{
             </div>
         </TimelineContent>
       </TimelineItem>
+      {/* <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot  className={classes.timelineDotColor}/>
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <div className={classes.timelinecontentalternative}>
+                <ProjectCard project={projectList[3]}/>
+            </div>
+        </TimelineContent>
+      </TimelineItem> */}
+      {/* <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[4]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[5]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[6]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[7]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[8]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[9]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[10]}/>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className={classes.timelineDotColor}/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent data-aos="fade-up">
+            <ProjectCard project={projectList[11]}/>
+        </TimelineContent>
+      </TimelineItem> */}
     </Timeline>
+    <Button className={classes.cardbutton}>
+    <Link className={classes.menuLink} to={'/ourjouney'}>Read More</Link>
+    </Button>
     </div>
     /*    
     <section id="timeline">

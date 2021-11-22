@@ -77,7 +77,7 @@ export default function About(){
    
    
 ]
-  const description = 'JB Infra Projects is a 19 year old real estate firm which has built its reputation for developing wide range of affordable real estate ventures in and around Ibrahimpatnam  Adibatla areas in Hyderabad. The promoters have vast experience with deep domain knowledge in identifying, developing, marketing and delivering real estate projects they undertake. All the ventures are planned and executed with custom-made features keeping targeted customers needs in mind.JB Infra Projects offers wide range of plots, customized housing options, residential investments in fast developing locations in and around ORR in Hyderabad. JB Infra Projects primary focus is on building ever lasting relationships with its customers.'
+  const description = 'JB Infra is a 20 year old Real estate firm which has built its reputation for developing wide range of affordable real estate ventures in and around Hyderabad. The promoters have vast experience with deep domain knowledge in identifying, developing, marketing and delivering real estate projects they undertake. All the ventures are planned and executed with custom-made features keeping targeted customers needs in mind. JB Infra offers wide range of plots, customised housing options, Villas and Residential investments in fast developing locations in and around ORR in Hyderabad. JB’s primary focus is building an ever lasting relationship with its customers. The pride and joy in seeing their dreams of thousands of happy families come to reality through our ventures is unparalleled and it is what we strive for day in and day out.'
     return (
     <div>
             <Banner image={'aboutusintro.png'}/>

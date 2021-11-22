@@ -33,11 +33,12 @@ export const ContactUs = ()=>{
         {
             type : 'BRANCH OFFICE',
             lines : [
-                `7-1B,Sai Nagar Colony,Peddamberpet,`,
-                `Hayatnagar Mandal, Hyderabad`,
-                `Telangana 501505`,
-                `customercare@jbinfraprojects.com`,
-                `040 2955 4577` 
+                "JB'S NATURE VALLEY",
+                '7-1B,Sai Nagar Colony,Peddamberpet,Hayatnagar Mandal,',
+                'Hyderabad,',
+                'Telangana 501505',
+                'customercare@jbinfraprojects.com',
+                '040 2955 4577'
             ],
             map:'map2.png',
            }

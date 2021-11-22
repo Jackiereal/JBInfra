@@ -44,31 +44,31 @@ const testimonialList = [
         id: 1029,
         name : 'Anonymous',
         description : " Had felt good experience with JB with their service and good potential compa. As all my investments in this company were worthy and in-return hiked my asset value and living style.You made and changed my life meaningful, we are always with you!",
-        image: 'pic2.jpg',
+        image: 'pic1.jpg',
     },
     {
         id: 1040,
         name : 'Landbloom9290',
         description : "This is my second time buying plot with JB Infra.Both experiences have been great.On this offer, we got number of consequences due to covid but the company management went above and beyond to close the deal but got delayed a bit.",
-        image: 'pic4.jpg'
+        image: 'pic2.jpg'
     },
     {
         id: 1030,
         name : 'Teja',
         description : " Had felt good experience with JB with their service and good potential compa. As all my investments in this company were worthy and in-return hiked my asset value and living style.You made and changed my life meaningful, we are always with you!",
-        image: 'pic5.jpg',
+        image: 'pic6.jpg',
     },
     {
         id: 1050,
         name : 'Raja',
         description : "This is my second time buying plot with JB Infra.Both experiences have been great.On this offer, we got number of consequences due to covid but the company management went above and beyond to close the deal but got delayed a bit.",
-        image: 'pic6.jpg'
+        image: 'pic4.jpg'
     },
     {
         id: 1060,
         name : 'Rahul',
         description : "This is my second time buying plot with JB Infra.Both experiences have been great.On this offer, we got number of consequences due to covid but the company management went above and beyond to close the deal but got delayed a bit.",
-        image: 'pic2.jpg'
+        image: 'pic5.jpg'
     },
     
 ]
