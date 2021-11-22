@@ -113,18 +113,12 @@ export const FeaturedProjects = () => {
   let { project } = useParams();
   const [projects,setProjects] = useState({});
   if(!window.location.hash){
-    if('caches' in window){
-      caches.keys().then((names) => {
-              // Delete all the cache files
-              names.forEach(name => {
-                  caches.delete(name);
-              })
-          });
     window.location = window.location + '#'
     window.location.reload()
+  }
+  window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
-}
 
 
   return (

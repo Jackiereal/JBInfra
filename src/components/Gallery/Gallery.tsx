@@ -24,6 +24,8 @@ export const Gallery = ()=>{
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
+  }
+  window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
     return (

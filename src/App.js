@@ -12,7 +12,6 @@ import { OurJourney } from './components/Ourjourney';
 // import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
 import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
 import { PlotAvailability } from './components/PlotAvailability/PlotAvailability'
-
 import { BrowserRouter as Router,
   Switch,
   Route,

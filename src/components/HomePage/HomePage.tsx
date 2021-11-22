@@ -7,7 +7,7 @@ import { IntroVideo } from './IntroVideo';
 import { Quote } from './../AboutPage/Quote';
 import { Banner } from './../AboutPage/Banner';
 import GoToTop from './../GoToTop';
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -27,15 +27,14 @@ const useStyles = makeStyles({
 export const HomePage = ()=>{
     const classes = useStyles()
     const [projects,setProjects] = useState([]);
-    
+
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
-
   }
-  React.useEffect(() => {
+  window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }, []);
+  }
     // const [loading, setLoading] = useState(false);
 
     // useEffect(() => {

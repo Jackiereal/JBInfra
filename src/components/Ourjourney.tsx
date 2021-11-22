@@ -81,8 +81,10 @@ export const OurJourney = ()=>{
     if(!window.location.hash){
       window.location = window.location + '#'
       window.location.reload()
-      window.scrollTo(0, 0);
     }
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
     const classes = useStyles();
     return (
         <div className={classes.root}>
