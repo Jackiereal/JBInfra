@@ -339,7 +339,7 @@ export const ProjectTimeline = ()=>{
       </TimelineItem> */}
     </Timeline>
     <Button className={classes.cardbutton}>
-    <Link className={classes.menuLink} to={'/ourjouney'}>Read More</Link>
+    <Link className={classes.menuLink} to={'/ourjourney'}>Read More</Link>
     </Button>
     </div>
     /*    
