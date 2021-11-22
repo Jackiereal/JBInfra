@@ -11,7 +11,9 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 // import { getProjectImages } from '../../services/services';
 import { useState, useEffect, useCallback } from 'react';
-import ImageViewer from "react-simple-image-viewer";
+// import ImageViewer from "react-simple-image-viewer";
+import "./../../styles/scss/image-gallery.scss"
+import ImageGallery from 'react-image-gallery';
 
 
 
@@ -104,7 +106,8 @@ const useStyles = makeStyles({
 const itemData = [
       {
         //  img :`https://picsum.photos/id/100/360/360`,
-        img :'1.jpg',
+        original :'1.jpg',
+        thumbnail : '1.jpg',
          title: 'Image',
         author: 'author',
          cols: 1,
@@ -112,7 +115,8 @@ const itemData = [
        },
        {
         // img :`https://picsum.photos/id/200/360/360`,
-        img :'2.jpg',
+        original :'2.jpg',
+        thumbnail : '2.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -120,7 +124,8 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/300/360/360`,
-        img :'3.jpg',
+        original :'1.jpg',
+        thumbnail : '1.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -128,7 +133,8 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/400/360/360`,
-        img :'4.jpg',
+        original :'1.jpg',
+        thumbnail : '1.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -136,7 +142,8 @@ const itemData = [
       },
       {
       //  img :`https://picsum.photos/id/500/360/360`,
-      img :'5.jpg',
+      original :'1.jpg',
+      thumbnail : '1.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -144,7 +151,8 @@ const itemData = [
      },
      {
       //  img :`https://picsum.photos/id/600/360/360`,
-      img :'6.jpg',
+      original :'1.jpg',
+      thumbnail : '1.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -152,7 +160,8 @@ const itemData = [
      },
      {
         // img :`https://picsum.photos/id/700/360/360`,
-        img :'7.jpg',
+        original :'1.jpg',
+        thumbnail : '1.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -160,7 +169,8 @@ const itemData = [
       },
       {
       //  img :`https://picsum.photos/id/800/360/360`,
-      img :'8.jpg',
+      original :'1.jpg',
+      thumbnail : '1.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -168,7 +178,8 @@ const itemData = [
      },
      {
       //  img :`https://picsum.photos/id/900/360/360`,
-      img :'9.jpg',
+      original :'1.jpg',
+        thumbnail : '1.jpg',
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -220,9 +231,9 @@ export const GalleryComponent = ()=>{
     const [currentImage, setCurrentImage] = useState(0);
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const [images, setImages] = useState(itemData)
-    let imageList = images.map(item=>{
-      return item.img;
-    });
+    // let imageList = images.map(item=>{
+    //   return item.img;
+    // });
 
     let width = useCurrentWidth()
 
@@ -282,7 +293,8 @@ export const GalleryComponent = ()=>{
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>
-                <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
+              <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>;
+                {/* <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
                     {images.map((item,index) => (
                     <ImageListItem key={item.img} cols={item.cols || 1}>
                         <img src={item.img} alt={item.title} onClick={()=>openImageViewer(index)}/>
@@ -300,7 +312,7 @@ export const GalleryComponent = ()=>{
                     }}
                     closeOnClickOutside={true}
                   />
-                )}
+                )} */}
             </div>
         </Container>
     )
