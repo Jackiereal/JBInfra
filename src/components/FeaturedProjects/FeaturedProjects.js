@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 // import { getProjects, getFeaturedProjects } from '../../services/services';
 import { ProjectHome } from './ProjectHome';
+import { ProjectHomeAlternative } from './ProjectHomeAlternative'
 import { ProjVideo } from './ProjVideo';
 import { FeatureVideo } from './../HomePage/FeatureVideo';
 import {
@@ -27,7 +28,7 @@ import GoToTop from './../GoToTop'
 const projectPage = (props)=>{
   switch (props) {
         case 'serenecity':
-          return <ProjectHome project={SERENECITY} projectName={props}/> 
+          return <ProjectHomeAlternative project={SERENECITY} projectName={props}/> 
         
         case 'serenevillas': 
           return  <ProjectHome project={SERENEVILLAS} projectName={props}/> 
@@ -36,7 +37,7 @@ const projectPage = (props)=>{
           return <ProjectHome project={SERENERESORTS} projectName={props}/>   
     
         case 'serenenaturevalley': 
-          return  <ProjectHome project={SERENENATUREVALLEY} projectName={props}/>
+          return  <ProjectHomeAlternative project={SERENENATUREVALLEY} projectName={props}/>
         
         case 'hillsidecounty': 
           return  <ProjectHome project={HILLSIDECOUNTY} projectName={props}/>
@@ -126,24 +127,9 @@ export const FeaturedProjects = () => {
         <ProjVideo video={`${project}.mp4`}/>
         
         <div>
-        {projectPage(project)}
-            <div>
-            <Container fixed classes={{root : classes.containerRoot}}>
-             <Card classes={{root: classes.cardRoot}}>
-                <CardMedia
-                    
-                    className={classes.media}
-                    image={`${project}.jpg`}
-                    controls
-                />
-               
-            </Card> 
-            </Container>
-            <GoToTop />
-            </div>
-            <GoToTop />
-            </div>
-            <GoToTop />
+          {projectPage(project)}
+        </div>
+            
     </div>
   );
 }
