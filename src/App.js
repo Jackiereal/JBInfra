@@ -27,14 +27,14 @@ function App() {
     <div className="App">
         <Header/>
         <Switch>
-            <Route path="/about" component={About}></Route>
-            <Route path="/brochure" component={Brochures} />
-            <Route path="/gallery" component={Gallery} />
-            <Route path="/jbnews" component={JBNews} />
-            <Route path="/contactus" component={ContactUs} />
-            <Route path="/ourjourney" component={OurJourney} />
+            <Route path="/about" component={About} forceRefresh={true}></Route>
+            <Route path="/brochure" component={Brochures} forceRefresh={true}/>
+            <Route path="/gallery" component={Gallery} forceRefresh={true}/>
+            <Route path="/jbnews" component={JBNews} forceRefresh={true}/>
+            <Route path="/contactus" component={ContactUs} forceRefresh={true}/>
+            <Route path="/ourjourney" component={OurJourney} forceRefresh={true}/>
             {/* <Route path="/plotavailability/:project" component={PlotAvailability} /> */}
-            <Route path="/:project" component={FeaturedProjects} /> 
+            <Route path="/:project" component={FeaturedProjects} forceRefresh={true}/> 
             {/* <Route path="/:compproject" component={FeaturedProjects} /> */}
             <Route path="/" component={HomePage} forceRefresh={true}></Route>
           </Switch>
