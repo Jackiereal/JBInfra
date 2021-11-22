@@ -107,9 +107,8 @@ export const OurJourney = ()=>{
       window.location = window.location + '#'
       window.location.reload()
     }
-    window.onbeforeunload = function () {
+    
         window.scrollTo(0, 0);
-      }
     const classes = useStyles();
     return (
       <div>
