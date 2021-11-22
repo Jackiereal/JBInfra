@@ -15,6 +15,7 @@ export default function About(){
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
+    window.scrollTo(0, 0);
   }
   // const [isError,setIsError] = useState(false);
 

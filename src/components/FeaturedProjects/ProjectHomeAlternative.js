@@ -169,6 +169,7 @@ export const ProjectHomeAlternative = (props)=>{
                         <Tab label="Phase I" />
                         <Tab label="Phase II" />
                         <Tab label="Phase III" />
+                        <Tab label="Phase IV" />
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
@@ -176,7 +177,7 @@ export const ProjectHomeAlternative = (props)=>{
                                 <CardMedia
                                     
                                     className={classes.media}
-                                    image={`${projectName}.jpg`}
+                                    image={`p1.jpg`}
                                     controls
                                 />
                             
@@ -189,7 +190,7 @@ export const ProjectHomeAlternative = (props)=>{
                                 <CardMedia
                                     
                                     className={classes.media}
-                                    image={`${projectName}.jpg`}
+                                    image={`p2.jpg`}
                                     controls
                                 />
                             
@@ -202,7 +203,20 @@ export const ProjectHomeAlternative = (props)=>{
                                 <CardMedia
                                     
                                     className={classes.media}
-                                    image={`${projectName}.jpg`}
+                                    image={`p3.jpg`}
+                                    controls
+                                />
+                            
+                            </Card> 
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={3}>
+                        <Container fixed classes={{root : classes.containerRoot}}>
+                            <Card classes={{root: classes.cardRoot}}>
+                                <CardMedia
+                                    
+                                    className={classes.media}
+                                    image={`p4.jpg`}
                                     controls
                                 />
                             

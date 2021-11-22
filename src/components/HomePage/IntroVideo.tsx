@@ -33,6 +33,6 @@ export const IntroVideo = ()=>{
         //     </Card> 
         // </Container>
         // <VideoCard src={'gearth.mp4'} autoplay={true} loop={true}/>
-        <ReactPlayer url='home3.mp4' playing loop width='100%' height='auto' muted/>
+        <ReactPlayer url='home.mp4' playing loop width='100%' height='auto' muted/>
     )
 }

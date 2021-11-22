@@ -81,6 +81,7 @@ export const OurJourney = ()=>{
     if(!window.location.hash){
       window.location = window.location + '#'
       window.location.reload()
+      window.scrollTo(0, 0);
     }
     const classes = useStyles();
     return (

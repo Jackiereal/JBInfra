@@ -15,6 +15,7 @@ export const ContactUs = ()=>{
     if(!window.location.hash){
         window.location = window.location + '#'
         window.location.reload()
+        window.scrollTo(0, 0);
       }
       
 
