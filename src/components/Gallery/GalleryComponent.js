@@ -52,13 +52,14 @@ const useStyles = makeStyles({
   rootImage: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
+    alignItems:'center',
     overflow: 'hidden',
     backgroundColor: '#fff',
     // height:'540px',
+    width:'100%',
     marginBottom:'30px',
     marginTop:'50px',
-    left:'100px'
   },
   imageList: {
     width: '90%',
@@ -294,7 +295,7 @@ export const GalleryComponent = ()=>{
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>
-              <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>;
+              <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false} slideInterval={5000}/>;
                 {/* <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
                     {images.map((item,index) => (
                     <ImageListItem key={item.img} cols={item.cols || 1}>
