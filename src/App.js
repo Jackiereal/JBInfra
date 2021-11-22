@@ -7,7 +7,7 @@ import { JBNews } from './components/JBNews/JBNews'
 import { ContactUs } from './components/ContactUs/ContactUs'
 import { HomePage } from './components/HomePage/HomePage'
 import { Brochures } from './components/Brochures/Brochures'
-import { OurJourney } from './components/Ourjourney';
+import { OurJourney } from './components/CompletedProjects/OurJourney';
 // import { Introduction } from "./components/HomePage/Introduction";
 // import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'
 import { FeaturedProjects } from './components/FeaturedProjects/FeaturedProjects'

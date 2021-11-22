@@ -16,11 +16,7 @@ export const ContactUs = ()=>{
         window.location = window.location + '#'
         window.location.reload()
       }
-    
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      }
-      
+      window.scrollTo(0, 0);
 
     const addresses = [
         {

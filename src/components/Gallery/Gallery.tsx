@@ -25,9 +25,7 @@ export const Gallery = ()=>{
     window.location = window.location + '#'
     window.location.reload()
   }
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+  window.scrollTo(0, 0);
     return (
         <div>
         <div>
