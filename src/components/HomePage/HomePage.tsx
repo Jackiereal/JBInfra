@@ -26,6 +26,12 @@ const useStyles = makeStyles({
 
 export const HomePage = ()=>{
     const classes = useStyles()
+    const [projects,setProjects] = useState([]);
+
+  if(!window.location.hash){
+    window.location = window.location + '#'
+    window.location.reload()
+  }
     // const [loading, setLoading] = useState(false);
 
     // useEffect(() => {

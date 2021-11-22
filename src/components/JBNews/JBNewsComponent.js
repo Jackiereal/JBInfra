@@ -106,7 +106,7 @@ const useStyles = makeStyles({
 const itemData = [
       {
         //  img :`https://picsum.photos/id/100/360/360`,
-        img:'1.jpg',
+        img:'jbnews2.jpg',
          title: 'Image',
         author: 'author',
          cols: 1,
@@ -114,7 +114,7 @@ const itemData = [
        },
        {
         // img :`https://picsum.photos/id/200/360/360`,
-        img:'2.jpg',
+        img:'jbnews1.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -168,14 +168,14 @@ const itemData = [
        cols: 1,
        project : 4,
      },
-     {
-      //  img :`https://picsum.photos/id/900/360/360`,
-      img:'9.jpg',
-       title: 'Image',
-      author: 'author',
-       cols: 1,
-       project : 1,
-     }
+    //  {
+    //   //  img :`https://picsum.photos/id/900/360/360`,
+    //   img:'9.jpg',
+    //    title: 'Image',
+    //   author: 'author',
+    //    cols: 1,
+    //    project : 1,
+    //  }
     ]
 
 
@@ -272,9 +272,9 @@ export const JBNewsComponent = ()=>{
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
          &nbsp;
-            <Typography  classes={{ root : classes.root}}>PHOTO GALLERY</Typography>
+            <Typography  classes={{ root : classes.root}}>JB News</Typography>
             <Typography  classes={{ root : classes.descroot}}>Your Happiness begins here...</Typography>
-            <div className={classes.rootButtonGroup}>
+            {/* <div className={classes.rootButtonGroup}>
                 <ButtonGroup size="small" variant="text" >
                     <Button onClick={()=>handleButtonClick(0)} classes={{root:classes.buttons}} className={project === 0 ? classes.active : ""}>All</Button>
                     <Button onClick={()=>handleButtonClick(1)} classes={{root:classes.buttons}} className={project === 1 ? classes.active : ""}>Nature Valley</Button>
@@ -282,7 +282,7 @@ export const JBNewsComponent = ()=>{
                     <Button onClick={()=>handleButtonClick(3)} classes={{root:classes.buttons}} className={project === 3 ? classes.active : ""}>Serene Villas</Button>
                     <Button onClick={()=>handleButtonClick(4)} classes={{root:classes.buttons}} className={project === 4 ? classes.active : ""}>Serene Resort</Button>
                 </ButtonGroup>
-            </div>
+            </div> */}
             <div className={classes.rootImage}>
               {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}
                 <ImageList rowHeight={240} className={classes.imageList} cols={columns}>

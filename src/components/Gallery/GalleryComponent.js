@@ -58,6 +58,7 @@ const useStyles = makeStyles({
     // height:'540px',
     marginBottom:'30px',
     marginTop:'50px',
+    left:'100px'
   },
   imageList: {
     width: '90%',

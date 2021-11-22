@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     
     containerRoot:{
         
-        backgroundImage:  'url("quote3.png")',
+        backgroundImage:  'url("quote4.png")',
         backgroundSize:'100% auto',
         width:'100%',
         height:'700px',

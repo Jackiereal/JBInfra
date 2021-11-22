@@ -5,6 +5,7 @@ import { Quote } from '../AboutPage/Quote'
 import { JBNewsComponent } from './JBNewsComponent'
 import { makeStyles } from '@material-ui/core/styles';
 import GoToTop from '../GoToTop';
+import { useState, useEffect } from 'react';
 const useStyles = makeStyles({
     
     containerRoot:{
@@ -15,6 +16,12 @@ const useStyles = makeStyles({
 
 export const JBNews = ()=>{
     const classes = useStyles();
+    const [projects,setProjects] = useState([]);
+
+    if(!window.location.hash){
+      window.location = window.location + '#'
+      window.location.reload()
+    }
     return (
         <div>
         <div>
