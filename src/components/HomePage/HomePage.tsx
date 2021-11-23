@@ -31,7 +31,17 @@ export const HomePage = ()=>{
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
+    let initialValidSlug = '';
+
+    window.addEventListener('load', () => {
+      window.location.hash = '';
+      window.location.hash = (initialValidSlug ? initialValidSlug : '');
+      window.scrollBy(0, -document.getElementsByClassName("heading")[0].clientHeight);
+    });
   }
+
+
+
 
   window.scrollTo(0, 0);
     // const [loading, setLoading] = useState(false);
