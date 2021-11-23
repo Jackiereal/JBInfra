@@ -6,7 +6,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 // import { VideoCard } from 'material-ui-player';
 import ReactPlayer from 'react-player'
-
+import GoToTop from './../GoToTop';
 const useStyles = makeStyles({
     containerRoot :{
         margin:0,
@@ -33,6 +33,10 @@ export const IntroVideo = ()=>{
         //     </Card> 
         // </Container>
         // <VideoCard src={'gearth.mp4'} autoplay={true} loop={true}/>
+        <div>
         <ReactPlayer url='home.mp4' playing loop width='100%' height='auto' muted/>
+        
+            <GoToTop/>
+        </div>
     )
 }

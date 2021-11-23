@@ -54,6 +54,7 @@ export const HomePage = ()=>{
         // </div>
         //  :
         <div>
+        <div>
             {/* <Introduction/> */}
             <IntroVideo/>
             <Projects/>
@@ -64,6 +65,8 @@ export const HomePage = ()=>{
             <Quote/>
             <GoToTop/>
         </div>
+<GoToTop/>
+         </div>
 // }
 //         </div>
 
