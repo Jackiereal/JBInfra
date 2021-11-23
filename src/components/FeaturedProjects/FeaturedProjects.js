@@ -115,10 +115,10 @@ export const FeaturedProjects = () => {
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
-    window.scrollTo(0, 0);
   }
-
-  window.scrollTo(0, 0);
+  setTimeout(() => {window.scrollTo(0, 0); }, 2000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  //window.scrollTo(0, 0);
 
   return (
   

@@ -27,23 +27,23 @@ const useStyles = makeStyles({
 export const HomePage = ()=>{
     const classes = useStyles()
     const [projects,setProjects] = useState([]);
+    
 
   if(!window.location.hash){
     window.location = window.location + '#'
     window.location.reload()
-    let initialValidSlug = '';
+    // let initialValidSlug = '';
+    //setTimeout(() => {  console.log("World!"); }, 2000);
+    // window.addEventListener('load', () => {
+    //   window.location.hash = '';
+    //   window.location.hash = (initialValidSlug ? initialValidSlug : '');
+    //   window.scrollBy(0, -document.getElementsByClassName("heading")[0].clientHeight);
+    // });
 
-    window.addEventListener('load', () => {
-      window.location.hash = '';
-      window.location.hash = (initialValidSlug ? initialValidSlug : '');
-      window.scrollBy(0, -document.getElementsByClassName("heading")[0].clientHeight);
-    });
   }
 
-
-
-
-  window.scrollTo(0, 0);
+  setTimeout(() => {window.scrollTo(0, 0); }, 2000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
     // const [loading, setLoading] = useState(false);
 
     // useEffect(() => {
