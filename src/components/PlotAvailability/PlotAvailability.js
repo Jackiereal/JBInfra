@@ -1,10 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { useParams } from "react-router-dom";
+import {
+
+    Typography,
+
+} from '@material-ui/core';
 const useStyles = makeStyles({
     
     containerRoot:{
         marginTop:'65px',
         marginBottom:'30px',
+        color: '#f78320',
+        fontSize: '24px',
+        fontFamily: 'Montserrat',
     },
     iframe:{
         width:'100%',
@@ -21,6 +29,17 @@ const plotUrl = {
     'JB003' : 'http://43.240.65.20/NextoraMaps/home/project/JB003/',
     'JB004' : 'http://43.240.65.20/NextoraMaps/home/project/JB004/',
 }
+
+const plotName = {
+    'JB00040' : 'JB Nature Valley - Phase I',
+    'JBI00050' : 'JB Nature Valley - Phase II',
+    'JBI00052' : 'JB Nature Valley - Phase III',
+    'JBI00054' : 'JB Nature Valley - Phase IV',
+    '12345' : 'JB Serene City',
+    'JB003' : 'JB Serene City II',
+    'JB004' : 'JB Serene City III',
+}
+
 
 export const PlotAvailability = ( props )=>{
     const classes = useStyles();
