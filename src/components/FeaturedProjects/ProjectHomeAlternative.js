@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import "./../../styles/scss/image-gallery.scss"
 import ImageGallery from 'react-image-gallery';
-
+import App1 from './carousel.js'
 const useStyles = makeStyles({
     container:{
         maxWidth:'100%',

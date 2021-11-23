@@ -33,7 +33,7 @@ function App() {
             <Route path="/jbnews" component={JBNews} forceRefresh={true}/>
             <Route path="/contactus" component={ContactUs} forceRefresh={true}/>
             <Route path="/ourjourney" component={OurJourney} forceRefresh={true}/>
-            {/* <Route path="/plotavailability/:project" component={PlotAvailability} /> */}
+            <Route path="/plotavailability/:project" component={PlotAvailability} />
             <Route path="/:project" component={FeaturedProjects} forceRefresh={true}/> 
             {/* <Route path="/:compproject" component={FeaturedProjects} /> */}
             <Route path="/" component={HomePage} forceRefresh={true}></Route>

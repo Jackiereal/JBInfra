@@ -44,6 +44,7 @@ export const HomePage = ()=>{
 
   setTimeout(() => {window.scrollTo(0, 0); }, 2000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  
     // const [loading, setLoading] = useState(false);
 
     // useEffect(() => {
