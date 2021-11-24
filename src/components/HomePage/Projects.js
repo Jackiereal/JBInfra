@@ -138,7 +138,7 @@ export const Projects = ()=>{
         {
           id: 1085,
           title : 'JB HILLSIDE COUNTY',
-          img: '2.jpg',
+          img: 'hscounty.jpg',
           name: 'hillsidecounty',
           description : " JB's Hillside County is Hillside plotting project offering modern clubhouse"
       },

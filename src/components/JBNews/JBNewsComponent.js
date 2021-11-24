@@ -272,7 +272,7 @@ export const JBNewsComponent = ()=>{
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
          &nbsp;
-            <Typography  classes={{ root : classes.root}}>JB News</Typography>
+            <Typography  classes={{ root : classes.root}}>JB in News</Typography>
             <Typography  classes={{ root : classes.descroot}}>Your Happiness begins here...</Typography>
             {/* <div className={classes.rootButtonGroup}>
                 <ButtonGroup size="small" variant="text" >

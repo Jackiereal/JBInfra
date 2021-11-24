@@ -108,8 +108,8 @@ const useStyles = makeStyles({
 const itemData = [
       {
         //  img :`https://picsum.photos/id/100/360/360`,
-        original :'1.jpg',
-        thumbnail : '1.jpg',
+        original :'nv1.jpeg',
+        thumbnail : 'nv1.jpeg',
          title: 'Image',
         author: 'author',
          cols: 1,
@@ -117,12 +117,102 @@ const itemData = [
        },
        {
         // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv2.jpeg',
+        thumbnail : 'nv2.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv3.jpg',
+        thumbnail : 'nv3.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv4.jpg',
+        thumbnail : 'nv4.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv5.jpg',
+        thumbnail : 'nv5.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv6.jpg',
+        thumbnail : 'nv6.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv7.jpg',
+        thumbnail : 'nv7.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv8.jpg',
+        thumbnail : 'nv8.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv9.jpeg',
+        thumbnail : 'nv9.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        original :'nv10.jpeg',
+        thumbnail : 'nv10.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/300/360/360`,
+        original :'1.jpg',
+        thumbnail : '1.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 2,
+      },
+      {
+        // img :`https://picsum.photos/id/300/360/360`,
         original :'2.jpg',
         thumbnail : '2.jpg',
         title: 'Image',
        author: 'author',
         cols: 1,
-        project : 1,
+        project : 2,
       },
       {
         // img :`https://picsum.photos/id/300/360/360`,
@@ -140,7 +230,7 @@ const itemData = [
         title: 'Image',
        author: 'author',
         cols: 1,
-        project : 2,
+        project : 3,
       },
       {
       //  img :`https://picsum.photos/id/500/360/360`,
@@ -158,7 +248,7 @@ const itemData = [
        title: 'Image',
       author: 'author',
        cols: 1,
-       project : 3,
+       project : 4,
      },
      {
         // img :`https://picsum.photos/id/700/360/360`,
@@ -176,7 +266,7 @@ const itemData = [
        title: 'Image',
       author: 'author',
        cols: 1,
-       project : 4,
+       project : 5,
      },
      {
       //  img :`https://picsum.photos/id/900/360/360`,
@@ -185,7 +275,7 @@ const itemData = [
        title: 'Image',
       author: 'author',
        cols: 1,
-       project : 1,
+       project : 5,
      }
     ]
 
@@ -283,15 +373,16 @@ export const GalleryComponent = ()=>{
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
          &nbsp;
-            <Typography  classes={{ root : classes.root}}>PHOTO GALLERY</Typography>
+            <Typography  classes={{ root : classes.root}}>GALLERY</Typography>
             <Typography  classes={{ root : classes.descroot}}>Your Happiness begins here...</Typography>
             <div className={classes.rootButtonGroup}>
                 <ButtonGroup size="small" variant="text" >
                     <Button onClick={()=>handleButtonClick(0)} classes={{root:classes.buttons}} className={project === 0 ? classes.active : ""}>All</Button>
                     <Button onClick={()=>handleButtonClick(1)} classes={{root:classes.buttons}} className={project === 1 ? classes.active : ""}>Nature Valley</Button>
-                    <Button onClick={()=>handleButtonClick(2)} classes={{root:classes.buttons}} className={project === 2 ? classes.active : ""}>Serene City</Button>
-                    <Button onClick={()=>handleButtonClick(3)} classes={{root:classes.buttons}} className={project === 3 ? classes.active : ""}>Serene Villas</Button>
-                    <Button onClick={()=>handleButtonClick(4)} classes={{root:classes.buttons}} className={project === 4 ? classes.active : ""}>Serene Resort</Button>
+                    <Button onClick={()=>handleButtonClick(2)} classes={{root:classes.buttons}} className={project === 2 ? classes.active : ""}>Hill Side County</Button>
+                    <Button onClick={()=>handleButtonClick(3)} classes={{root:classes.buttons}} className={project === 3 ? classes.active : ""}>Serene City</Button>
+                    <Button onClick={()=>handleButtonClick(4)} classes={{root:classes.buttons}} className={project === 4 ? classes.active : ""}>Serene Villas</Button>
+                    <Button onClick={()=>handleButtonClick(5)} classes={{root:classes.buttons}} className={project === 5 ? classes.active : ""}>Serene Resort</Button>
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>

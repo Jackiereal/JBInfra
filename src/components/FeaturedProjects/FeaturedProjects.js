@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 // import { getProjects, getFeaturedProjects } from '../../services/services';
 import { ProjectHome } from './ProjectHome';
 import { ProjectHomeAlternative } from './ProjectHomeAlternative'
+import { ProjectHomeSerene } from './ProjectHomeSerene'
 import { ProjVideo } from './ProjVideo';
 import { FeatureVideo } from './../HomePage/FeatureVideo';
 import {
@@ -28,7 +29,7 @@ import GoToTop from './../GoToTop'
 const projectPage = (props)=>{
   switch (props) {
         case 'serenecity':
-          return <ProjectHomeAlternative project={SERENECITY} projectName={props}/> 
+          return <ProjectHomeSerene project={SERENECITY} projectName={props}/> 
         
         case 'serenevillas': 
           return  <ProjectHome project={SERENEVILLAS} projectName={props}/> 
@@ -116,7 +117,8 @@ export const FeaturedProjects = () => {
     window.location = window.location + '#'
     window.location.reload()
   }
-  setTimeout(() => {window.scrollTo(0, 0); }, 2000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   //window.scrollTo(0, 0);
 

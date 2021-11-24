@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         marginTop:'30px'
     },
     gridItems:{
-        marginLeft:'20px',
+        marginLeft:'0px',
         marginRight:'20px'
     },
     title:{
@@ -174,6 +174,7 @@ export const ProjectHomeAlternative = (props)=>{
     const locationHighlights = props.project.valueslocation;
     
     const [value, setValue] = useState(0);
+    const images = ['nv1.jpeg', 'nv2.jpeg','nv3.jpg','nv4.jpg','nv5.jpg','nv6.jpg','nv7.jpg','nv8.jpg','nv9.jpeg',,'nv10.jpeg'];
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -203,7 +204,7 @@ export const ProjectHomeAlternative = (props)=>{
                         />
 
                         <div>
-                        <App1 autoPlay={true} />
+                        <App1 autoPlay={true} images={images}/>
                         </div>
                     </div>
                     {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}

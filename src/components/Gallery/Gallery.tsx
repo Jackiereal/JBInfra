@@ -25,7 +25,9 @@ export const Gallery = ()=>{
     window.location = window.location + '#'
     window.location.reload()
   }
-  window.scrollTo(0, 0);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
     return (
         <div>
         <div>

@@ -27,7 +27,8 @@ class App1 extends React.Component {
     super(props);
     this.state = {
       trigger: false,
-      autoPlay: this.props.autoPlay
+      autoPlay: this.props.autoPlay,
+      images: this.props.images
     };
   }
  
@@ -57,14 +58,14 @@ class App1 extends React.Component {
       responsive: [{
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 6,
           slidesToScroll: 1,
           centerMode: true,
         }
       }]
     };
 
-    var children = ['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
+    var children = this.state.images;
 
     //alert(" Autoplay - " + this.state.autoPlay + "       should update - " + this.state.trigger);
     return (

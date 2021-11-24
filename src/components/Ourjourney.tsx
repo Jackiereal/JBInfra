@@ -94,7 +94,7 @@ const useStyles = makeStyles({
         marginBottom:'20px'
       },
       quoteContainer:{
-        marginTop: '40px'
+        marginTop: '100px'
       }
       
 })
@@ -131,6 +131,16 @@ export const OurJourney = ()=>{
             </Grid>
             <Grid container spacing={3}>
                 <Grid item xs={10} sm={4}>
+                    <img className={classes.logoImage} src={'pvalley.png'} alt="peacockvalley"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                    JB's Peacock Valley is a 36 Acre Prestigious Residential Plotting Venture at Medchal launched in the year 2004.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={4}>
                     <img className={classes.logoImage} src={'vishaka.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
@@ -139,6 +149,47 @@ export const OurJourney = ()=>{
                     </Typography>
                 </Grid>
             </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={4}>
+                    <img className={classes.logoImage} src={'jbsagarvalley1.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                      JB Sagar Valley is a 24 Acre Prestigious Residential Plotting Venture at Mallepally near Nagarjuna Sagar launched on 2007.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={4}>
+                    <img className={classes.logoImage} src={'jbhills.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                      JB Hills is a 26 Acre Prestigious Residential Plotting Venture at Mallepally near Nagarjuna Sagar launched on 2007.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={4}>
+                    <img className={classes.logoImage} src={'jbsv2.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                      JB's Sagar Valley is a 18 Acre Prestigious Residential Plotting Venture at Patelguda, Telangana launched on 2012.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={4}>
+                    <img className={classes.logoImage} src={'jasminecity1.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                      JB's Jasmine City is a 33 Acre Prestigious Residential Plotting Venture at Mangalpally, Telangana launched on 2013.
+                    </Typography>
+                </Grid>
+            </Grid>
+            
             <Grid container spacing={3}>
                 <Grid item xs={10} sm={4}>
                     <img className={classes.logoImage} src={'brundavanam.png'} alt="logo"></img>
@@ -156,6 +207,36 @@ export const OurJourney = ()=>{
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
                     <Typography className={classes.simpletext}  align="left">
                        JB Resorts is a Resort Living Plotting Project, offering modern clubhouse, which extends in 100 acre layout.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={6} sm={4}>
+                    <img className={classes.logoImage} src={'jbgreenmeadows.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                       JB's Green Meadows is a 40 Acre Prestigious Residential Plotting Venture at Kongarkalan launched in the year 2015.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={6} sm={4}>
+                    <img className={classes.logoImage} src={'aeroheights.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                       JB's Aero Heights is a 12 Acre Prestigious Residential Plotting Venture at Tukkuguda launched in the year 2018.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={4}>
+                    <img className={classes.logoImage} src={'jbenclave.png'} alt="logo"></img>
+                </Grid>
+                <Grid item xs={10} sm={8} className={classes.gridContainer}>
+                    <Typography className={classes.simpletext}  align="left">
+                    JB Enclave is a 10 Acre Prestigious Residential Plotting Venture at Tummaloor, Telangana launched in the year 2019.
                     </Typography>
                 </Grid>
             </Grid>
