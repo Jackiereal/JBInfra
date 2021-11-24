@@ -1,7 +1,28 @@
 import React from "react";
 import Slider from "react-slick";
+import {
+  Container, Grid, Typography,Card,CardMedia
+} from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+// const useStyles = makeStyles({
+//   media: {
+//       height: '0',
+//       paddingTop: '73%', // 16:9,
+//       boxShadow:'none',
+//       border:'none',
+//       width:"82%",
+//       margin:'auto'
+//     },
+//   cardMedia:{
+//       boxShadow:'none',
+//       marginTop:'-70px',
+//   },
+ 
+
+// });
 
 class App1 extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -9,6 +30,7 @@ class App1 extends React.Component {
       autoPlay: this.props.autoPlay
     };
   }
+ 
 
   componentWillReceiveProps(nextProps) {
     this.setState({ trigger: true, autoPlay: nextProps.autoPlay });
@@ -24,23 +46,41 @@ class App1 extends React.Component {
 
   render() {
     var settings = {
-      dots: true,
+      centerMode: true,
       autoplay: this.state.autoPlay,
-      autoplaySpeed: 3000,
-      adaptiveHeight: true,
       slidesToShow: 3,
-      slidesToScroll:1,
+      slidesToScroll: 1,
+      dots: false,
       infinite: true,
+      cssEase: 'linear',
+      mobileFirst: true, //optional, to be used only if your page is mobile first
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      }]
     };
 
-    var children = ['serenevillas1111.jpg', 'serenevillas2222.jpg', 'serenevillas333.jpg'];
+    var children = ['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
 
     //alert(" Autoplay - " + this.state.autoPlay + "       should update - " + this.state.trigger);
     return (
       <div>
         <Slider {...settings}>
           {children.map(index => {
-            return <div>{index}</div>;
+            return <div height="auto" width="100%">
+              <img width="350" height="200" src={index}/>
+              {/* <Card >
+                            <CardMedia
+                                    // image="https://picsum.photos/id/1029/2048/2048"
+                                    image={index}
+                                    title=""
+                            />
+                        </Card> */}
+                        </div>;
           })}
         </Slider>
       </div>

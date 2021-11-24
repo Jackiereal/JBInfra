@@ -2,14 +2,16 @@ import {
     Container, Grid, Typography, Card, CardMedia
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import "./../../styles/scss/image-gallery.scss"
-import ImageGallery from 'react-image-gallery';
-import App1 from './carousel.js'
+import App1 from './carousel.js';
+import App2 from './ViewImage.js';
+import "react-image-lightbox/style.css";
+
 const useStyles = makeStyles({
     container:{
         maxWidth:'100%',
@@ -17,9 +19,16 @@ const useStyles = makeStyles({
     grid:{
         marginTop:'50px',
     },
+    gridInner:{
+        marginTop:'30px'
+    },
+    gridItems:{
+        marginLeft:'20px',
+        marginRight:'20px'
+    },
     title:{
         fontFamily: 'Montserrat',
-        fontSize: '18px',
+        fontSize: '14px',
         textAlign: 'center',
         lineHeight: '36px',
         marginBottom:'10px',
@@ -61,7 +70,8 @@ const useStyles = makeStyles({
         maxWidth: '100%',
         height:'100%',
         boxShadow: 'none',
-        
+        marginTop:'20px',
+        position: 'relative'    
     },
     media:{
         width: '100%',
@@ -69,6 +79,14 @@ const useStyles = makeStyles({
         backgroundSize:'contain',
         backgroundPosition:'top',
        
+    },
+    title:{
+        fontFamily: 'Montserrat',
+        fontSize: '18px',
+        textAlign: 'center',
+        lineHeight: '36px',
+        marginBottom:'10px',
+        color:'#f78320',
     },
     containerRoot:{
         // marginTop:'50px',
@@ -97,22 +115,29 @@ const useStyles = makeStyles({
         // paddingTop:'200px',
         // paddingLeft:'100px'
     },
+    listItem:{
+        fontFamily: 'Montserrat',
+        fontSize: '13px',
+        textAlign: 'left',
+        lineHeight: '26px',
+        color:'#4a4a4a',
+    },
 })
 
-const images = [
-    {
-        original: 'serenenaturevalley.jpg',
-        thumbnail: 'serenenaturevalley.jpg',
-      },
-      {
-        original: 'sereneresorts.jpg',
-        thumbnail: 'sereneresorts.jpg',
-      },
-      {
-        original: 'serenevillas.jpg',
-        thumbnail: 'serenevillas.jpg',
-      },
-]
+// const images = [
+//     {
+//         original: 'serenenaturevalley.jpg',
+//         thumbnail: 'serenenaturevalley.jpg',
+//       },
+//       {
+//         original: 'sereneresorts.jpg',
+//         thumbnail: 'sereneresorts.jpg',
+//       },
+//       {
+//         original: 'serenevillas.jpg',
+//         thumbnail: 'serenevillas.jpg',
+//       },
+// ]
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -145,7 +170,9 @@ export const ProjectHomeAlternative = (props)=>{
     const projectName = props.projectName;
     console.log(projectName)
     console.log(props.project)
-
+    const projectHighlights = props.project.valuesproject;
+    const locationHighlights = props.project.valueslocation;
+    
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -161,10 +188,27 @@ export const ProjectHomeAlternative = (props)=>{
                 <Grid item xs={12}>
                     <Typography className={classes.description}>{props.project.overview}</Typography>
                 </Grid>
-                <Grid item xs={12}>
-                    <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>;
+                <Grid className={classes.gridItems} item xs={12}>
+                    <div>
+                        <link
+                        rel="stylesheet"
+                        type="text/css"
+                        charset="UTF-8"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+                        />
+                        <link
+                        rel="stylesheet"
+                        type="text/css"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+                        />
+
+                        <div>
+                        <App1 autoPlay={true} />
+                        </div>
+                    </div>
+                    {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}
                 </Grid>
-                <Grid item xs={12} sm={12}>
+                <Grid className={classes.gridInner} item xs={12} sm={12}>
                     <Tabs value={value} onChange={handleChange} centered>
                         <Tab label="Phase I" />
                         <Tab label="Phase II" />
@@ -173,54 +217,138 @@ export const ProjectHomeAlternative = (props)=>{
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
-                            <Card classes={{root: classes.cardRoot}}>
-                                <CardMedia
-                                    
-                                    className={classes.media}
-                                    image={`p1.jpg`}
-                                    controls
-                                />
-                            
-                            </Card> 
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        <div>
+                        <App2 image={'p1.jpg'}/>
+                        </div>
+                        
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
-                        <Container fixed classes={{root : classes.containerRoot}}>
-                            <Card classes={{root: classes.cardRoot}}>
-                                <CardMedia
-                                    
-                                    className={classes.media}
-                                    image={`p2.jpg`}
-                                    controls
-                                />
-                            
-                            </Card> 
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        <div>
+                        <App2 image={'p2.jpg'}/>
+                        </div>
+                        
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
-                        <Container fixed classes={{root : classes.containerRoot}}>
-                            <Card classes={{root: classes.cardRoot}}>
-                                <CardMedia
-                                    
-                                    className={classes.media}
-                                    image={`p3.jpg`}
-                                    controls
-                                />
-                            
-                            </Card> 
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        <div>
+                        <App2 image={'p3.jpg'}/>
+                        </div>
+                        
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={3}>
-                        <Container fixed classes={{root : classes.containerRoot}}>
-                            <Card classes={{root: classes.cardRoot}}>
-                                <CardMedia
-                                    
-                                    className={classes.media}
-                                    image={`p4.jpg`}
-                                    controls
-                                />
-                            
-                            </Card> 
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        <div>
+                        <App2 image={'p4.jpg'}/>
+                        </div>
+                        
                         </Container>
                     </TabPanel>
                 </Grid>
