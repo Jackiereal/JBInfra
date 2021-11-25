@@ -9,6 +9,7 @@ import { Banner } from './../AboutPage/Banner';
 import GoToTop from './../GoToTop';
 import { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
+import { Footer } from './../../components/Footer'
 
 const useStyles = makeStyles({
     
@@ -75,6 +76,7 @@ export const HomePage = ()=>{
             <Banner image={'curve_2.png'}/>
             <Testimonials/>
             <Quote/>
+            <Footer></Footer>
             <GoToTop/>
         </div>
 <GoToTop/>

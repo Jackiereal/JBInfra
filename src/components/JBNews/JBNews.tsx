@@ -6,6 +6,7 @@ import { JBNewsComponent } from './JBNewsComponent'
 import { makeStyles } from '@material-ui/core/styles';
 import GoToTop from '../GoToTop';
 import { useState, useEffect } from 'react';
+import { Footer } from './../../components/Footer'
 const useStyles = makeStyles({
     
     containerRoot:{
@@ -35,6 +36,7 @@ export const JBNews = ()=>{
              <Quote/>
         </div>
         <GoToTop/>
+        <Footer></Footer>
         </div>
 
     )

@@ -209,6 +209,7 @@ export const ProjectHomeAlternative = (props)=>{
                     </div>
                     {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}
                 </Grid>
+                <Container fixed classes={{root : classes.containerRoot}}>
                 <Grid className={classes.gridInner} item xs={12} sm={12}>
                     <Tabs value={value} onChange={handleChange} centered>
                         <Tab label="Phase I" />
@@ -218,6 +219,9 @@ export const ProjectHomeAlternative = (props)=>{
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
+                        <div>
+                        <App2 image={'p1.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -244,14 +248,15 @@ export const ProjectHomeAlternative = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'p1.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'p2.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -278,14 +283,15 @@ export const ProjectHomeAlternative = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'p2.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'p3.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -312,14 +318,15 @@ export const ProjectHomeAlternative = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'p3.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={3}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'p4.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -346,13 +353,13 @@ export const ProjectHomeAlternative = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'p4.jpg'}/>
-                        </div>
+                        
+                        
                         
                         </Container>
                     </TabPanel>
                 </Grid>
+                </Container>
             </Grid>
         </Container> 
     )

@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 import GoToTop from './GoToTop';
 import { Banner} from "./AboutPage/Banner";
 import { Quote } from './AboutPage/Quote';
+import { Footer } from './Footer'
 
  
 
@@ -244,6 +245,7 @@ export const OurJourney = ()=>{
         </div>
         <div  className={classes.quoteContainer}>
         <Quote/>
+        <Footer></Footer>
         </div>
         <GoToTop/>
         </div>

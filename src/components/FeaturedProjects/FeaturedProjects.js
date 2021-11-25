@@ -132,6 +132,9 @@ export const FeaturedProjects = () => {
         <div>
           {projectPage(project)}
         </div>
+        
+        
+        
             
     </div>
   );

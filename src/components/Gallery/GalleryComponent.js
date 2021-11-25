@@ -260,6 +260,15 @@ const itemData = [
         project : 4,
       },
       {
+        //  img :`https://picsum.photos/id/900/360/360`,
+        original :'8.jpg',
+          thumbnail : '8.jpg',
+         title: 'Video',
+        author: 'author',
+         cols: 1,
+         project : 4,
+       },
+      {
       //  img :`https://picsum.photos/id/800/360/360`,
       original :'8.jpg',
       thumbnail : '8.jpg',
@@ -370,6 +379,8 @@ export const GalleryComponent = ()=>{
       setIsViewerOpen(false);
     };
 
+    
+
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
          &nbsp;
@@ -386,7 +397,7 @@ export const GalleryComponent = ()=>{
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>
-              <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false} slideInterval={5000}/>;
+              <ImageGallery items={images} infinite={true} autoPlay={true} showFullscreenButton={true} showVideo={true} showPlayButton={false} slideInterval={5000}/>;
                 {/* <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
                     {images.map((item,index) => (
                     <ImageListItem key={item.img} cols={item.cols || 1}>

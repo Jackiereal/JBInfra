@@ -10,6 +10,7 @@ import {
     Grid
 } from '@material-ui/core';
 import GoToTop from '../GoToTop';
+import { Footer } from './../../components/Footer'
 export const ContactUs = ()=>{
 
     if(!window.location.hash){
@@ -66,6 +67,7 @@ export const ContactUs = ()=>{
                 </Grid>
             </Grid>
             <Quote/>
+            <Footer></Footer>
         <GoToTop />
         </div>
     )

@@ -221,6 +221,9 @@ export const ProjectHomeSerene = (props)=>{
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
+                        <div>
+                        <App2 image={'s1.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -247,14 +250,15 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s1.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s3.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -281,14 +285,15 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s3.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s4.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -315,14 +320,15 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s4.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={3}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s5.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -349,14 +355,15 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s5.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={4}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s7.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -383,14 +390,15 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s7.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={5}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s7.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -417,14 +425,15 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s7.jpg'}/>
-                        </div>
+                        
                         
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={6}>
                     <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s8.jpg'}/>
+                        </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
                                 <Typography className={classes.title}>{props.project.titleproject}</Typography>
@@ -451,9 +460,7 @@ export const ProjectHomeSerene = (props)=>{
                                 </ul>
                             </Grid>
                         </Grid>
-                        <div>
-                        <App2 image={'s8.jpg'}/>
-                        </div>
+                        
                         </Container>
                     </TabPanel>
                 </Grid>

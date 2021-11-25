@@ -1,7 +1,7 @@
 import './App.scss';
 import { Header } from './components/Header'
 import About  from './components/AboutPage/AboutPage'
-import { Footer } from './components/Footer'
+
 import { Gallery } from './components/Gallery/Gallery'
 import { JBNews } from './components/JBNews/JBNews'
 import { ContactUs } from './components/ContactUs/ContactUs'
@@ -38,7 +38,7 @@ function App() {
             {/* <Route path="/:compproject" component={FeaturedProjects} /> */}
             <Route path="/" component={HomePage} forceRefresh={true}></Route>
           </Switch>
-        <Footer/>
+        
     </div>
     </Router>
   );

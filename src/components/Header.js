@@ -317,6 +317,7 @@ export function Header(props) {
                   }
                 }}
                 >
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-nature-valley.pdf" target = "_blank">Nature Valley</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-serene-city.pdf" target = "_blank">Serene City</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-serene-villas.pdf" target = "_blank">Serene Villas</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink}href="jb-serene-resort.pdf" target = "_blank">Serene Resorts</a></MenuItem>
@@ -467,6 +468,7 @@ export function Header(props) {
                   }
                 }}
                 >
+                  <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-nature-valley.pdf" target = "_blank">Nature Valley</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-serene-city.pdf" target = "_blank">Serene City</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink} href="jb-serene-villas.pdf" target = "_blank">Serene Villas</a></MenuItem>
                   <MenuItem onClick={handleCloseBrochure} ><a className={classes.menuLink}href="jb-serene-resort.pdf" target = "_blank">Serene Resorts</a></MenuItem>

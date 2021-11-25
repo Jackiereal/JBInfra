@@ -2,6 +2,7 @@ import { Introduction } from "./../AboutPage/Introduction";
 import { Banner } from "./../AboutPage/Banner"
 // import { Introduction } from "./../HomePage/Introduction";
 import { Quote } from './../AboutPage/Quote'
+import { Footer } from './../../components/Footer'
 import { GalleryComponent } from './GalleryComponent'
 import { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -38,6 +39,7 @@ export const Gallery = ()=>{
         </div>
         <div className={classes.containerRoot}>
              <Quote/>
+             <Footer></Footer>
         </div>
         <GoToTop/>
         </div>
