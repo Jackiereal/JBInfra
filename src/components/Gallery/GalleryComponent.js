@@ -116,7 +116,7 @@ const itemData = [
       {
         //  img :`https://picsum.photos/id/100/360/360`,
         
-        embedUrl :'https://youtu.be/KTMm5mbtFJM',
+        original :'nv1.jpeg',
         thumbnail : 'nv1.jpeg',
          title: 'Image',
         author: 'author',
@@ -143,7 +143,7 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/200/360/360`,
-        embedUrl :'https://youtu.be/KTMm5mbtFJM',
+        original :'nv4.jpg',
         thumbnail : 'nv4.jpg',
         title: 'Image',
        author: 'author',
@@ -205,6 +205,16 @@ const itemData = [
         project : 1,
       },
       {
+        embedUrl :'https://www.youtube.com/watch?v=tN2JD3inVbg',
+        renderItem: renderVideo,
+        original :'4.jpg',
+        thumbnail : '4.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
         // img :`https://picsum.photos/id/300/360/360`,
         original :'1.jpg',
         thumbnail : '1.jpg',
@@ -239,11 +249,34 @@ const itemData = [
         title: 'Image',
        author: 'author',
         cols: 1,
-        project : 3,
+        project : 4,
       },
       {
+        // img :`https://picsum.photos/id/400/360/360`,
+        embedUrl :'https://www.youtube.com/watch?v=B8jO3Yod_90',
+        original :'4.jpg',
+        thumbnail : '4.jpg',
+        renderItem: renderVideo,
+        title: 'Teaser',
+       author: 'author',
+        cols: 1,
+        project : 2,
+      },
+      
+      {
       //  img :`https://picsum.photos/id/500/360/360`,
-      embedUrl : 'https://youtu.be/GuKQrolWWY8',
+      embedUrl : 'https://www.youtube.com/watch?v=-dDeECgUz-s',
+      original :'5.jpg',
+      thumbnail : '5.jpg',
+      renderItem: renderVideo,
+       title: 'Image',
+      author: 'author',
+       cols: 1,
+       project : 4,
+     },
+     {
+      //  img :`https://picsum.photos/id/500/360/360`,
+      embedUrl : 'https://www.youtube.com/watch?v=3SDkcl_gDh4',
       original :'5.jpg',
       thumbnail : '5.jpg',
       renderItem: renderVideo,
@@ -252,6 +285,7 @@ const itemData = [
        cols: 1,
        project : 3,
      },
+     
      {
       //  img :`https://picsum.photos/id/600/360/360`,
       original :'6.jpg',
