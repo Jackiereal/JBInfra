@@ -161,6 +161,22 @@ $ig-shadow: 0 2px 2px lighten($ig-black, 10%);
 
   .image-gallery-slide .image-gallery-image {
     max-height: calc(100vh - 80px); // 80 px for the thumbnail space
+    width:calc(100vw - 100px);
+    height:300px;  
+
+  }
+
+  @media (min-width: $ig-xsmall-screen) {
+    .image-gallery-image {
+      width:calc(100vw - 100px);
+      height: 400px !important;
+    }
+  }
+  @media (min-width: $ig-small-screen) {
+    .image-gallery-image {
+      width:calc(100vw - 100px);
+      height: 700px !important;
+    }
   }
 
   &.left,

@@ -59,12 +59,13 @@ const useStyles = makeStyles({
     backgroundColor: '#fff',
     // height:'540px',
     width:'100%',
+    height:'auto',
     marginBottom:'30px',
     marginTop:'50px',
   },
   imageList: {
     width: '90%',
-    height: 480,
+    height: 'auto',
     margin:'auto',
     cursor:'pointer',
    
@@ -108,7 +109,9 @@ const useStyles = makeStyles({
 
 const renderVideo = (item) =>{
   return (
-      <ReactPlayer url={item.embedUrl} width='100%' height='auto' />
+      <div class="image-gallery-image">
+        <ReactPlayer url={item.embedUrl} width='100%' height='100%' />
+      </div>
   )
 }
 
@@ -443,25 +446,6 @@ export const GalleryComponent = ()=>{
             </div>
             <div className={classes.rootImage}>
               <ImageGallery items={images} infinite={true} autoPlay={true} showFullscreenButton={true} showVideo={true} showPlayButton={false} slideInterval={5000}/>
-                {/* <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
-                    {images.map((item,index) => (
-                    <ImageListItem key={item.img} cols={item.cols || 1}>
-                        <img src={item.img} alt={item.title} onClick={()=>openImageViewer(index)}/>
-                    </ImageListItem>
-                    ))}
-                </ImageList>
-                {isViewerOpen && (
-                  <ImageViewer
-                    src={imageList}
-                    currentIndex={currentImage}
-                    onClose={closeImageViewer}
-                    disableScroll={false}
-                    backgroundStyle={{
-                      backgroundColor: "rgba(0,0,0,0.9)"
-                    }}
-                    closeOnClickOutside={true}
-                  />
-                )} */}
             </div>
         </Container>
     )
