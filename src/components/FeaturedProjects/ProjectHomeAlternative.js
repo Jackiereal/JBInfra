@@ -14,7 +14,42 @@ import "react-image-lightbox/style.css";
 
 const useStyles = makeStyles({
     container:{
+        backgroundImage:  'url("nvcurve.png")',
+        // backgroundPosition: 'left',
+        backgroundSize:'100% auto',
+        backgroundRepeat: 'no-repeat',
+        // height:'400px',
+        width:'100%',
         maxWidth:'100%',
+        marginTop:'-200px',
+        paddingTop:'100px',
+        position:'relative',
+        height:'1000px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-130px',
+            paddingTop:'50px',
+            height:'1700px',
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-150px',
+            paddingTop:'125px',
+            height:'1100px'
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-250px',
+            paddingTop:'150px',
+            height:'800px'
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-300px',
+            paddingTop:'220px',
+            height:'850px'
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-400px',
+            paddingTop:'325px',
+            height:'650px'
+          },
     },
     grid:{
         marginTop:'50px',

@@ -3,7 +3,13 @@
 
 //     )
 // }
+import {
+    Typography,
+    Card,
+    Grid,
+    CardMedia
 
+} from '@material-ui/core';
 import {
     Container,
 } from '@material-ui/core';
@@ -23,7 +29,7 @@ const useStyles = makeStyles({
         marginTop:'-125px',
         marginBottom:'30px',
         ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
-            height:'200px',
+            height:'300px',
             marginTop:'-100px',
             maxWidth:'100%',
         },
@@ -76,13 +82,32 @@ const useStyles = makeStyles({
         fontFamily:'Montserrat',
         paddingRight:'30px',
         paddingTop:'5px',
+    },
+    mobile:{
+        position:'relative',marginTop:'750px',marginLeft: '450px'
+    },
+    mail:{
+        marginLeft: '800px',position:'relative',marginTop:'40px'
     }
 })
+
+const Mailto = ({ email, subject = '', body = '', children }) => {
+    let params = subject || body ? '?' : '';
+    if (subject) params += `subject=${encodeURIComponent(subject)}`;
+    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+  
+    return <a href={`mailto:${email}${params}`}>{children}</a>;
+  };
 
 export const Quote = ()=>{
     const classes = useStyles();
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
+            
+            <a href="tel:04029554577"></a><br />
+            
+            <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!">
+  </Mailto>
         </Container>
     )
-}
+} 
