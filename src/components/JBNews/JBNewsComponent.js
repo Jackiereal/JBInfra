@@ -12,6 +12,9 @@ import { makeStyles } from '@material-ui/core/styles';
 // import { getProjectImages } from '../../services/services';
 import { useState, useEffect, useCallback } from 'react';
 import ImageViewer from "react-simple-image-viewer";
+import ReactImageVideoLightbox from "react-image-video-lightbox";
+import { DataSaverOffRounded } from '@mui/icons-material';
+
 // import "./../../styles/scss/image-gallery.scss"
 // import ImageGallery from 'react-image-gallery';
 
@@ -138,6 +141,17 @@ const itemData = [
     //  }
     ]
 
+    
+
+    const data = [
+      
+      {
+        url: "https://www.youtube.com/embed/ScMzIvxBSi4",
+        type: "video",
+        altTag: "some video"
+      },
+    ];
+
 
 
     const getWidth = () => window.innerWidth 
@@ -180,7 +194,9 @@ export const JBNewsComponent = ()=>{
     const [project,setProject] = useState(0);
     const [columns,setColumns] = useState(4);
     const [currentImage, setCurrentImage] = useState(0);
+    const [currentVideo, setCurrentVideo] = useState(0);
     const [isViewerOpen, setIsViewerOpen] = useState(false);
+    const [isYoutubeViewerOpen, setIsYoutubeViewerOpen] = useState(false);
     const [images, setImages] = useState(itemData)
     let imageList = images.map(item=>{
       return item.img;
@@ -224,10 +240,26 @@ export const JBNewsComponent = ()=>{
       setIsViewerOpen(true);
     }, []);
   
+    const openYoutubeImageViewer = useCallback((index) => {
+      //  return <a style={{display: "table-cell"}} href="'https://www.youtube.com/embed/nfk6sCzRTbM?autoplay=1'" target="_blank">text</a>
+    }, []);
+
     const closeImageViewer = () => {
       setCurrentImage(0);
       setIsViewerOpen(false);
     };
+
+    const closeVideoViewer = () => {
+      setCurrentVideo(0);
+      setIsYoutubeViewerOpen(false);
+    };
+
+    const openInNewTab = (url) => {
+      const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+      if (newWindow) newWindow.opener = null
+    }
+
+    const handleToggle = () => setIsYoutubeViewerOpen(!isYoutubeViewerOpen);
 
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
@@ -251,6 +283,12 @@ export const JBNewsComponent = ()=>{
                         <img src={item.img} alt={item.title} onClick={()=>openImageViewer(index)}/>
                     </ImageListItem>
                     ))}
+                    <ImageListItem>
+                      <img src={'jbnews4.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=GuKQrolWWY8&t=197s')}/>
+                    </ImageListItem>
+                    <ImageListItem>
+                      <img src={'jbnews5.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=6klt1ev5Gxs&t=21s')}/>
+                    </ImageListItem>
                 </ImageList>
                 {isViewerOpen && (
                   <ImageViewer
@@ -263,6 +301,15 @@ export const JBNewsComponent = ()=>{
                     }}
                     closeOnClickOutside={true}
                   />
+                )}
+                {isYoutubeViewerOpen && (
+                  <a style={{display: "table-cell"}} href="'https://www.youtube.com/embed/nfk6sCzRTbM?autoplay=1'" target="_blank">text</a>
+                //   <ReactImageVideoLightbox
+                //   data='https://www.youtube.com/embed/nfk6sCzRTbM?autoplay=1' 
+                //   startIndex={0}
+                //   showResourceCount={true}
+                //   onCloseCallback={() => handleToggle()}
+                // />
                 )}
             </div>
         </Container>
