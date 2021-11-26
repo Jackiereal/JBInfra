@@ -442,7 +442,7 @@ export const GalleryComponent = ()=>{
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>
-              <ImageGallery items={images} infinite={true} autoPlay={true} showFullscreenButton={true} showVideo={true} showPlayButton={false} slideInterval={5000}/>;
+              <ImageGallery items={images} infinite={true} autoPlay={true} showFullscreenButton={true} showVideo={true} showPlayButton={false} slideInterval={5000}/>
                 {/* <ImageList rowHeight={240} className={classes.imageList} cols={columns}>
                     {images.map((item,index) => (
                     <ImageListItem key={item.img} cols={item.cols || 1}>
