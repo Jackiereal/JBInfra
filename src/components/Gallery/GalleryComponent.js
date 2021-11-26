@@ -14,6 +14,7 @@ import { useState, useEffect, useCallback } from 'react';
 // import ImageViewer from "react-simple-image-viewer";
 import "./../../styles/scss/image-gallery.scss"
 import ImageGallery from 'react-image-gallery';
+import ReactPlayer from 'react-player'
 
 
 
@@ -105,10 +106,17 @@ const useStyles = makeStyles({
 },
 });
 
+const renderVideo = (item) =>{
+  return (
+      <ReactPlayer url={item.embedUrl} width='100%' height='auto' />
+  )
+}
+
 const itemData = [
       {
         //  img :`https://picsum.photos/id/100/360/360`,
-        original :'nv1.jpeg',
+        
+        embedUrl :'https://youtu.be/KTMm5mbtFJM',
         thumbnail : 'nv1.jpeg',
          title: 'Image',
         author: 'author',
@@ -135,7 +143,7 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/200/360/360`,
-        original :'nv4.jpg',
+        embedUrl :'https://youtu.be/KTMm5mbtFJM',
         thumbnail : 'nv4.jpg',
         title: 'Image',
        author: 'author',
@@ -225,8 +233,9 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/400/360/360`,
-        original :'4.jpg',
+        embedUrl :'https://youtu.be/KTMm5mbtFJM',
         thumbnail : '4.jpg',
+        renderItem: renderVideo,
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -234,8 +243,10 @@ const itemData = [
       },
       {
       //  img :`https://picsum.photos/id/500/360/360`,
+      embedUrl : 'https://youtu.be/GuKQrolWWY8',
       original :'5.jpg',
       thumbnail : '5.jpg',
+      renderItem: renderVideo,
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -365,7 +376,7 @@ export const GalleryComponent = ()=>{
          const filtered = itemData.filter(item=>{
           return id === 0 ? true : item.project === id;
         })
-         setImages(filtered) 
+        setImages(filtered) 
 
     }
 
