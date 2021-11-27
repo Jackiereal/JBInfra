@@ -18,7 +18,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     
     containerRoot:{
-        
+        position:'relative',
         backgroundImage:  'url("getintouch.png")',
         backgroundSize:'100% auto',
         width:'100%',
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
         marginTop:'-125px',
         marginBottom:'30px',
         ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
-            height:'300px',
+            height:'350px',
             marginTop:'-100px',
             maxWidth:'100%',
         },
@@ -84,10 +84,32 @@ const useStyles = makeStyles({
         paddingTop:'5px',
     },
     mobile:{
-        position:'relative',marginTop:'750px',marginLeft: '450px'
+        position:'absolute',
+        bottom:'50px',
+        right:'40px',
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            height:'120px',
+        },
+    },
+    buttonImage:{
+        height:'60px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            height:'40px',
+        },
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            height:'50px',
+        },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            height:'60px',
+        },
     },
     mail:{
-        marginLeft: '800px',position:'relative',marginTop:'40px'
+        position:'absolute',
+        bottom:'10px',
+        right:'40px',
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'40px',
+        },
     }
 })
 
@@ -103,12 +125,14 @@ export const Quote = ()=>{
     const classes = useStyles();
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
-            
-            <a href="tel:04029554577"><img src="mobile.png"></img></a><br />
-            
-            <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!">
-                <img src="mail.png"/>
-            </Mailto>
+            <Grid className={classes.mobile}>
+                <a href="tel:04029554577"><img className={classes.buttonImage} src="mobile.png"></img></a><br />
+            </Grid>
+            <Grid className={classes.mail}>
+                <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!">
+                    <img className={classes.buttonImage} src="mail.png"/>
+                </Mailto>
+            </Grid>
         </Container>
     )
 } 
