@@ -233,7 +233,7 @@ export const OurJourney = ()=>{
             </Grid>
             <Grid container spacing={3}>
                 <Grid item xs={10} sm={4}>
-                    <img className={classes.logoImage} src={'jbenclave.png'} alt="logo"></img>
+                    <img className={classes.logoImage} src={'jbenclave2.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
                     <Typography className={classes.simpletext}  align="left">
