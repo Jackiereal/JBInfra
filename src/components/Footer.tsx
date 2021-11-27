@@ -15,7 +15,7 @@ import { CopyrightOutlined } from '@material-ui/icons';
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
-        width:'90%',
+        width:'100%',
         margin:'auto',
         marginBottom:'30px'
       },
@@ -63,6 +63,7 @@ const useStyles = makeStyles({
           margin:'auto',
       },
       cardbutton:{
+          marginLeft:'10px',
         "&:hover": {
             backgroundColor: '#f78320',
             color:'#fff',
@@ -138,8 +139,8 @@ export const Footer = ()=>{
                         
                     </Typography>
                 </Grid>
-                <Grid item xs={10} sm={2}>
-                <IconButton className={classes.cardbutton}>
+                <Grid item xs={10} sm={2} className={classes.gridContainer}>
+                    <IconButton className={classes.cardbutton}>
                          <FacebookIcon onClick={() => { window.open('https://www.facebook.com/Jbinfraofficial/','_blank')}}/>
                      </IconButton>
                      <IconButton className={classes.cardbutton} >
