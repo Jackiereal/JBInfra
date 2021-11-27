@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     
     containerRoot:{
         
-        backgroundImage:  'url("quote4.png")',
+        backgroundImage:  'url("getintouch.png")',
         backgroundSize:'100% auto',
         width:'100%',
         height:'700px',
@@ -104,10 +104,11 @@ export const Quote = ()=>{
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
             
-            <a href="tel:04029554577"></a><br />
+            <a href="tel:04029554577"><img src="mobile.png"></img></a><br />
             
             <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!">
-  </Mailto>
+                <img src="mail.png"/>
+            </Mailto>
         </Container>
     )
 } 
