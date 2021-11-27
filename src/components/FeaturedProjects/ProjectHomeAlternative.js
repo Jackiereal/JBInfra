@@ -207,6 +207,7 @@ export const ProjectHomeAlternative = (props)=>{
     console.log(props.project)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
+    setTimeout(() => {window.scrollTo(0, 0); }, 1000);
     
     const [value, setValue] = useState(0);
     const images = ['nv1.jpeg', 'nv2.jpeg','nv3.jpg','nv4.jpg','nv5.jpg','nv6.jpg','nv7.jpg','nv8.jpg','nv9.jpeg',,'nv10.jpeg'];
