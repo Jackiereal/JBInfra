@@ -131,6 +131,38 @@ const itemData = [
         cols: 1,
         project : 1,
       },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews6.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews7.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews8.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews9.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
     //  {
     //   //  img :`https://picsum.photos/id/900/360/360`,
     //   img:'9.jpg',
@@ -289,6 +321,21 @@ export const JBNewsComponent = ()=>{
                     <ImageListItem>
                       <img src={'jbnews5.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=6klt1ev5Gxs&t=21s')}/>
                     </ImageListItem>
+                    <ImageListItem>
+                      <img src={'jbnews10.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=x2Qs3n1gJas')}/>
+                    </ImageListItem>
+                    <ImageListItem>
+                      <img src={'jbnews11.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=6CUPAbvtaQ0&t=185s')}/>
+                    </ImageListItem>
+                    <ImageListItem>
+                      <img src={'jbnews12.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=aGeqHklNCx4')}/>
+                    </ImageListItem>
+                    <ImageListItem>
+                      <img src={'jbnews13.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=LeAq-LpanGA')}/>
+                    </ImageListItem> 
+                    <ImageListItem>
+                      <img src={'jbnews14.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=jUyh1D-dIM4')}/>
+                    </ImageListItem> 
                 </ImageList>
                 {isViewerOpen && (
                   <ImageViewer
@@ -302,7 +349,7 @@ export const JBNewsComponent = ()=>{
                     closeOnClickOutside={true}
                   />
                 )}
-                {isYoutubeViewerOpen && (
+                {/* {isYoutubeViewerOpen && (
                   <a style={{display: "table-cell"}} href="'https://www.youtube.com/embed/nfk6sCzRTbM?autoplay=1'" target="_blank">text</a>
                 //   <ReactImageVideoLightbox
                 //   data='https://www.youtube.com/embed/nfk6sCzRTbM?autoplay=1' 
@@ -310,7 +357,7 @@ export const JBNewsComponent = ()=>{
                 //   showResourceCount={true}
                 //   onCloseCallback={() => handleToggle()}
                 // />
-                )}
+                )} */}
             </div>
         </Container>
     )

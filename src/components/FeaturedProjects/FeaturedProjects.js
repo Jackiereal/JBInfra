@@ -120,6 +120,7 @@ export const FeaturedProjects = () => {
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   //window.scrollTo(0, 0);
 
   return (
