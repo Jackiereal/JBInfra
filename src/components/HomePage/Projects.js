@@ -69,7 +69,7 @@ const useStyles = makeStyles({
           ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-200px',
             paddingTop:'175px',
-            height:'850px'
+            height:'650px'
           },
           ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-300px',
