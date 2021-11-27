@@ -109,10 +109,21 @@ const useStyles = makeStyles({
 
 const renderVideo = (item) =>{
   return (
-      <div class="image-gallery-image">
+      <div class="image-gallery-image" onClick={handleClick}>
         <ReactPlayer url={item.embedUrl} width='100%' height='100%' />
       </div>
   )
+}
+
+const linkObject = {
+   '4.jpg' : 'https://www.youtube.com/watch?v=tN2JD3inVbg',
+}
+
+const handleClick = (event) => {
+  const src = event.target.src
+  const key = src.split('/')
+  if(linkObject[key[key.length-1]])
+    window.open(linkObject[key[key.length-1]], '_blank').focus();
 }
 
 const itemData = [
@@ -208,8 +219,8 @@ const itemData = [
         project : 1,
       },
       {
-        embedUrl :'https://www.youtube.com/watch?v=tN2JD3inVbg',
-        renderItem: renderVideo,
+        // embedUrl :'https://www.youtube.com/watch?v=tN2JD3inVbg',
+        // renderItem: renderVideo,
         original :'4.jpg',
         thumbnail : '4.jpg',
         title: 'Image',
@@ -246,9 +257,10 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/400/360/360`,
-        embedUrl :'https://youtu.be/KTMm5mbtFJM',
+        // embedUrl :'https://youtu.be/KTMm5mbtFJM',
+        // renderItem: renderVideo,
+        original :'4.jpg',
         thumbnail : '4.jpg',
-        renderItem: renderVideo,
         title: 'Image',
        author: 'author',
         cols: 1,
@@ -256,10 +268,10 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/400/360/360`,
-        embedUrl :'https://www.youtube.com/watch?v=B8jO3Yod_90',
+        // embedUrl :'https://www.youtube.com/watch?v=B8jO3Yod_90',
+        // renderItem: renderVideo,
         original :'4.jpg',
         thumbnail : '4.jpg',
-        renderItem: renderVideo,
         title: 'Teaser',
        author: 'author',
         cols: 1,
@@ -268,10 +280,10 @@ const itemData = [
       
       {
       //  img :`https://picsum.photos/id/500/360/360`,
-      embedUrl : 'https://www.youtube.com/watch?v=-dDeECgUz-s',
+      // embedUrl : 'https://www.youtube.com/watch?v=-dDeECgUz-s',
+      // renderItem: renderVideo,
       original :'5.jpg',
       thumbnail : '5.jpg',
-      renderItem: renderVideo,
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -279,10 +291,10 @@ const itemData = [
      },
      {
       //  img :`https://picsum.photos/id/500/360/360`,
-      embedUrl : 'https://www.youtube.com/watch?v=3SDkcl_gDh4',
+      // embedUrl : 'https://www.youtube.com/watch?v=3SDkcl_gDh4',
+      // renderItem: renderVideo,
       original :'5.jpg',
       thumbnail : '5.jpg',
-      renderItem: renderVideo,
        title: 'Image',
       author: 'author',
        cols: 1,
@@ -445,7 +457,7 @@ export const GalleryComponent = ()=>{
                 </ButtonGroup>
             </div>
             <div className={classes.rootImage}>
-              <ImageGallery items={images} infinite={true} autoPlay={true} showFullscreenButton={true} showVideo={true} showPlayButton={false} slideInterval={5000}/>
+              <ImageGallery items={images} infinite={true} autoPlay={true} showFullscreenButton={true} showVideo={true} showPlayButton={false} slideInterval={5000} onClick={handleClick} />
             </div>
         </Container>
     )
