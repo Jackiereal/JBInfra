@@ -94,7 +94,7 @@ export const OurJourney = ()=>{
               </Grid>
               <Grid item xs={10} sm={2} className={classes.gridContainer}>
                   <Typography className={classes.simpletext}  align="left">
-                  JB Enclave is a 30 Acre Residential Plotting Venture at Bonguluru launched on 2001.
+                  JB Enclave is a 30 Acre Residential Plotting Venture at Benguluru launched on 2001.
                   </Typography>
               </Grid>
           </Grid>
