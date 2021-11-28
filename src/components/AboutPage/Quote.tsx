@@ -29,7 +29,7 @@ const useStyles = makeStyles({
         marginTop:'-125px',
         marginBottom:'30px',
         ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
-            height:'350px',
+            height:'300px',
             marginTop:'-100px',
             maxWidth:'100%',
         },
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
             maxWidth:'100%',
         },
         ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
-            height:'600px',
+            height:'650px',
             marginTop:'-100px',
             maxWidth:'100%',
         },
@@ -85,16 +85,26 @@ const useStyles = makeStyles({
     },
     mobile:{
         position:'absolute',
-        bottom:'50px',
+        bottom:'80px',
         right:'40px',
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
-            height:'120px',
+            bottom:'80px',
         },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'100px',
+        },
+        ['@media (min-width:1024px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'100px',
+        },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'120px',
+        },
+        
     },
     buttonImage:{
         height:'60px',
         ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
-            height:'40px',
+            height:'30px',
         },
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             height:'50px',
@@ -102,13 +112,28 @@ const useStyles = makeStyles({
         ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
             height:'60px',
         },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            height:'60px',
+        },
+        ['@media (min-width:1536px)']: { // eslint-disable-line no-useless-computed-key
+            height:'80px',
+        },
     },
     mail:{
         position:'absolute',
-        bottom:'10px',
+        bottom:'50px',
         right:'40px',
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
+        ['@media (min-width:1024px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'40px',
+        },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'60px',
         },
     }
 })
