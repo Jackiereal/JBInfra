@@ -4,7 +4,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
 import GoToTop from './../GoToTop'
-
+import App1 from './carousel.js';
 
 const useStyles = makeStyles({
     container:{
@@ -139,7 +139,7 @@ export const ProjectHome = (props)=>{
 
     const curve = 'url("'+props.projectName+'curve.png")'
     console.log(curve)
-
+    const images = ['sv1.jpg', 'sv2.jpg','sv3.jpg','sv4.jpg','sv5.jpg','sv6.jpg','sv7.jpg','sv8.jpg','sv9.jpg','sv10.jpg','sv11.jpg','sv12.jpg','sv13.jpg','sv14.jpg'];
     useEffect(()=>{
         
     },[])
@@ -158,6 +158,26 @@ export const ProjectHome = (props)=>{
                 </Grid>
                 <Grid item xs={12}>
                     <Typography className={classes.description}>{props.project.overview}</Typography>
+                </Grid>
+                <Grid className={classes.gridItems} item xs={12}>
+                    <div>
+                        <link
+                        rel="stylesheet"
+                        type="text/css"
+                        charset="UTF-8"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+                        />
+                        <link
+                        rel="stylesheet"
+                        type="text/css"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+                        />
+
+                        <div>
+                        <App1 autoPlay={true} images={images}/>
+                        </div>
+                    </div>
+                    {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Typography className={classes.title}>{props.project.titleproject}</Typography>

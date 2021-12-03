@@ -172,7 +172,7 @@ export const ProjectHomeSerene = (props)=>{
     console.log(props.project)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
-    const images = ['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
+    const images = ['sc3.jpg', 'sc1.jpg','sc2.jpg','sc7.jpg','sc8.jpg','sc5.jpg','sc6.jpg'];
     
     const [value, setValue] = useState(0);
 
@@ -218,6 +218,7 @@ export const ProjectHomeSerene = (props)=>{
                         <Tab label="Phase VI" />
                         <Tab label="Phase VII" />
                         <Tab label="Phase VIII and IX" />
+                        <Tab label="Extension: Phase IV" />
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
@@ -362,7 +363,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={4}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
-                        <App2 image={'s7.jpg'}/>
+                        <App2 image={'s6.jpg'}/>
                         </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
@@ -433,6 +434,40 @@ export const ProjectHomeSerene = (props)=>{
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                         <App2 image={'s8.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={7}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                        <App2 image={'s4e.jpg'}/>
                         </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>

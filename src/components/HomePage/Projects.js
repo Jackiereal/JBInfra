@@ -154,7 +154,7 @@ export const Projects = ()=>{
             title : 'SERENE CITY',
             img: '4.jpg',
             name: 'serenecity',
-            description : " JB's Serene city is a 540 acre layout with Residential Plotting"
+            description : " JB's Serene city is a 570 acre layout with Residential Plotting"
         },
         {
             id: 1048,

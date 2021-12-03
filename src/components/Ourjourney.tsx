@@ -113,7 +113,7 @@ export const OurJourney = ()=>{
     const classes = useStyles();
     return (
       <div>
-        <Banner image={'contactusintro.png'}/>
+        <Banner image={'compprojects.jpg'}/>
       
         <div className={classes.root}>
            

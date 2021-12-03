@@ -207,7 +207,7 @@ export const ProjectHomeAlternative = (props)=>{
     console.log(props.project)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
-    setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+    // setTimeout(() => {window.scrollTo(0, 0); }, 1000);
     
     const [value, setValue] = useState(0);
     const images = ['nv1.jpeg', 'nv2.jpeg','nv3.jpg','nv4.jpg','nv5.jpg','nv6.jpg','nv7.jpg','nv8.jpg','nv9.jpeg',,'nv10.jpeg'];
@@ -325,7 +325,7 @@ export const ProjectHomeAlternative = (props)=>{
                     </TabPanel>
                     <TabPanel value={value} index={2}>
                     <Container fixed classes={{root : classes.containerRoot}}>
-                    <div>
+                    <div backgroundColor="rgba(0, 0, 0, 0.0)">
                         <App2 image={'p3.jpg'}/>
                         </div>
                         <Grid container xs={12}>

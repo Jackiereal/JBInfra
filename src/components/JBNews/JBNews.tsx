@@ -29,7 +29,7 @@ export const JBNews = ()=>{
     return (
         <div>
         <div>
-            <Banner image={'galleryintro.png'}/>
+            <Banner image={'jbinnews.jpg'}/>
             <JBNewsComponent/>
         </div>
         <div className={classes.containerRoot}>

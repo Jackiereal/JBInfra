@@ -9,7 +9,8 @@ import { Banner } from './../AboutPage/Banner';
 import GoToTop from './../GoToTop';
 import { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import { Footer } from './../../components/Footer'
+import { Footer } from './../../components/Footer';
+import { Disclaimer } from './Disclaimer'
 
 const useStyles = makeStyles({
     
@@ -68,6 +69,7 @@ export const HomePage = ()=>{
         //  :
         <div>
         <div>
+            
             {/* <Introduction/> */}
             <IntroVideo/>
             <Projects/>

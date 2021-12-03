@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { ProjectHome } from './ProjectHome';
 import { ProjectHomeAlternative } from './ProjectHomeAlternative'
 import { ProjectHomeSerene } from './ProjectHomeSerene'
+import { ProjectHSCounty } from './ProjectHSCounty'
 import { ProjVideo } from './ProjVideo';
 import { FeatureVideo } from './../HomePage/FeatureVideo';
 import {
@@ -41,7 +42,7 @@ const projectPage = (props)=>{
           return  <ProjectHomeAlternative project={SERENENATUREVALLEY} projectName={props}/>
         
         case 'hillsidecounty': 
-          return  <ProjectHome project={HILLSIDECOUNTY} projectName={props}/>
+          return  <ProjectHSCounty project={HILLSIDECOUNTY} projectName={props}/>
 
         case 'greenmeadows':
           return <ProjectHome project={GREENMEADOWS} projectName={props}/> 
@@ -117,6 +118,7 @@ export const FeaturedProjects = () => {
     window.location = window.location + '#'
     window.location.reload()
   }
+  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);

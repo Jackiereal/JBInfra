@@ -8,6 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import { CopyrightOutlined } from '@material-ui/icons';
 
  
@@ -144,7 +145,7 @@ export const Footer = ()=>{
                          <FacebookIcon onClick={() => { window.open('https://www.facebook.com/Jbinfraofficial/','_blank')}}/>
                      </IconButton>
                      <IconButton className={classes.cardbutton} >
-                         <TwitterIcon onClick={() => { window.open('https://twitter.com/Jbinfraofficial','_blank')}}/>
+                         <YouTubeIcon onClick={() => { window.open('https://www.youtube.com/channel/UCGBYyonpe0xh1flaxJ_0NjA/videos','_blank')}}/>
                      </IconButton>
                      <IconButton className={classes.cardbutton}>
                          <InstagramIcon onClick={() => { window.open('https://www.instagram.com/jbinfragroupofficial/','_blank')}}/>

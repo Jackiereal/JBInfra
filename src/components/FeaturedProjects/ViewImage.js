@@ -20,7 +20,11 @@ class App2 extends Component {
   render() {
     const { photoIndex, isOpen } = this.state;
     const style = {
-        height:"400px"
+        
+        height:"400px",
+        
+        
+        
         
     }
 
@@ -33,11 +37,13 @@ class App2 extends Component {
             </div>  
 
         {isOpen && (
+          <div style={{zIndex:1001,postion:"fixed"}}>
           <Lightbox
-            mainSrc={this.props.image} style={style}
+            mainSrc={this.props.image} 
             onCloseRequest={() => this.setState({ isOpen: false })}
           >
         </Lightbox>
+        </div>
         )}
       </div>
     );  

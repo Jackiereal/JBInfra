@@ -97,7 +97,7 @@ const useStyles = makeStyles({
             bottom:'100px',
         },
         ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'120px',
+            bottom:'160px',
         },
         
     },
@@ -133,7 +133,7 @@ const useStyles = makeStyles({
             bottom:'40px',
         },
         ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'60px',
+            bottom:'90px',
         },
     }
 })
