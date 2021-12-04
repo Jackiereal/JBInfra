@@ -27,6 +27,7 @@ function App() {
     <div className="App">
         <Header/>
         <Switch>
+            <Route path="/home" component={HomePage} forceRefresh={true}></Route>
             <Route path="/about" component={About} forceRefresh={true}></Route>
             <Route path="/brochure" component={Brochures} forceRefresh={true}/>
             <Route path="/gallery" component={Gallery} forceRefresh={true}/>

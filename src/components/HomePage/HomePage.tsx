@@ -10,7 +10,10 @@ import GoToTop from './../GoToTop';
 import { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Footer } from './../../components/Footer';
-import { Disclaimer } from './Disclaimer'
+import Disclaimer from './Disclaimer'
+import { 
+  useLocation
+} from 'react-router-dom';
 
 const useStyles = makeStyles({
     
@@ -29,6 +32,9 @@ const useStyles = makeStyles({
 export const HomePage = ()=>{
     const classes = useStyles()
     const [projects,setProjects] = useState([]);
+    const location = useLocation();
+    const { pathname } = location;
+    const splitLocation = pathname.split("/");
     
 
   if(!window.location.hash){
@@ -71,6 +77,7 @@ export const HomePage = ()=>{
         <div>
             
             {/* <Introduction/> */}
+            { splitLocation[1] === "" ? <Disclaimer/>: null}
             <IntroVideo/>
             <Projects/>
             <Banner image={'curve_1.png'}/>
