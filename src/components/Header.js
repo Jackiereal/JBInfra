@@ -294,31 +294,6 @@ export function Header(props) {
 
 
                 <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "ourjourney" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "ourjourney" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/ourjourney">COMPLETED PROJECTS </Link></Button>
-                 {/* <Button color="inherit"  aria-controls="fade-menu-completed" aria-haspopup="true" onClick={handleClickcomp} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
-                   COMPLETED PROJECTS
-                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
-                 </Button>
-                 <Menu
-                
-                id="fade-menu-completed"
-                anchorEl={anchorEl1}
-                keepMounted
-                open={opencomp}
-                onClose={handleClosecomp}
-                TransitionComponent={Fade}
-                PaperProps={{
-                  style: {
-                    background: "#fff",
-                    marginTop:'30px',
-                    marginLeft:'10px'
-                  }
-                }}
-                >
-                  <MenuItem onClick={handleClosecomp}  className={splitLocation[1] === "greenmeadows" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "greenmeadows" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/greenmeadows">JB's Green Meadows</Link></MenuItem>
-                  <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jbresorts" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jbresorts" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/jbresorts">JB Resort</Link></MenuItem>
-                  <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jasminecity" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jasminecity" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/jasminecity">Jasmine City</Link></MenuItem>
-                  <MenuItem onClick={handleClosecomp} className={splitLocation[1] === "jasminecity2" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "jasminecity2" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/jasminecity2">Jasmine City II</Link></MenuItem>
-                </Menu> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}}>GALLERY</Button> */}
                 <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "gallery" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "gallery" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/gallery">Gallery </Link></Button>
                 <Button onClick={handleDrawerToggle} color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "jbnews" ? (scroll ? classes.activeScrolled: classes.active ) : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "jbnews" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink}  to="/jbnews">JB in NEWS </Link></Button>

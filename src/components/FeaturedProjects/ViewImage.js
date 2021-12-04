@@ -37,7 +37,7 @@ class App2 extends Component {
             </div>  
 
         {isOpen && (
-          <div style={{zIndex:1001,postion:"fixed"}}>
+          <div>
           <Lightbox
             mainSrc={this.props.image} 
             onCloseRequest={() => this.setState({ isOpen: false })}
