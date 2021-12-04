@@ -4,7 +4,11 @@ import {
     Button,
     Menu,
     MenuItem,
-    Fade
+    Fade,
+    List,
+    ListItem,
+    ListItemText,
+    Collapse,
 } from '@material-ui/core';
 import NestedMenuItem from 'material-ui-nested-menu-item';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
@@ -21,6 +25,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -65,6 +71,15 @@ const useStyles = makeStyles((theme) => ({
       // color: '#fff',
       color:'#f78320',
     },
+
+    menuLinkPlot: {
+      textDecoration: 'none ',
+      // color: '#fff',
+      color:'#f78320',
+      fontSize:'12px',
+      textAlign:'center',
+      fontFamily: 'MontserratSemiBold',
+    },
    
     menuButtonHighlightedScroll: {
       border:'1px solid #f78320',
@@ -96,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
     menuItemIcon:{
       fontSize : '16px',
       marginLeft: '3px',
+      color: '#f78320',
     },
     title: {
       flexGrow: 1,
@@ -155,6 +171,8 @@ export function Header(props) {
     const [anchorEl1, setAnchorEl1] = React.useState(null);
     const [anchorBrochure, setAnchorBrochure] = React.useState(null);
     const [anchorPlot, setAnchorPlot] = React.useState(null);
+    const [openPlotToggle,setOpenPlotToggle] = React.useState(false);
+    const [openPlotToggle2,setOpenPlotToggle2] = React.useState(false);
 
     const open = Boolean(anchorEl);
     const opencomp = Boolean(anchorEl1);
@@ -200,6 +218,14 @@ export function Header(props) {
     const handleClosePlot = () => {
       setAnchorPlot(null);
     };
+
+    const handleNatureValley = () =>{
+      setOpenPlotToggle(!openPlotToggle)
+    }
+
+    const handleSereneCity = () =>{
+      setOpenPlotToggle2(!openPlotToggle2)
+    }
 
     useEffect(() => {
       window.addEventListener("scroll", () => {
@@ -345,7 +371,21 @@ export function Header(props) {
                 }}
                 >
                  
-                    <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">JB Nature Valley Phase-1</a></MenuItem>
+                {/* <ListItem button onClick={handlePlotTest}>
+                  <ListItemText primary="test"></ListItemText>
+                  {openPlotToggle ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <ListItem button >
+                      <ListItemText primary="Subtest -1"></ListItemText>
+                    </ListItem>
+                    <ListItem button >
+                      <ListItemText primary="Subtest -2"></ListItemText>
+                    </ListItem>
+                  </List>
+                </Collapse> */}
+                {/* <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">JB Nature Valley Phase-1</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JBI00050" target = "_blank">JB Nature Valley Phase-2</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JBI00052" target = "_blank">JB Nature Valley Phase-3</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JBI00054" target = "_blank">JB Nature Valley Phase-4</a></MenuItem>
@@ -353,7 +393,7 @@ export function Header(props) {
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/12345" target = "_blank">JB SERENECITY</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/12354" target = "_blank">JB SERENECITY Phase-2</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB003" target = "_blank">JB SERENECITY Phase-3</a></MenuItem>
-                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB004" target = "_blank">JB SERENECITY Phase-4</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB004" target = "_blank">JB SERENECITY Phase-4</a></MenuItem> */}
                 {/* <MenuItem onClick={handleClosePlot}  className={splitLocation[1] === "plotavailability/JB00040" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "plotavailability/JB00040" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/plotavailability/JB00040">JB Nature Valley Phase-1</Link></MenuItem>
                 <MenuItem onClick={handleClosePlot} className={splitLocation[1] === "plotavailability/JBI00050" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "plotavailability/JBI00050" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/plotavailability/JBI00050">JB Nature Valley Phase-2</Link></MenuItem>
                 <MenuItem onClick={handleClosePlot} className={splitLocation[1] === "plotavailability/JBI00052" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "plotavailability/JBI00052" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/plotavailability/JBI00052">JB Nature Valley Phase-3</Link></MenuItem>
@@ -497,14 +537,34 @@ export function Header(props) {
                   }
                 }}
                 >
-                <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">JB Nature Valley Phase-1</a></MenuItem>
+                <ListItem button onClick={handleNatureValley}>
+                  <MenuItem className={classes.menuLinkPlot}>JB NATURE VALEEY</MenuItem>
+                  {openPlotToggle ? <ExpandLess classes={{root: classes.menuItemIcon}}/> : <ExpandMore classes={{root: classes.menuItemIcon}}/>}
+                </ListItem>
+                <Collapse in={openPlotToggle} timeout="auto" unmountOnExit>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">Phase I</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JBI00050" target = "_blank">Phase II</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JBI00052" target = "_blank">Phase III</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JBI00054" target = "_blank">Phase IV</a></MenuItem>
+                </Collapse>
+                <ListItem button onClick={handleSereneCity}>
+                  <MenuItem className={classes.menuLinkPlot}>JB SERENE CITY</MenuItem>
+                  {openPlotToggle2 ? <ExpandLess classes={{root: classes.menuItemIcon}}/> : <ExpandMore classes={{root: classes.menuItemIcon}}/>}
+                </ListItem>
+                <Collapse in={openPlotToggle2} timeout="auto" unmountOnExit>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/12345" target = "_blank">Phase I</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/12354" target = "_blank">Phase II</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB003" target = "_blank">Phase III</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB004" target = "_blank">Phase IV</a></MenuItem> 
+                </Collapse>
+                {/* <MenuItem className={classes.menuLink} onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JB00040" target = "_blank">JB Nature Valley Phase-1</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/JBI00050" target = "_blank">JB Nature Valley Phase-2</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JBI00052" target = "_blank">JB Nature Valley Phase-3</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JBI00054" target = "_blank">JB Nature Valley Phase-4</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/12345" target = "_blank">JB SERENECITY</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink} href="http://43.240.65.20/NextoraMaps/home/project/12354" target = "_blank">JB SERENECITY Phase-2</a></MenuItem>
                 <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB003" target = "_blank">JB SERENECITY Phase-3</a></MenuItem>
-                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB004" target = "_blank">JB SERENECITY Phase-4</a></MenuItem>
+                <MenuItem onClick={handleClosePlot} ><a className={classes.menuLink}href="http://43.240.65.20/NextoraMaps/home/project/JB004" target = "_blank">JB SERENECITY Phase-4</a></MenuItem> */}
                 {/* <MenuItem onClick={handleClosePlot}  className={splitLocation[1] === "plotavailability/JB00040" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "plotavailability/JB00040" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/plotavailability/JB00040">JB Nature Valley Phase-1</Link></MenuItem>
                 <MenuItem onClick={handleClosePlot} className={splitLocation[1] === "plotavailability/JBI00050" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "plotavailability/JBI00050" ? (scroll? classes.activeLinkScroll : classes.activeLink): classes.menuLink} to="/plotavailability/JBI00050">JB Nature Valley Phase-2</Link></MenuItem>
                 <MenuItem onClick={handleClosePlot} className={splitLocation[1] === "plotavailability/JBI00052" ?  (scroll ? classes.activeScrolled: classes.active ) : ""}><Link className={splitLocation[1] === "plotavailability/JBI00052" ? (scroll? classes.activeLinkScroll : classes.activeLink) : classes.menuLink} to="/plotavailability/JBI00052">JB Nature Valley Phase-3</Link></MenuItem>
