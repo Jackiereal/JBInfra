@@ -173,6 +173,10 @@ export function Header(props) {
     const [anchorPlot, setAnchorPlot] = React.useState(null);
     const [openPlotToggle,setOpenPlotToggle] = React.useState(false);
     const [openPlotToggle2,setOpenPlotToggle2] = React.useState(false);
+    const [openPlotToggle3,setOpenPlotToggle3] = React.useState(false);
+    const [openPlotToggle4,setOpenPlotToggle4] = React.useState(false);
+    const [openPlotToggle5,setOpenPlotToggle5] = React.useState(false);
+    const [openPlotToggle6,setOpenPlotToggle6] = React.useState(false);
 
     const open = Boolean(anchorEl);
     const opencomp = Boolean(anchorEl1);
@@ -225,6 +229,18 @@ export function Header(props) {
 
     const handleSereneCity = () =>{
       setOpenPlotToggle2(!openPlotToggle2)
+    }
+
+    const handleAeroHeights = () =>{
+      setOpenPlotToggle3(!openPlotToggle3)
+    }
+
+    const handleSereneResort = () =>{
+      setOpenPlotToggle4(!openPlotToggle4)
+    }
+
+    const handleSereneEnclave = () =>{
+      setOpenPlotToggle5(!openPlotToggle5)
     }
 
     useEffect(() => {
@@ -513,7 +529,7 @@ export function Header(props) {
                 }}
                 >
                 <ListItem button onClick={handleNatureValley}>
-                  <MenuItem className={classes.menuLinkPlot}>JB NATURE VALEEY</MenuItem>
+                  <MenuItem className={classes.menuLinkPlot}>JB NATURE VALLEY</MenuItem>
                   {openPlotToggle ? <ExpandLess classes={{root: classes.menuItemIcon}}/> : <ExpandMore classes={{root: classes.menuItemIcon}}/>}
                 </ListItem>
                 <Collapse in={openPlotToggle} timeout="auto" unmountOnExit>
@@ -531,6 +547,33 @@ export function Header(props) {
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/12354" target = "_blank">Phase II</a></MenuItem>
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB003" target = "_blank">Phase III</a></MenuItem>
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB004" target = "_blank">Phase IV</a></MenuItem> 
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB00023" target = "_blank">Extension: Phase IV</a></MenuItem> 
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/1100" target = "_blank">Phase V</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB00022" target = "_blank">Phase VI</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB00042" target = "_blank">Phase VII</a></MenuItem>
+                </Collapse>
+                <ListItem button onClick={handleAeroHeights}>
+                  <MenuItem className={classes.menuLinkPlot}>JB AERO HEIGHTS</MenuItem>
+                  {openPlotToggle3 ? <ExpandLess classes={{root: classes.menuItemIcon}}/> : <ExpandMore classes={{root: classes.menuItemIcon}}/>}
+                </ListItem>
+                <Collapse in={openPlotToggle3} timeout="auto" unmountOnExit>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JB005" target = "_blank">Phase I</a></MenuItem>
+                </Collapse>
+                <ListItem button onClick={handleSereneResort}>
+                  <MenuItem className={classes.menuLinkPlot}>JB SERENE RESORTS</MenuItem>
+                  {openPlotToggle4 ? <ExpandLess classes={{root: classes.menuItemIcon}}/> : <ExpandMore classes={{root: classes.menuItemIcon}}/>}
+                </ListItem>
+                <Collapse in={openPlotToggle4} timeout="auto" unmountOnExit>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JB00011" target = "_blank">Phase I</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JB00028" target = "_blank">Phase II</a></MenuItem>
+                </Collapse>
+                
+                <ListItem button onClick={handleSereneEnclave}>
+                  <MenuItem className={classes.menuLinkPlot}>JB SERENE ENCLAVE</MenuItem>
+                  {openPlotToggle5 ? <ExpandLess classes={{root: classes.menuItemIcon}}/> : <ExpandMore classes={{root: classes.menuItemIcon}}/>}
+                </ListItem>
+                <Collapse in={openPlotToggle5} timeout="auto" unmountOnExit>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JBEC001" target = "_blank">Phase I</a></MenuItem>
                 </Collapse>
               </Menu>
         </Drawer>

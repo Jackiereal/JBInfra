@@ -1,5 +1,5 @@
 import {
-    Container, Grid, Typography, Card, CardMedia
+    Container, Grid, Typography, Card, CardMedia, Button
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
@@ -85,6 +85,14 @@ const useStyles = makeStyles({
         fontSize: '18px',
         textAlign: 'center',
         lineHeight: '36px',
+        marginBottom:'10px',
+        color:'#f78320',
+    },
+    buttonName:{
+        fontFamily: 'Montserrat',
+        fontSize: '12px',
+        textAlign: 'center',
+        lineHeight: '18px',
         marginBottom:'10px',
         color:'#f78320',
     },
@@ -223,6 +231,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
                         <div>
+                        <Button className={classes.buttons}><a href='s1.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s1.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -258,6 +267,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={1}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s3.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s3.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -293,6 +303,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={2}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s4.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s4.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -328,6 +339,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={3}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s5.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s5.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -363,6 +375,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={4}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s6.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s6.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -398,6 +411,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={5}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s7.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s7.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -433,6 +447,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={6}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s8.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s8.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -467,6 +482,7 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={7}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='s4e.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'s4e.jpg'}/>
                         </div>
                         <Grid container xs={12}>

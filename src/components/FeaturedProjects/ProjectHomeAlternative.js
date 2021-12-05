@@ -11,6 +11,9 @@ import "./../../styles/scss/image-gallery.scss"
 import App1 from './carousel.js';
 import App2 from './ViewImage.js';
 import "react-image-lightbox/style.css";
+import { 
+    Button,
+} from '@material-ui/core';
 
 const useStyles = makeStyles({
     container:{
@@ -123,6 +126,14 @@ const useStyles = makeStyles({
         marginBottom:'10px',
         color:'#f78320',
     },
+    buttonName:{
+        fontFamily: 'Montserrat',
+        fontSize: '12px',
+        textAlign: 'center',
+        lineHeight: '18px',
+        marginBottom:'10px',
+        color:'#f78320',
+    },
     containerRoot:{
         // marginTop:'50px',
         // backgroundImage:  'url("intro.gif")',
@@ -157,6 +168,17 @@ const useStyles = makeStyles({
         lineHeight: '26px',
         color:'#4a4a4a',
     },
+    buttons:{
+        color: '#4a4a4a',
+        fontFamily: 'Montserrat',
+        fontSize: '14px',
+        padding:'10px',
+        background:'#fff',
+        ['@media (max-width:360px)']: { // eslint-disable-line no-useless-computed-key
+          fontSize: '10px',
+          
+        },
+    }
 })
 
 // const images = [
@@ -256,6 +278,7 @@ export const ProjectHomeAlternative = (props)=>{
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
                         <div>
+                        <Button className={classes.buttons}><a href='p1.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'p1.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -291,6 +314,7 @@ export const ProjectHomeAlternative = (props)=>{
                     <TabPanel value={value} index={1}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='p2.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'p2.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -326,6 +350,7 @@ export const ProjectHomeAlternative = (props)=>{
                     <TabPanel value={value} index={2}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div backgroundColor="rgba(0, 0, 0, 0.0)">
+                    <Button className={classes.buttons}><a href='p3.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'p3.jpg'}/>
                         </div>
                         <Grid container xs={12}>
@@ -361,6 +386,7 @@ export const ProjectHomeAlternative = (props)=>{
                     <TabPanel value={value} index={3}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
+                    <Button className={classes.buttons}><a href='p4.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'p4.jpg'}/>
                         </div>
                         <Grid container xs={12}>

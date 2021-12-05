@@ -316,6 +316,9 @@ export const JBNewsComponent = ()=>{
                     </ImageListItem>
                     ))}
                     <ImageListItem>
+                      <img src={'jbnews15.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=u3KH7wuqYSE&t=6s')}/>
+                    </ImageListItem>
+                    <ImageListItem>
                       <img src={'jbnews4.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=GuKQrolWWY8&t=197s')}/>
                     </ImageListItem>
                     <ImageListItem>
@@ -335,7 +338,7 @@ export const JBNewsComponent = ()=>{
                     </ImageListItem> 
                     <ImageListItem>
                       <img src={'jbnews14.jpg'} onClick={() => openInNewTab('https://www.youtube.com/watch?v=jUyh1D-dIM4')}/>
-                    </ImageListItem> 
+                    </ImageListItem>
                 </ImageList>
                 {isViewerOpen && (
                   <ImageViewer
