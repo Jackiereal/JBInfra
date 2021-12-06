@@ -40,7 +40,7 @@ const useStyles = makeStyles({
           },
           ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-400px',
-            paddingTop:'300px',
+            paddingTop:'280px',
             height:'650px'
           },
     },

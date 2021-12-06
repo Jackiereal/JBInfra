@@ -254,7 +254,8 @@ export const ProjectHomeSerene = (props)=>{
                 </Grid>
                 <Grid className={classes.gridInner} item xs={12} sm={12}>
                     <Tabs value={value} onChange={handleChange} centered>
-                        <Tab label="Phase I and II" />
+                        <Tab label="Phase I" />
+                        <Tab label="Phase II" />
                         <Tab label="Phase III" />
                         <Tab label="Phase IV" />
                         <Tab label="Extension: Phase IV" />
@@ -300,6 +301,42 @@ export const ProjectHomeSerene = (props)=>{
                         </Container>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
+                        <Container fixed classes={{root : classes.containerRoot}}>
+                        <div>
+                        <Button className={classes.buttons}><a href='s1.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'s1.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s3.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
@@ -335,7 +372,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={2}>
+                    <TabPanel value={value} index={3}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s4.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
@@ -371,7 +408,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={7}>
+                    <TabPanel value={value} index={4}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s4e.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
@@ -406,7 +443,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={3}>
+                    <TabPanel value={value} index={5}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s5.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
@@ -442,7 +479,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={4}>
+                    <TabPanel value={value} index={6}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s6.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
@@ -478,7 +515,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={5}>
+                    <TabPanel value={value} index={7}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s7.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
@@ -514,7 +551,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={6}>
+                    <TabPanel value={value} index={8}>
                     <Container fixed classes={{root : classes.containerRoot}}>
                     <div>
                     <Button className={classes.buttons}><a href='s8.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
