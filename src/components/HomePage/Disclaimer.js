@@ -38,7 +38,6 @@ export default function Disclaimer() {
     setOpen(false);
   };
 
-  
 
   return (
     <div>
@@ -47,6 +46,11 @@ export default function Disclaimer() {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
+        TransitionProps={{
+          style: {
+              transitionDelay: 4000,
+          }
+      }}
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle className={classes.root}>{"Disclaimer"}</DialogTitle>

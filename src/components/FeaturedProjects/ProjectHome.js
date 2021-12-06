@@ -40,7 +40,7 @@ const useStyles = makeStyles({
           },
           ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
             marginTop:'-400px',
-            paddingTop:'325px',
+            paddingTop:'300px',
             height:'650px'
           },
     },
@@ -121,7 +121,7 @@ const useStyles = makeStyles({
           height:'750px'
         },
         ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
-          height:'1100px'
+          height:'800px'
         },
   
         // paddingTop:'200px',
@@ -179,6 +179,23 @@ export const ProjectHome = (props)=>{
                     </div>
                     {/* <ImageGallery items={images} infinite={true} autoPlay={true} showPlayButton={false}/>; */}
                 </Grid>
+                <Grid item xs={12} sm={12}>
+                    <Typography className={classes.title}>PROJECT IMAGE</Typography>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <Card classes={{root: classes.cardRoot}}>
+                    
+                    <CardMedia
+                        
+                        className={classes.media}
+                        image={`${projectName}.jpg`}
+                        controls
+                    />
+                   
+                </Card> 
+             
+            </Container>
+                  
+                </Grid>
                 <Grid item xs={12} sm={6}>
                     <Typography className={classes.title}>{props.project.titleproject}</Typography>
                     <ul>
@@ -204,18 +221,8 @@ export const ProjectHome = (props)=>{
                     </ul>
                 </Grid>
             </Grid>
-
-            <Container fixed classes={{root : classes.containerRoot}}>
-             <Card classes={{root: classes.cardRoot}}>
-                <CardMedia
-                    
-                    className={classes.media}
-                    image={`${projectName}.jpg`}
-                    controls
-                />
-               
-            </Card> 
-            </Container>
+            
+            
 
         </Container> 
         

@@ -14,7 +14,42 @@ import "react-image-lightbox/style.css";
 
 const useStyles = makeStyles({
     container:{
+        backgroundImage:  'url("serenecitycurve.png")',
+        // backgroundPosition: 'left',
+        backgroundSize:'100% auto',
+        backgroundRepeat: 'no-repeat',
+        // height:'400px',
+        width:'100%',
         maxWidth:'100%',
+        marginTop:'-200px',
+        paddingTop:'100px',
+        position:'relative',
+        height:'1000px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-130px',
+            paddingTop:'50px',
+            height:'1700px',
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-150px',
+            paddingTop:'125px',
+            height:'1100px'
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-250px',
+            paddingTop:'150px',
+            height:'800px'
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-300px',
+            paddingTop:'220px',
+            height:'850px'
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'-400px',
+            paddingTop:'280px',
+            height:'650px'
+          },
     },
     grid:{
         marginTop:'50px',
@@ -222,11 +257,11 @@ export const ProjectHomeSerene = (props)=>{
                         <Tab label="Phase I and II" />
                         <Tab label="Phase III" />
                         <Tab label="Phase IV" />
+                        <Tab label="Extension: Phase IV" />
                         <Tab label="Phase V" />
                         <Tab label="Phase VI" />
                         <Tab label="Phase VII" />
                         <Tab label="Phase VIII and IX" />
-                        <Tab label="Extension: Phase IV" />
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
@@ -333,6 +368,41 @@ export const ProjectHomeSerene = (props)=>{
                             </Grid>
                         </Grid>
                         
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={7}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                    <Button className={classes.buttons}><a href='s4e.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'s4e.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
                         
                         </Container>
                     </TabPanel>
@@ -479,41 +549,7 @@ export const ProjectHomeSerene = (props)=>{
                         
                         </Container>
                     </TabPanel>
-                    <TabPanel value={value} index={7}>
-                    <Container fixed classes={{root : classes.containerRoot}}>
-                    <div>
-                    <Button className={classes.buttons}><a href='s4e.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
-                        <App2 image={'s4e.jpg'}/>
-                        </div>
-                        <Grid container xs={12}>
-                            <Grid item xs={12} sm={6}>
-                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
-                                <ul>
-                                {
-                                    projectHighlights.map( (value)=>{
-                                        return (
-                                            <li className={classes.listItem}>{value}</li>
-                                        )
-                                    })
-                                }
-                                </ul>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
-                                <ul>
-                                {
-                                    locationHighlights.map( (value)=>{
-                                        return (
-                                            <li className={classes.listItem}>{value}</li>
-                                        )
-                                    })
-                                }
-                                </ul>
-                            </Grid>
-                        </Grid>
-                        
-                        </Container>
-                    </TabPanel>
+                    
                 </Grid>
             </Grid>
         </Container> 
