@@ -303,8 +303,8 @@ export const ProjectHomeSerene = (props)=>{
                     <TabPanel value={value} index={1}>
                         <Container fixed classes={{root : classes.containerRoot}}>
                         <div>
-                        <Button className={classes.buttons}><a href='s1.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
-                        <App2 image={'s1.jpg'}/>
+                        <Button className={classes.buttons}><a href='s2.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'s2.jpg'}/>
                         </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>

@@ -264,15 +264,6 @@ const itemData = [
       },
       {
         // img :`https://picsum.photos/id/300/360/360`,
-        original :'sc4.jpg',
-        thumbnail : 'sc4.jpg',
-        title: 'Image',
-       author: 'author',
-        cols: 1,
-        project : 4,
-      },
-      {
-        // img :`https://picsum.photos/id/300/360/360`,
         original :'sv2.jpg',
         thumbnail : 'sv2.jpg',
         title: 'Image',
