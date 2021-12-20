@@ -58,7 +58,7 @@ class App1 extends React.Component {
       responsive: [{
         breakpoint: 1024,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
         }

@@ -18,7 +18,22 @@ const useStyles = makeStyles({
         flexGrow: 1,
         width:'100%',
         margin:'auto',
-        marginBottom:'30px'
+        marginBottom:'30px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginLeft:"20px"
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            marginLeft:"20px"
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            marginLeft:"10px"
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            marginLeft:"0px"
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            marginLeft:"0px"
+          },
       },
     simpletext:{
         color: '#4a4a4a',

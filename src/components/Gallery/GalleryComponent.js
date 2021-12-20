@@ -86,7 +86,7 @@ const useStyles = makeStyles({
     fontSize: '14px',
     padding:'10px',
     background:'#fff',
-    ['@media (max-width:360px)']: { // eslint-disable-line no-useless-computed-key
+    ['@media (max-width:500px)']: { // eslint-disable-line no-useless-computed-key
       fontSize: '10px',
       
     },

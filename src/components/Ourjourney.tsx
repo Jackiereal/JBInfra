@@ -28,12 +28,33 @@ const useStyles = makeStyles({
         color: '#f78320',
       },
     simpletext:{
+        position: 'absolute',
         color: '#4a4a4a',
         fontSize: '18px',
-        alignSelf:'center',
         fontFamily: 'Montserrat',
-        marginTop: '20px'
-        // alignContent:'center',
+        marginTop: '20px',
+        textAlign: 'left',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop: '-80px',
+            textAlign: 'left'
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop: '100px',
+            textAlign: 'left'
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop: '30px',
+            textAlign: 'center'
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            textAlign: 'left',
+            marginTop: '20px',
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            textAlign: 'left',
+            marginTop: '20px',
+          },
+        // align:"left"
       },
       iconButton: {
         display: 'flex',
@@ -66,6 +87,21 @@ const useStyles = makeStyles({
       },
       gridContainer:{
         marginTop:'20px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'10px',
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'10px',
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'10px',
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'10px',
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'10px',
+          },
       },
       logoImage:{
           width:'300px',
@@ -125,7 +161,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jbenclave.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                     JB Enclave is a 30 Acre Prestigious Residential Plotting Venture at Benguluru launched in the year 2001.
                     </Typography>
                 </Grid>
@@ -135,7 +171,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'peacockvalley.png'} alt="peacockvalley"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                     JB's Peacock Valley is a 36 Acre Prestigious Residential Plotting Venture at Medchal launched in the year 2004.
                     </Typography>
                 </Grid>
@@ -145,7 +181,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'vishaka.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                       JB Vishaka is a 87 Acre Prestigious Residential Plotting Venture at Visakhapatnam(Vizag) launched on 2005.
                     </Typography>
                 </Grid>
@@ -155,7 +191,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jbsagarvalley1.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                       JB Sagar Valley is a 24 Acre Prestigious Residential Plotting Venture at Mallepally near Nagarjuna Sagar launched on 2007.
                     </Typography>
                 </Grid>
@@ -165,7 +201,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jbhills.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                       JB Hills is a 26 Acre Prestigious Residential Plotting Venture at Mallepally near Nagarjuna Sagar launched on 2007.
                     </Typography>
                 </Grid>
@@ -175,7 +211,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jbsv2.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                       JB's Sagar Valley is a 18 Acre Prestigious Residential Plotting Venture at Patelguda, Telangana launched on 2012.
                     </Typography>
                 </Grid>
@@ -185,7 +221,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jasminecity1.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                       JB's Jasmine City is a 33 Acre Prestigious Residential Plotting Venture at Mangalpally, Telangana launched on 2013.
                     </Typography>
                 </Grid>
@@ -196,7 +232,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'brundavanam.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                       JB's - Brundavanam is a 23 Acre Prestigious Residential Plotting Venture at Yamjal launched in the year 2014.
                     </Typography>
                 </Grid>
@@ -206,7 +242,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jbresort.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                        JB Resorts is a Resort Living Plotting Project, offering modern clubhouse, which extends in 100 acre layout.
                     </Typography>
                 </Grid>
@@ -216,7 +252,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'greenmeadows.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                        JB's Green Meadows is a 40 Acre Prestigious Residential Plotting Venture at Kongarkalan launched in the year 2015.
                     </Typography>
                 </Grid>
@@ -226,7 +262,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'aeroheights.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                        JB's Aero Heights is a 12 Acre Prestigious Residential Plotting Venture at Tukkuguda launched in the year 2018.
                     </Typography>
                 </Grid>
@@ -236,7 +272,7 @@ export const OurJourney = ()=>{
                     <img className={classes.logoImage} src={'jbenclave2.png'} alt="logo"></img>
                 </Grid>
                 <Grid item xs={10} sm={8} className={classes.gridContainer}>
-                    <Typography className={classes.simpletext}  align="left">
+                    <Typography className={classes.simpletext}>
                     JB Enclave is a 10 Acre Prestigious Residential Plotting Venture at Tummaloor, Telangana launched in the year 2019.
                     </Typography>
                 </Grid>

@@ -112,6 +112,9 @@ const useStyles = makeStyles({
             bottom:'100px',
         },
         ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'100px',
+        },
+        ['@media (min-width:1536px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'160px',
         },
         
@@ -130,7 +133,7 @@ const useStyles = makeStyles({
         ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
             height:'60px',
         },
-        ['@media (min-width:1536px)']: { // eslint-disable-line no-useless-computed-key
+        ['@media (min-width:1300px)']: { // eslint-disable-line no-useless-computed-key
             height:'80px',
         },
     },
@@ -148,7 +151,10 @@ const useStyles = makeStyles({
             bottom:'40px',
         },
         ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'90px',
+            bottom:'40px',
+        },
+        ['@media (min-width:1536px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'80px',
         },
     }
 })
