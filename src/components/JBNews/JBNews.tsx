@@ -13,6 +13,24 @@ const useStyles = makeStyles({
         marginTop:'100px',
         marginBottom:'30px',
     },
+    entire:{
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'50px',
+        },
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+
+      },
 })
 
 export const JBNews = ()=>{
@@ -27,7 +45,7 @@ export const JBNews = ()=>{
     window.scrollTo(0, 0);
 
     return (
-        <div>
+        <div className={classes.entire}>
         <div>
             <Banner image={'jbinnews.jpg'}/>
             <JBNewsComponent/>

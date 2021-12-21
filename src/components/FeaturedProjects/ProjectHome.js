@@ -52,8 +52,22 @@ const useStyles = makeStyles({
         fontSize: '18px',
         textAlign: 'center',
         lineHeight: '36px',
-        marginBottom:'10px',
         color:'#f78320',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'20px',
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'20px',
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'20px',
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'20px',
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            marginTop:'20px',
+          },
     },
     description:{
         fontFamily: 'Montserrat',

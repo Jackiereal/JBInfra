@@ -107,7 +107,25 @@ const useStyles = makeStyles({
     },
     containerRoot:{
         marginTop: '10px',
-    }
+    },
+    entire:{
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'50px',
+        },
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+
+      },
   
   });
 
@@ -115,7 +133,7 @@ const useStyles = makeStyles({
 export const AboutUs = (props)=>{
     const classes = useStyles();
     return (
-        <div>
+        <div className={classes.entire}>
             <Container fixed className={classes.container}>
                 <Typography  classes={{ root : classes.root}}>ABOUT US</Typography>
                 <Grid container justifyContent="center" spacing={2}>

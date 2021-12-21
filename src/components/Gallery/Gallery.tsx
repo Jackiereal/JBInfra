@@ -15,7 +15,25 @@ const useStyles = makeStyles({
     }, 
     rootImageAlign:{
         left: '50px'
-    }
+    },
+    entire:{
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'50px',
+        },
+        ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+        ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+          marginTop:'1px',
+        },
+
+      },
 })
 
 export const Gallery = ()=>{
@@ -30,7 +48,7 @@ export const Gallery = ()=>{
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
   setTimeout(() => {window.scrollTo(0, 0); }, 1000);
     return (
-        <div>
+        <div className={classes.entire}>
         <div>
             <Banner image={'galleryintro.png'}/>
         </div>

@@ -207,20 +207,22 @@ export function Header(props) {
 
     const handleClickBrochure = (event) => {
       setAnchorBrochure(event.currentTarget);
-      handleDrawerToggle()
+      
     };
   
     const handleCloseBrochure = () => {
       setAnchorBrochure(null);
+      handleDrawerToggle()
     };
 
     const handleClickPlot = (event) => {
       setAnchorPlot(event.currentTarget);
-      handleDrawerToggle()
+      
     };
   
     const handleClosePlot = () => {
       setAnchorPlot(null);
+      handleDrawerToggle()
     };
 
     const handleNatureValley = () =>{
@@ -296,7 +298,7 @@ export function Header(props) {
                 PaperProps={{
                   style: {
                     background: "#fff",
-                    marginTop:'30px',
+                    marginTop:'35px',
                     marginLeft:'10px',
                   }
                 }}
@@ -330,7 +332,7 @@ export function Header(props) {
                 PaperProps={{
                   style: {
                     background: "#fff",
-                    marginTop:'30px',
+                    marginTop:'35px',
                     marginLeft:'10px'
                   }
                 }}
@@ -356,7 +358,7 @@ export function Header(props) {
                 PaperProps={{
                   style: {
                     background: "#fff",
-                    marginTop:'30px',
+                    marginTop:'35px',
                     marginLeft:'10px'
                   }
                 }}
@@ -436,7 +438,7 @@ export function Header(props) {
                 PaperProps={{
                   style: {
                     background: "#fff",
-                    marginTop:'30px',
+                    marginTop:'35px',
                     marginLeft:'10px',
                   }
                 }}
@@ -482,10 +484,14 @@ export function Header(props) {
 
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} className={splitLocation[1] === "brochure" ? classes.active : ""}><Link classes={classes.menuLink} className={splitLocation[1] === "brochure" ? classes.activeLink : classes.menuLink}  to="/home">BROCHURES </Link></Button> */}
                 {/* <Button color="inherit" classes={{ root : classes.menuButton}} ><a classes={classes.menuLink} href="sample.pdf" target = "_blank"  to="/home">BROCHURES </a></Button> */}
-                <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ?(scroll ? classes.activeScrolled: classes.active ) : ""}>
+                {/* <Button color="inherit" aria-controls="fade-brochure" aria-haspopup="true" onClick={handleClickBrochure} classes={{ root : classes.menuButton}} className={splitLocation[1] === "1" ?(scroll ? classes.activeScrolled: classes.active ) : ""}>
                   BROCHURE
                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
-                </Button>
+                </Button> */}
+                <Button color="inherit" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClickBrochure} classes={{root: classes.menuButton}} className={splitLocation[1] === "1" ? (scroll ? classes.activeScrolled: classes.active ) : ""}>
+                   BROCHURE
+                   <KeyboardArrowDownIcon classes={{root: classes.menuItemIcon}}></KeyboardArrowDownIcon>
+                 </Button>
                 <Menu
                 
                 id="fade-brochure"
@@ -497,7 +503,7 @@ export function Header(props) {
                 PaperProps={{
                   style: {
                     background: "#fff",
-                    marginTop:'30px',
+                    marginTop:'35px',
                     marginLeft:'10px'
                   }
                 }}
@@ -523,7 +529,7 @@ export function Header(props) {
                 PaperProps={{
                   style: {
                     background: "#fff",
-                    marginTop:'30px',
+                    marginTop:'35px',
                     marginLeft:'10px'
                   }
                 }}
