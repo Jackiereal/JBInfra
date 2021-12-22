@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       opacity: '1',
     },
     logoContainer:{
-      ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+      ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
        width:'100%',
       },
     },
@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     },
     menuItems:{
       display:'block',
-      ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+      ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
         display:'none',
       },
     },
@@ -270,7 +270,7 @@ export function Header(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ display: { lg: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -383,7 +383,7 @@ export function Header(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'block', md: 'block', lg: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
