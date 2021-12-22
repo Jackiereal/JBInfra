@@ -54,48 +54,37 @@ export const HomePage = ()=>{
     const { pathname } = location;
     const splitLocation = pathname.split("/");
     
+    
+    // let isShowModal = localStorage.getItem('showModal')
+    
 
-  if(!window.location.hash){
-    window.location = window.location + '#'
-    window.location.reload()
-    // let initialValidSlug = '';
-    //setTimeout(() => {  console.log("World!"); }, 2000);
-    // window.addEventListener('load', () => {
-    //   window.location.hash = '';
-    //   window.location.hash = (initialValidSlug ? initialValidSlug : '');
-    //   window.scrollBy(0, -document.getElementsByClassName("heading")[0].clientHeight);
-    // });
+  // if(!window.location.hash){
+  //   window.location = window.location + '#'
+  //   window.location.reload()
+  // }
 
-  }
+  // setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  // setTimeout(() => {window.scrollTo(0, 0); }, 1000);
+  // setTimeout(() => {window.scrollTo(0, 0); }, 1000);
 
-  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
-  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
-  setTimeout(() => {window.scrollTo(0, 0); }, 1000);
-  
-    // const [loading, setLoading] = useState(false);
 
-    // useEffect(() => {
-    // setLoading(true);
-    // setTimeout(()=>{setLoading(false)},8000);
-
-    // }, [])
+  const [showModal, setShowModal] = useState(sessionStorage.getItem('showModal'))
+    console.log(splitLocation)
+    useEffect(()=>{
+      if(showModal === null){
+        sessionStorage.setItem('showModal','false')
+      }
+      // else if( showModal === 'true'){
+      //   setShowModal('false')
+      // }
+    },[showModal])
     
     return (
-        // <div>
-        //     {
-        //         loading ?
-        // <div className={classes.loaderContainer}>
-        
-                
-        //         <RingLoader color={"#f78320"} loading={loading} size={100} />
-               
-        // </div>
-        //  :
         <div className={classes.entire}>
         <div>
             
             {/* <Introduction/> */}
-            { splitLocation[1] === "" ? <Disclaimer/>: null}
+            { showModal === null && splitLocation[1] === "" ? <Disclaimer/>: null}
             <IntroVideo/>
             <Projects/>
             <Banner image={'curve_1.png'}/>
@@ -108,9 +97,5 @@ export const HomePage = ()=>{
         </div>
 <GoToTop/>
          </div>
-// }
-//         </div>
-
-        
     )
 }
