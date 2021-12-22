@@ -58,7 +58,42 @@ const useStyles = makeStyles({
         marginTop:'50px',
     },
     gridInner:{
-        marginTop:'30px'
+        marginTop:'30px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            display:"none"
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            display:"none"
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            display:"inline"
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            display:"inline"
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            display:"inline"
+          },
+    },
+
+    gridInner_m:{
+        marginTop:'30px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            display:"inline"
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            display:"inline"
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            display:"none"
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            display:"none"
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            display:"none"
+          },
+
     },
     gridItems:{
         marginLeft:'0px',
@@ -270,6 +305,175 @@ export const ProjectHomeAlternative = (props)=>{
                 <Container fixed classes={{root : classes.containerRoot}}>
                 <Grid className={classes.gridInner} item xs={12} sm={12}>
                     <Tabs value={value} onChange={handleChange} centered>
+                        <Tab label="Phase I" />
+                        <Tab label="Phase II" />
+                        <Tab label="Phase III" />
+                        <Tab label="Phase IV" />
+                    </Tabs>
+                    <TabPanel value={value} index={0}>
+                        <Container fixed classes={{root : classes.containerRoot}}>
+                        <div>
+                        <Button className={classes.buttons}><a href='p1.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'p1.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                    <Button className={classes.buttons}><a href='p2.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'p2.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div backgroundColor="rgba(0, 0, 0, 0.0)">
+                    <Button className={classes.buttons}><a href='p3.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'p3.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={3}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                    <Button className={classes.buttons}><a href='p4.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'p4.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        </Container>
+                    </TabPanel>
+                </Grid>
+
+
+
+
+
+
+
+
+
+
+                <Grid className={classes.gridInner_m} item xs={12} sm={12}>
+                <Tabs value={value}
+                        onChange={handleChange}
+                        variant="scrollable"
+                        scrollButtons
+                        allowScrollButtonsMobile
+                        aria-label="scrollable force tabs example" 
+                        centered>
                         <Tab label="Phase I" />
                         <Tab label="Phase II" />
                         <Tab label="Phase III" />
