@@ -33,8 +33,18 @@ const useStyles = makeStyles({
             marginTop:'-100px',
             maxWidth:'100%',
         },
+        ['@media (min-width:500px)']: { // eslint-disable-line no-useless-computed-key
+            height:'400px',
+            marginTop:'-100px',
+            maxWidth:'100%',
+        },
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             height:'400px',
+            marginTop:'-100px',
+            maxWidth:'100%',
+        },
+        ['@media (min-width:700px)']: { // eslint-disable-line no-useless-computed-key
+            height:'500px',
             marginTop:'-100px',
             maxWidth:'100%',
         },
@@ -102,6 +112,15 @@ const useStyles = makeStyles({
         position:'absolute',
         bottom:'80px',
         right:'40px',
+        ['@media (min-width:300px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'80px',
+        },
+        ['@media (min-width:400px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'80px',
+        },
+        ['@media (min-width:500px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'80px',
+        },
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'80px',
         },
@@ -141,7 +160,22 @@ const useStyles = makeStyles({
         position:'absolute',
         bottom:'50px',
         right:'40px',
+        ['@media (min-width:300px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
+        ['@media (min-width:400px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
+        ['@media (min-width:500px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
+        ['@media (min-width:700px)']: { // eslint-disable-line no-useless-computed-key
+            bottom:'20px',
+        },
+        ['@media (min-width:800px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'20px',
         },
         ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
