@@ -37,3 +37,7 @@ code {
   src: local('Montserrat'), url('./fonts/bold.ttf') format('truetype');
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

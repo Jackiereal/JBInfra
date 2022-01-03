@@ -7,13 +7,18 @@ import {
     Typography,
     Card,
     Grid,
-    CardMedia
+    CardMedia,
+    Fab
 
 } from '@material-ui/core';
 import {
     Container,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import MailIcon from '@mui/icons-material/Mail';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import { useState, useEffect } from 'react';
+
 
 const useStyles = makeStyles({
     
@@ -190,29 +195,89 @@ const useStyles = makeStyles({
         ['@media (min-width:1536px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'80px',
         },
+    },
+    fabMobile: {
+        position:'fixed',
+        bottom: '20px',
+        right: '20px',
+        color: "#fff",
+        backgroundColor: "#f78320",
+        margin: '10px',
+        "&:hover": {
+            backgroundColor: '#fff',
+            color:'#f78320',
+        }
+    },
+    fabMail: {
+        position:'fixed',
+        bottom: '20px',
+        right: '100px',
+        backgroundColor: "#f78320",
+        margin: '10px',
+        "&:hover": {
+            backgroundColor: '#fff',
+        }
+    },
+    link:{
+        color:'#fff',
+        textDecoration:'none',
+        paddingTop:'8px',
+        "&:hover": {
+            color:'#f78320',
+        }
     }
 })
 
-const Mailto = ({ email, subject = '', body = '', children }) => {
+const Mailto = ({ email, subject = '', body = '', children , className}) => {
     let params = subject || body ? '?' : '';
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
     if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
   
-    return <a href={`mailto:${email}${params}`}>{children}</a>;
+    return <a href={`mailto:${email}${params}`} className={className}>{children}</a>;
   };
 
 export const Quote = ()=>{
+
+    const [scroll,setScroll] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+          setScroll(window.scrollY > 400);
+        });
+      }, []); 
+
     const classes = useStyles();
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
-            <Grid className={classes.mobile}>
+            {/* <Grid className={classes.mobile}>
                 <a href="tel:04029554577"><img className={classes.buttonImage} src="mobile.png"></img></a><br />
             </Grid>
             <Grid className={classes.mail}>
                 <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!">
                     <img className={classes.buttonImage} src="mail.png"/>
                 </Mailto>
-            </Grid>
+            </Grid> */}
+            <div>
+            {
+                scroll ? 
+                <div>
+                <Fab className={classes.fabMail} aria-label="add">
+                    {/* <MailIcon> */}
+                        <a href="tel:04029554577" className={classes.link}>  <LocalPhoneIcon/> </a>
+                    {/* </MailIcon> */}
+                </Fab>
+                <Fab className={classes.fabMobile} aria-label="add">
+                    {/* <LocalPhoneIcon> */}
+                        <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!" className={classes.link}>
+                            <MailIcon/>
+                        </Mailto>
+                    {/* </LocalPhoneIcon> */}
+
+                </Fab>
+                </div>
+                 : null
+            }
+            </div>
         </Container>
     )
 } 
