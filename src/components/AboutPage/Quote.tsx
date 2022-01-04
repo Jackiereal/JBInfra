@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     
     containerRoot:{
         position:'relative',
-        backgroundImage:  'url("getintouch.png")',
+        backgroundImage:  'url("quote4.png")',
         backgroundSize:'100% auto',
         width:'100%',
         height:'700px',
@@ -118,13 +118,13 @@ const useStyles = makeStyles({
         bottom:'80px',
         right:'40px',
         ['@media (min-width:300px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'80px',
+            bottom:'100px',
         },
         ['@media (min-width:400px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'80px',
         },
         ['@media (min-width:500px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'80px',
+            bottom:'130px',
         },
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'80px',
@@ -166,13 +166,13 @@ const useStyles = makeStyles({
         bottom:'50px',
         right:'40px',
         ['@media (min-width:300px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'20px',
+            bottom:'70px',
         },
         ['@media (min-width:400px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'20px',
+            bottom:'50px',
         },
         ['@media (min-width:500px)']: { // eslint-disable-line no-useless-computed-key
-            bottom:'20px',
+            bottom:'100px',
         },
         ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
             bottom:'20px',
@@ -212,6 +212,7 @@ const useStyles = makeStyles({
         position:'fixed',
         bottom: '20px',
         right: '100px',
+        color: "#fff",
         backgroundColor: "#f78320",
         margin: '10px',
         "&:hover": {
@@ -262,19 +263,19 @@ export const Quote = ()=>{
                 scroll ? 
                 <div>
                 <Fab className={classes.fabMail} aria-label="add">
-                    {/* <MailIcon> */}
+                    <MailIcon>
                         <a href="tel:04029554577" className={classes.link}>  <LocalPhoneIcon/> </a>
-                    {/* </MailIcon> */}
+                    </MailIcon>
                 </Fab>
                 <Fab className={classes.fabMobile} aria-label="add">
-                    {/* <LocalPhoneIcon> */}
+                    <LocalPhoneIcon>
                         <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!" className={classes.link}>
                             <MailIcon/>
                         </Mailto>
-                    {/* </LocalPhoneIcon> */}
+                    </LocalPhoneIcon>
 
                 </Fab>
-                </div>
+                 </div>
                  : null
             }
             </div>

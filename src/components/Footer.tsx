@@ -85,6 +85,30 @@ const useStyles = makeStyles({
             color:'#fff',
         },
       },
+      poweredBy:{
+        color: '#A9A9A9',
+        fontSize: '13px',
+        fontFamily: 'Montserrat',
+        marginRight: '10px',
+        ['@media (min-width:0px)']: { // eslint-disable-line no-useless-computed-key
+            marginRight:'50px',
+            marginTop: '10px',
+          },
+          ['@media (min-width:600px)']: { // eslint-disable-line no-useless-computed-key
+            textAlign:'center',
+           
+          },
+          ['@media (min-width:900px)']: { // eslint-disable-line no-useless-computed-key
+            textAlign:'center',
+          },
+          ['@media (min-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            textAlign:'right',
+          },
+          ['@media (min-width:1513px)']: { // eslint-disable-line no-useless-computed-key
+            textAlign:'right',
+          },
+        
+      }
       
 })
 
@@ -136,6 +160,7 @@ export const Footer = ()=>{
             <Grid container spacing={2}>
                 <Grid item xs={10} sm={2}>
                     <img className={classes.logoImage} src={'logo-orange.gif'} alt="logo"></img>
+                    
                 </Grid>
                 {FooterLinksArray.map((item)=>(
                     <Grid item xs={10} sm={3}>
@@ -169,7 +194,11 @@ export const Footer = ()=>{
                          <LinkedInIcon onClick={() => { window.open('https://www.linkedin.com/company/jb-infraprojects/','_blank')}}/>
                      </IconButton>
                 </Grid>
+               
             </Grid>
+            <Typography className={classes.poweredBy} align="center">
+                        Powered by <b>Cloud Monks</b>
+                    </Typography>
         </div>
        
     )

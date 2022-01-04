@@ -53,7 +53,7 @@ export default function Disclaimer() {
       }}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle className={classes.root}>{"Disclaimer"}</DialogTitle>
+        <DialogTitle className={classes.root}><u>{"Disclaimer"}</u></DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
             <Typography paragraph={true} className={classes.paragraph}>
