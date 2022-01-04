@@ -141,6 +141,9 @@ const useStyles = makeStyles({
         // paddingTop:'200px',
         // paddingLeft:'100px'
     },
+    gridItems:{
+      height:220
+    }
 })
 
 export const ProjectHome = (props)=>{

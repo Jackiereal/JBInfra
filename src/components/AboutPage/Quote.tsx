@@ -263,14 +263,14 @@ export const Quote = ()=>{
                 scroll ? 
                 <div>
                 <Fab className={classes.fabMail} aria-label="add">
-                    <MailIcon>
-                        <a href="tel:04029554577" className={classes.link}>  <LocalPhoneIcon/> </a>
-                    </MailIcon>
+                    {/* <MailIcon> */}
+                        <a href="tel:04029554577" className={classes.link}>  <MailIcon /> </a>
+                    {/* </MailIcon> */}
                 </Fab>
                 <Fab className={classes.fabMobile} aria-label="add">
                     <LocalPhoneIcon>
                         <Mailto email="customercare@jbinfraprojects.com" subject="Get in Touch" body="H!" className={classes.link}>
-                            <MailIcon/>
+                            {/* <MailIcon/> */}
                         </Mailto>
                     </LocalPhoneIcon>
 

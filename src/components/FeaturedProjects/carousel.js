@@ -56,11 +56,12 @@ class App1 extends React.Component {
       cssEase: 'linear',
       mobileFirst: true, //optional, to be used only if your page is mobile first
       responsive: [{
-        breakpoint: 1024,
+        breakpoint: 480,        
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
           centerMode: true,
+          initialSlide: 0,
+          variableWidth: true
         }
       }]
     };
