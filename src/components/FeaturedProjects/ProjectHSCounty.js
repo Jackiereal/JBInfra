@@ -59,7 +59,8 @@ const useStyles = makeStyles({
     },
     gridItems:{
         marginLeft:'0px',
-        marginRight:'20px'
+        marginRight:'20px',
+        height:220
     },
     title:{
         fontFamily: 'Montserrat',
