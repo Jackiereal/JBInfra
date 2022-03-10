@@ -4,6 +4,7 @@ import About  from './components/AboutPage/AboutPage'
 
 import { Gallery } from './components/Gallery/Gallery'
 import { JBNews } from './components/JBNews/JBNews'
+import { JBLife } from './components/JBLife/JBLife'
 import { ContactUs } from './components/ContactUs/ContactUs'
 import { HomePage } from './components/HomePage/HomePage'
 import { Brochures } from './components/Brochures/Brochures'
@@ -32,6 +33,7 @@ function App() {
             <Route path="/brochure" component={Brochures} forceRefresh={true}/>
             <Route path="/gallery" component={Gallery} forceRefresh={true}/>
             <Route path="/jbnews" component={JBNews} forceRefresh={true}/>
+            <Route path="/jblife" component={JBLife} forceRefresh={true}/>
             <Route path="/contactus" component={ContactUs} forceRefresh={true}/>
             <Route path="/ourjourney" component={OurJourney} forceRefresh={true}/>
             {/* <Route path="/plotavailability/:project" component={PlotAvailability} /> */}
