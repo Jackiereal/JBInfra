@@ -423,7 +423,7 @@ export const JBLifeComponent = ()=>{
 
     return (
         <Container fixed classes={{root : classes.containerRoot}}>
-        <div>
+        {/* <div>
             <Typography  classes={{ root : classes.root}}>Employee of the month</Typography>
 
                         <Card className={classes.cardMedia} >
@@ -436,7 +436,7 @@ export const JBLifeComponent = ()=>{
                                     data-aos-anchor-placement="bottom-bottom"
                             />
                         </Card>
-        </div>
+        </div> */}
          &nbsp;
             <Typography  classes={{ root : classes.root}}>Life at JB</Typography>
             <Typography  classes={{ root : classes.descroot}}>Your Happiness begins here...</Typography>
