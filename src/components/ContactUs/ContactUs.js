@@ -68,7 +68,7 @@ export const ContactUs = ()=>{
             'Gardens,Chaitanya Nagar,B.N.Reddy Nagar,',
             'Hyderabad -500 070',
             'sales@jbinfraprojects.in',
-            '040 2409 0939', 
+            '040 2955 4577', 
          ],
          map:'map1.png',
         },
