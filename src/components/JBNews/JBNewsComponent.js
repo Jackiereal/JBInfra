@@ -107,14 +107,14 @@ const useStyles = makeStyles({
 });
 
 const itemData = [
-      // {
-      //   //  img :`https://picsum.photos/id/100/360/360`,
-      //   img:'jbnews2.jpg',
-      //    title: 'Image',
-      //   author: 'author',
-      //    cols: 1,
-      //    project : 1,
-      //  },
+      {
+        //  img :`https://picsum.photos/id/100/360/360`,
+        img:'jbnews2.jpg',
+         title: 'Image',
+        author: 'author',
+         cols: 1,
+         project : 1,
+       },
        {
         // img :`https://picsum.photos/id/200/360/360`,
         img:'jbnews1.jpg',
@@ -123,22 +123,22 @@ const itemData = [
         cols: 1,
         project : 1,
       },
-      // {
-      //   // img :`https://picsum.photos/id/200/360/360`,
-      //   img:'jbnews3.jpg',
-      //   title: 'Image',
-      //  author: 'author',
-      //   cols: 1,
-      //   project : 1,
-      // },
-      // {
-      //   // img :`https://picsum.photos/id/200/360/360`,
-      //   img:'jbnews6.jpeg',
-      //   title: 'Image',
-      //  author: 'author',
-      //   cols: 1,
-      //   project : 1,
-      // },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews3.jpg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews6.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
       {
         // img :`https://picsum.photos/id/200/360/360`,
         img:'jbnews7.jpeg',
@@ -155,14 +155,14 @@ const itemData = [
         cols: 1,
         project : 1,
       },
-      // {
-      //   // img :`https://picsum.photos/id/200/360/360`,
-      //   img:'jbnews9.jpeg',
-      //   title: 'Image',
-      //  author: 'author',
-      //   cols: 1,
-      //   project : 1,
-      // },
+      {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews9.jpeg',
+        title: 'Image',
+       author: 'author',
+        cols: 1,
+        project : 1,
+      },
     //  {
     //   //  img :`https://picsum.photos/id/900/360/360`,
     //   img:'9.jpg',
