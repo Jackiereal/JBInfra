@@ -78,7 +78,7 @@ export const ContactUs = ()=>{
                 '7-1B,Sai Nagar Colony,Peddamberpet,Hayatnagar Mandal,',
                 'Hyderabad,',
                 'Telangana 501505',
-                'customercare@jbinfraprojects.com',
+                'anilsuskandla@gmail.com',
                 '040 2955 4577'
             ],
             map:'map2.png',
