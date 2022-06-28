@@ -493,6 +493,8 @@ export function Header(props) {
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB00022" target = "_blank">Phase VI</a></MenuItem>
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JB00042" target = "_blank">Phase VII</a></MenuItem>
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JBI00056" target = "_blank">Hillside County</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="https://www.nextoramaps.com/NextoraMaps/home/project/JBI00060" target = "_blank">Phase X</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="https://www.nextoramaps.com/NextoraMaps/home/project/JBI00062" target = "_blank">Phase XI</a></MenuItem>
                 </Collapse>
                 <ListItem button onClick={handleAeroHeights}>
                   <MenuItem className={classes.menuLinkPlot}>JB AERO HEIGHTS</MenuItem>
