@@ -96,16 +96,17 @@ const useStyles = makeStyles({
     paddingRight:'30px',
     "&:hover": {
         backgroundColor: '#fff',
-        color:'#f78320',
+        color:'#f78320 !important',
         border:'1px solid #f78320',
     },
   },
   menuLink: {
     textDecoration: 'none ',
-    color: '#fff',
-    "&:hover": {
-        color:'#f78320',
-    },
+    color:'inherit'
+    // color: '#fff',
+    // "&:hover": {
+    //     color:'#f78320',
+    // },
   },
   image:{
       width:'100%',
