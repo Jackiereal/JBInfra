@@ -18,7 +18,6 @@ import {
   NavLink,
   useLocation
 } from 'react-router-dom';
-import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -478,6 +477,7 @@ export function Header(props) {
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot} href="http://43.240.65.20/NextoraMaps/home/project/JBI00050" target = "_blank">Phase II</a></MenuItem>
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JBI00052" target = "_blank">Phase III</a></MenuItem>
                   <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="http://43.240.65.20/NextoraMaps/home/project/JBI00054" target = "_blank">Phase IV</a></MenuItem>
+                  <MenuItem onClick={handleClosePlot} ><a className={classes.menuLinkPlot}href="https://www.nextoramaps.com/NextoraMaps/home/project/JBI00058" target = "_blank">Phase V</a></MenuItem>
                 </Collapse>
                 <ListItem button onClick={handleSereneCity}>
                   <MenuItem className={classes.menuLinkPlot}>JB SERENE CITY</MenuItem>
