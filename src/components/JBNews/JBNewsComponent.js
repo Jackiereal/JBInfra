@@ -108,6 +108,14 @@ const useStyles = makeStyles({
 
 const itemData = [
       {
+        // img :`https://picsum.photos/id/200/360/360`,
+        img:'jbnews24.jpg',
+        title: 'Image',
+      author: 'author',
+        cols: 1,
+        project : 1,
+      },
+      {
         //  img :`https://picsum.photos/id/100/360/360`,
         img:'jbnews2.jpg',
          title: 'Image',

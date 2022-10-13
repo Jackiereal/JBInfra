@@ -261,8 +261,6 @@ function TabPanel(props) {
 export const ProjectHomeAlternative = (props)=>{
     const classes = useStyles();
     const projectName = props.projectName;
-    console.log(projectName)
-    console.log(props.project)
     const projectHighlights = props.project.valuesproject;
     const locationHighlights = props.project.valueslocation;
     // setTimeout(() => {window.scrollTo(0, 0); }, 1000);
@@ -310,6 +308,7 @@ export const ProjectHomeAlternative = (props)=>{
                         <Tab label="Phase II" />
                         <Tab label="Phase III" />
                         <Tab label="Phase IV" />
+                        <Tab label="Phase V" />
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
@@ -424,6 +423,43 @@ export const ProjectHomeAlternative = (props)=>{
                     <div>
                     <Button className={classes.buttons}><a href='p4.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
                         <App2 image={'p4.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        </Container>
+                    </TabPanel>
+                    <TabPanel value={value} index={4}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                    <Button className={classes.buttons}><a href='p5.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'p5.jpg'}/>
                         </div>
                         <Grid container xs={12}>
                             <Grid item xs={12} sm={6}>
@@ -479,6 +515,7 @@ export const ProjectHomeAlternative = (props)=>{
                         <Tab label="Phase II" />
                         <Tab label="Phase III" />
                         <Tab label="Phase IV" />
+                        <Tab label="Phase V" />
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Container fixed classes={{root : classes.containerRoot}}>
@@ -625,6 +662,45 @@ export const ProjectHomeAlternative = (props)=>{
                         
                         </Container>
                     </TabPanel>
+            {/* Phase V */}
+            <TabPanel value={value} index={4}>
+                    <Container fixed classes={{root : classes.containerRoot}}>
+                    <div>
+                    <Button className={classes.buttons}><a href='p5.jpg' style={{textDecoration:"none"}} download><Typography className={classes.buttonName}>Click to Download Layout</Typography></a></Button>
+                        <App2 image={'p5.jpg'}/>
+                        </div>
+                        <Grid container xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titleproject}</Typography>
+                                <ul>
+                                {
+                                    projectHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Typography className={classes.title}>{props.project.titlelocation}</Typography>
+                                <ul>
+                                {
+                                    locationHighlights.map( (value)=>{
+                                        return (
+                                            <li className={classes.listItem}>{value}</li>
+                                        )
+                                    })
+                                }
+                                </ul>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        </Container>
+                    </TabPanel>
+            {/* Phase V */}
                 </Grid>
                 </Container>
             </Grid>
